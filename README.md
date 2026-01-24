@@ -6,28 +6,32 @@ ZDoom maps for the **DaF (Daft and Furious)** D&D campaign. Intended as a VTT (V
 
 ### Prerequisites
 
-- [Git LFS (Large File Storage)](https://git-lfs.com/), for pulling down models and other large files
-- [GZDoom](https://zdoom.org/downloads)
-- [UDB (Ultimate Doom Builder)](https://ultimatedoombuilder.github.io/) for using the maps as a VTT
-- (OPTIONAL) [SLADE](https://slade.mancubus.net/), edit the project's scripts, defs, lumps etc
+- [Git LFS (Large File Storage)](https://git-lfs.com/), to pull down models and other large files
+- [GZDoom](https://zdoom.org/downloads), engine this is built on
+- [UDB (Ultimate Doom Builder)](https://ultimatedoombuilder.github.io/), for using maps as a VTT
 
-### Cloning and Models
+### Cloning and Large Files
 
 1. `git clone https://github.com/tommarkallen/zd_daf.git`
 2. `git lfs install`
 3. `git lfs pull`
 
+### Optional
+
+- [SLADE](https://slade.mancubus.net/), edit the scripts, defs, lumps etc
+
 ## Usage
 
-### As an FPS
+### FPS (First Person Shooter)
 
 1. Drag `zd_daf` sub-folder over `gzdoom.exe`
 
-### As a VTT
+### VTT (Virtual Table Top)
 
 1. Open UDB (Ultimate Doom Builder)
-2. Open a .wad under `zd_daf/maps/`
-3. Add Resource > From Directory > Select `zd_daf` sub-folder
+2. Open Map > .wad under `zd_daf/maps/`
+3. Make sure Game Config is "GZDoom (UDMF)" and Script Type is "ZDoom ACS"
+4. Add Resource > From Directory > Select `zd_daf` sub-folder
 
 ### Project Structure
 - `zd_daf/`: Add this as resource from directory, or Archive into pk3 with SLADE
