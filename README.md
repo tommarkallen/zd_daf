@@ -18,7 +18,9 @@ ZDoom maps for the **DaF (Daft and Furious)** D&D campaign. Intended as a VTT (V
 
 ### Optional
 
-- [SLADE](https://slade.mancubus.net/), edit the scripts, defs, lumps etc
+- [SLADE](https://slade.mancubus.net/), edit scripts, defs, lumps, other wad internals etc
+- [Blender](https://www.blender.org/download/), edit models
+- [Gimp](https://www.gimp.org/downloads/), edit textures
 
 ## Usage
 
