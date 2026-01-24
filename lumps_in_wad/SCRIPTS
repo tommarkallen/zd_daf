@@ -1,0 +1,5 @@
+#include "zcommon.acs"
+
+script "ChangeTrack" ENTER {
+    setMusic("D_MESSAG");
+}

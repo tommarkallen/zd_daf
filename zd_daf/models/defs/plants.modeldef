@@ -1,0 +1,26 @@
+Model Anemone01
+{
+	Path "models"
+	Model 0 "SmallOrnamentalPlant1.obj"
+	Skin 0 "skins/plant_1-texture"
+	Scale 128.0 128.0 128.0
+	FrameIndex ANEA A 0 0
+}
+
+Model Anemone02
+{
+	Path "models"
+	Model 0 "Phormium_1.obj"
+	Skin 0 "skins/phormium_t_leaf_1_1_diffuse_1"
+	Scale 16.0 16.0 16.0
+	FrameIndex ANEB A 0 0
+}
+
+Model Anemone03
+{
+	Path "models"
+	Model 0 "Phormium_1.obj"
+	Skin 0 "skins/phormium_t_leaf_2_1_diffuse_3"
+	Scale 16.0 16.0 16.0
+	FrameIndex ANEC A 0 0
+}

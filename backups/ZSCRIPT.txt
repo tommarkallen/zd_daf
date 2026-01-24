@@ -1,0 +1,18 @@
+class MyModelActor : Actor
+{
+    Default
+    {
+        //$Category Props
+        Radius 16;
+        Height 32;
+        +SOLID;
+        Health 100;
+    }
+
+    States
+    {
+        Spawn:
+            TNT1 A -1; // Use an invisible sprite
+            Stop;
+    }
+}

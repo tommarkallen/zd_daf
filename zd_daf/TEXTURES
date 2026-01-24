@@ -1,0 +1,3 @@
+Sprite "ANEAA0", 1, 1 { Patch "TNT1A0", 0, 0}
+Sprite "ANEBA0", 1, 1 { Patch "TNT1A0", 0, 0}
+Sprite "ANECA0", 1, 1 { Patch "TNT1A0", 0, 0}

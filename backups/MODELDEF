@@ -1,0 +1,36 @@
+Model Anemone01
+{
+	Path "models"
+	Model 0 "SmallOrnamentalPlant1.obj"
+	Skin 0 "skins/plant_1-texture"
+	Scale 128.0 128.0 128.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex MDLA A 0 0
+}
+
+Model Anemone02
+{
+	Path "models"
+	Model 0 "Phormium_1.obj"
+	Skin 0 "skins/phormium_t_leaf_1_1_diffuse_1"
+	Scale 16.0 16.0 16.0
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex SMT3 A 0 0
+}
+
+
+Model Roots01
+{
+	Path "models"
+	Model 0 "wood_seamless2.obj"
+	Skin 0 "skins/wood_seamless2"
+	Scale 1 1 1
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex NO3D A 0 0
+}

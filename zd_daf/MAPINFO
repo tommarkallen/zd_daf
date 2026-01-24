@@ -1,0 +1,11 @@
+map MAP01 "Illithid Hive"
+{
+    music = "music/dr_gorgo.mp3"
+}
+
+DoomEdNums
+{
+    14001 = Anemone01
+    14002 = Anemone02
+    14003 = Anemone03
+}
