@@ -1,0 +1,3 @@
+# Exclude UDB autosaves and backups
+*.backup*
+*.autosave*
