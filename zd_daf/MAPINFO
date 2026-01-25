@@ -1,7 +1,37 @@
-map MAP01 "Illithid Hive"
+map HIVE01 "Illithid Hive"
 {
+	title = "Illithid Hive - Deep Sea Trench"
     music = "music/dr_gorgo.mp3"
+	next = "ABYSS222"
 }
+
+map ABYSS222 "Shedaklah, 222nd Abyss Layer"
+{
+    title = "Abyss - 222nd Layer - Shedaklah (aka Mycorji)"
+	music = "music/d2_act3_kurast_temple.mp3"
+    next = "ABYSS045"
+}
+
+map ABYSS045 "Azzagrat, 45th Abyss Layer"
+{
+    title = "Abyss - 45th Layer - Azzagrat (aka The Triple Realm)"
+	music = "music/ff7_forgotten_capital.mp3"
+    next = "ABYSS046"
+}
+
+map ABYSS046 "Zelatar, 46th Abyss Layer"
+{
+    title = "Abyss - 46th Layer - The City of Zelatar"
+	music = "music/d1_catacombs.mp3"
+    next = "ABYSS047"
+}
+
+map ABYSS047 "Argent Palace, 47th Abyss Layer"
+{
+    title = "Abyss - 47th Layer - The Argent Palace"
+	music = "music/ff7_bizarro_sephiroth.mp3"
+}
+
 
 DoomEdNums
 {
