@@ -2,6 +2,7 @@
     "files.associations": {
         "*.zs": "zscript",
         "DECORATE": "decorate",
+        "*.zd": "decorate",
         "MODELDEF": "modeldef",
         "MAPINFO": "mapinfo",
         "*.acs": "acs",

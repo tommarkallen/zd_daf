@@ -4,6 +4,7 @@ map HIVE01 "Illithid Hive"
     music = "music/dr_gorgo.mp3"
 	next = "ABYSS222"
     sky1 = "OSKY01"
+    sky2 = "OSKY51"
     par = 360
     levelnum = 1
 }
@@ -14,6 +15,7 @@ map ABYSS222 "Shedaklah, 222nd Abyss Layer"
 	music = "music/d2_act3_kurast_temple.mp3"
     next = "ABYSS045"
     sky1 = "OSKY51"
+    sky2 = "OSKY01"
     par = 360
     levelnum = 2
 }
@@ -53,4 +55,10 @@ DoomEdNums
     14001 = Anemone01
     14002 = Anemone02
     14003 = Anemone03
+	
+	17000 = BlueImp
+	17001 = MotherImp
+	17002 = PinkHorror
+	17003 = BlueHorror
+	17004 = MindFlayer
 }

@@ -1,0 +1,28 @@
+//MindFlayer sounds
+$random mindflayer/pain { mindflayer/hurt1 mindflayer/hurt2 mindflayer/hurt3 mindflayer/hurt4 }
+
+mindflayer/hurt1 	DEEPPN1
+mindflayer/hurt2 	DEEPPN2
+mindflayer/hurt3  	DEEPPN3
+mindflayer/hurt4 	DEEPPN4
+
+$random mindflayer/active { mindflayer/groan1 mindflayer/groan2 }
+
+mindflayer/groan1 	DEEPGN1
+mindflayer/groan2 	DEEPGN2
+
+$random mindflayer/meleegrowl { mindflayer/attack1 mindflayer/attack2 }
+
+mindflayer/melee	DSCLAW
+
+mindflayer/attack1 	DEEPAK1
+mindflayer/attack2 	DEEPAK2
+
+mindflayer/sight 	DEEPSEE
+mindflayer/stealth	DEEPSTTH
+
+mindflayer/death 	DEEPDTH
+
+mindflayer/fire 	DEEPFIRE
+
+mindflayer/firehit 	DEEPFHIT
