@@ -57,4 +57,4 @@ Default for now.
 
 ## Authors
 
-- Zeverin
+- Thomas Allen
