@@ -4,6 +4,8 @@
         "DECORATE": "decorate",
         "MODELDEF": "modeldef",
         "MAPINFO": "mapinfo",
-        "*.acs": "acs"
+        "*.acs": "acs",
+        "TEXTURES": "textures",
+        "TEXTURES.txt": "textures"
     }
 }
