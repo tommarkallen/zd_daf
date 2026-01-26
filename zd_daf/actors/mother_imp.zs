@@ -2,6 +2,9 @@ class BlueImp : DoomImp
 {
 	Default
 	{
+    	//$Category Monsters/Chaos Daemons
+    	//$Title "Blue Imp"		
+		Species "Chaos Daemon";
 		Scale 0.5;
 		Radius 16;
 		Height 32;
@@ -34,6 +37,11 @@ class MotherImp : Actor
 {
 	Default
 	{
+    	//$Category Monsters/Chaos Daemons
+    	//$Title "Mother Imp"		
+		Species "Chaos Daemon";
+		Monster;
+
 		Health 120;
 		Radius 32;
 		Height 64;
@@ -41,7 +49,6 @@ class MotherImp : Actor
 		Mass 100;
 		Speed 8;
 		PainChance 125;
-		Monster;
 		+FLOORCLIP
 		SeeSound "imp/sight";
 		PainSound "imp/pain";

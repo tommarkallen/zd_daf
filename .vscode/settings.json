@@ -7,6 +7,7 @@
         "MAPINFO": "mapinfo",
         "*.acs": "acs",
         "TEXTURES": "textures",
-        "TEXTURES.txt": "textures"
+        "TEXTURES.txt": "textures",
+        "*.gl": "gldefs"
     }
 }

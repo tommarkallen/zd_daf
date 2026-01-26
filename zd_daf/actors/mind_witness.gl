@@ -1,0 +1,79 @@
+
+//MindWitness GLDEFs
+Pulselight MindWitnessLight
+{
+Color 1.0 1.0 0.0
+Size 24
+SecondarySize 6
+Interval 3.0
+}
+
+Object MindWitnessBall
+{
+    frame MWBPA { light MWBP_X1 }
+    frame MWBPB { light MWBP_X2 }
+    frame MWBPC { light MWBP_X3 }
+    frame MWBPD { light MWBP_X4 }
+    frame MWBPE { light MWBP_X5 }
+    frame MWBPF { light MWBP_X6 }
+ }
+
+BrightMap Sprite MWITB1
+{
+Map "brightmaps/BMBLACK.png"
+DisableFullBright
+}
+
+BrightMap Sprite MWITC2C8
+{
+Map "brightmaps/BMBLACK.png"
+DisableFullBright
+}
+
+BrightMap Sprite MWITC3C7
+{
+Map "brightmaps/BMBLACK.png"
+DisableFullBright
+}
+
+BrightMap Sprite MWITC4C6
+{
+Map "brightmaps/BMBLACK.png"
+DisableFullBright
+}
+
+BrightMap Sprite MWITC5
+{
+Map "brightmaps/BMBLACK.png"
+DisableFullBright
+}
+
+BrightMap Sprite MWITC1
+{
+Map "brightmaps/BMACNBC1.png"
+DisableFullBright
+}
+
+BrightMap Sprite MWITC2C8
+{
+Map "brightmaps/BMACNBC2.png"
+DisableFullBright
+}
+
+BrightMap Sprite MWITC3C7
+{
+Map "brightmaps/BMACNBC3.png"
+DisableFullBright
+}
+
+BrightMap Sprite MWITC4C6
+{
+Map "brightmaps/BMACNBC4.png"
+DisableFullBright
+}
+
+BrightMap Sprite MWITC5
+{
+Map "brightmaps/BMACNBC5.png"
+DisableFullBright
+}

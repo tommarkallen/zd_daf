@@ -1,4 +1,9 @@
-//MindFlayer sounds
+//===========================================================================
+//
+// MindFlayer Sounds
+//
+//===========================================================================
+
 $random mindflayer/pain { mindflayer/hurt1 mindflayer/hurt2 mindflayer/hurt3 mindflayer/hurt4 }
 
 mindflayer/hurt1 	DEEPPN1
@@ -26,3 +31,14 @@ mindflayer/death 	DEEPDTH
 mindflayer/fire 	DEEPFIRE
 
 mindflayer/firehit 	DEEPFHIT
+
+
+//MindWitness Sounds
+$random mindwitness/attack		{ mindwitness/attack1  mindwitness/attack2 }
+mindwitness/sight		DSGRESIT
+mindwitness/death		DSGREDTH
+mindwitness/melee		DSGREATK
+mindwitness/active		DSGREACT
+mindwitness/pain		DSGREPAI
+mindwitness/attack1	dsvulsh1
+mindwitness/attack2	dsvulsh2

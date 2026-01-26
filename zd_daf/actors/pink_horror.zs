@@ -8,6 +8,10 @@ class BlueHorror : Demon
 {
     Default
     {
+    	//$Category Monsters/Chaos Daemons
+    	//$Title "Blue Horror"		
+		Species "Chaos Daemon";
+		Monster;
         Scale 0.6;
         Radius 16;
         Height 32;
@@ -28,6 +32,11 @@ class PinkHorror : Actor
 {
     Default
     {
+    	//$Category Monsters/Chaos Daemons
+    	//$Title "Pink Horror"		
+		Species "Chaos Daemon";
+        Monster;
+
         Health 150;
         Radius 30;
         Height 56;
@@ -36,7 +45,6 @@ class PinkHorror : Actor
         Speed 10;
         Translation "32:46=250:254";
         PainChance 180;
-        Monster;
         +FLOORCLIP
         SeeSound "demon/sight";
         PainSound "demon/pain";
