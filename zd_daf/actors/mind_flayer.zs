@@ -39,7 +39,6 @@ class MindFlayer : Actor
 		Obituary "%o was psychically blasted by a Mind Flayer.";
 		HitObituary "%o's brain was extracted by a Mind Flayer.";
 
-
 	}
 
 	States
@@ -99,6 +98,20 @@ class MindFlayer : Actor
 		CUTH N 10 A_Scream;
 		CUTH O 10;
 		CUTH P 10 A_NoBlocking;
+		CUTH P 0 A_SpawnItemEx(
+				"MindFlayer",
+				-12, 0, 10,
+				 4, 0, 8,
+				0,
+				SXF_NOCHECKPOSITION
+			);
+		CUTH P 0 A_SpawnItemEx(
+				"MindFlayer",
+				-12, 0, 10,
+				 4, 0, 8,
+				0,
+				SXF_NOCHECKPOSITION
+			);
 		CUTH Q -1;
 		Stop;
 

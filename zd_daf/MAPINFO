@@ -62,4 +62,8 @@ DoomEdNums
 	17003 = BlueHorror
 	17004 = MindFlayer
     17005 = MindWitness
+
+    18000 = FlashLightAngled
+    18001 = QuakeAxe
+
 }

@@ -2,7 +2,7 @@
 //
 // Faction Monster
 //
-// FIXME: Attempt to override non-existent virtual function isHostile
+// FIXME: Attempt to override non-existent virtual function isEnemy
 //
 // 0 = neutral, 1 = Illithid
 // 2 = Demon (Tanar'ri), 3 = Devil (Baatezu), 4 = Daemon (Yugoloth)
