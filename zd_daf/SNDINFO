@@ -32,8 +32,12 @@ mindflayer/fire 	DEEPFIRE
 
 mindflayer/firehit 	DEEPFHIT
 
+//===========================================================================
+//
+// MindWitness Sounds
+//
+//===========================================================================
 
-//MindWitness Sounds
 $random mindwitness/attack		{ mindwitness/attack1  mindwitness/attack2 }
 mindwitness/sight		DSGRESIT
 mindwitness/death		DSGREDTH

@@ -1,2 +1,3 @@
 #include "actors/mind_flayer.gl"
 #include "actors/mind_witness.gl"
+#include "actors/sahuagin.gl"

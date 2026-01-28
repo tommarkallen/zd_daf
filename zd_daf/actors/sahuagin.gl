@@ -1,0 +1,32 @@
+Pointlight SahuaginFireball
+{
+Color 0.0 1.0 0.0
+Size 25
+}
+
+Pointlight SahuaginFireball2
+{
+Color 0.0 1.0 0.0
+Size 30
+}
+
+Pointlight SahuaginFireball3
+{
+Color 0.0 0.7 0.0
+Size 25
+}
+
+Pointlight SahuaginFireball4
+{
+Color 0.0 0.4 0.0
+Size 20
+}
+
+Object SahuaginFireball
+{
+Frame SIBAA { Light SahuaginFireball }
+Frame SIBAB { Light SahuaginFireball }
+Frame SIBAC { Light SahuaginFireball2 }
+Frame SIBAD { Light SahuaginFireball3 }
+Frame SIBAE { Light SahuaginFireball4 }
+}

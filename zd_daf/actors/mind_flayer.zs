@@ -1,7 +1,14 @@
 //===========================================================================
-//
 // Illithid - Mind Flayer
 //
+// Based on "Deep One" from Realm667
+// Original submission: Dr. Doctor
+// Decorate: Dr. Doctor
+// Sounds: Acclaim Entertainment
+// Sprites: ID Software, Looking Glass Studios (fireballs)
+// Sprite Edit: Dr. Doctor
+// Source: https://www.realm667.com/repository/beastiary/doom-style?start=60#credits-9
+// Used under Realm667's free non-commercial use license. Do not sell.
 //===========================================================================
 
 class MindFlayer : Actor
@@ -14,7 +21,6 @@ class MindFlayer : Actor
 		Species "Illithid";
 		+FLOORCLIP;
 		+BOSSDEATH;
-		+MISSILEMORE;
 
 		Scale 1.3;
 		Radius 30;
@@ -30,14 +36,14 @@ class MindFlayer : Actor
 		BloodColor "purple";
         // Translation "112:127=192:207";
 
+		Obituary "%o was psychically blasted by a Mind Flayer.";
+		HitObituary "%o's brain was extracted by a Mind Flayer.";
+
 		SeeSound "mindflayer/sight";
 		PainSound "mindflayer/pain";
 		DeathSound "mindflayer/death";
 		ActiveSound "mindflayer/active";
 		MeleeSound "mindflayer/melee";
-
-		Obituary "%o was psychically blasted by a Mind Flayer.";
-		HitObituary "%o's brain was extracted by a Mind Flayer.";
 
 	}
 

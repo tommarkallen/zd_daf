@@ -1,7 +1,10 @@
 //===========================================================================
-//
 // Illithid - Mind Witness
 //
+// Based on a Realm667 asset
+// Source: https://www.realm667.com/repository/beastiary/doom-style#credits-12
+// Used under Realm667's free non-commercial use license. Do not sell.
+// See CREDITS file for details.
 //===========================================================================
 
 class MindWitness : Actor
