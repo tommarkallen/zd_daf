@@ -62,30 +62,69 @@ DoomEdNums
     15001 = QuakeAxe
 
     // Characters
-    16000 = Das
-    16001 = DasDog
-    // 16002 = Pogo
-    16003 = Fiddler
-    16004 = Shtank
-    
-    // Test Monsters
-	17000 = BlueImp
-	17001 = MotherImp
-
-    // Chaos Daemons
-	17002 = PinkHorror
-	17003 = BlueHorror
-
-    // Illithids
-	17004 = MindFlayer
-    17005 = MindWitness
-    17006 = Sahuagin
-    17007 = SahuaginBaron
-    17008 = SahuaginBaronWasphive
-    17009 = Grimlock
-    17010 = IntellectDevourer
+    19000 = Das
+    19001 = DasDog
+    // 19002 = Pogo
+    19003 = Fiddler
+    19004 = Shtank
 
     // Tanar'ri
-    17101 = Succubus
+    19100 = Succubus
+    // 19101 = Vrock
+    // 19102 = Hezrou
+    // 19103 = Glabrezu
+    // 19104 = Babau
+    // 19105 = Marilith
+    // 19106 = Balor
+    // 19107 = Quasit
+    // 19108 = Dretch
+    // 19109 = Manes
+    // 19110 = Nalfeshnee
+    // 19111 = Yochlol
+    // 19112 = ShadowDemon
+    // 19113 = Dybbuk
+    // 19114 = Rutterkin
+    // 19115 = Chasme
+    // 19116 = Goristro
+
+    // Baatezu
+    // 19200 = PitFiend
+    // 19201 = HornedDevil
+    // 19202 = Erinyes
+    // 19203 = BarbedDevil
+    // 19204 = ChainDevil
+    // 19205 = BoneDevil
+    // 19206 = Lemure
+    // 19207 = CambionDevil
+    // 19208 = Kyton
+    // 19209 = SpinedDevil
+    // 19210 = BeardedDevil
+    
+    // Yugoloths
+    // 19300 = Mezzoloth
+    // 19301 = Nycaloth
+    // 19302 = Ultroloth
+    // 19303 = Canoloth
+    // 19304 = Daemonette
+
+    // Obyriths
+    // 19400 = Sibriex
+
+    // Illithids
+	19500 = MindFlayer
+    19501 = MindWitness
+    19502 = Sahuagin
+    19503 = SahuaginBaron
+    19504 = SahuaginBaronWasphive
+    19505 = Grimlock
+    19506 = IntellectDevourer
+
+    // Chaos Daemons
+	19600 = PinkHorror
+	19601 = BlueHorror
+
+    // Other
+	19700 = BlueImp
+	19701 = MotherImp
 
 }
