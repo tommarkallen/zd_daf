@@ -1,0 +1,69 @@
+//===========================================================================
+//
+// Sahuagin Baron Decals
+//
+//===========================================================================
+
+fader SahuaginBaronSlimeFade
+{
+   DecayStart 0.5
+   DecayTime 0.5
+}
+
+stretcher SahuaginBaronSlimeStretch
+{
+   GoalX 0.47
+   GoalY 0.47
+   StretchStart 0.5
+   StretchTime 1.0
+}
+
+Combiner SahuaginBaronSlimeAnim
+{
+	SahuaginBaronSlimeFade
+	SahuaginBaronSlimeStretch
+}
+
+decal SahuaginBaronSlimeScorch1
+{
+	pic VBLSSCR1
+	shade "60 ff 60"
+	x-scale 0.5
+	y-scale 0.5
+	randomflipx
+	randomflipy
+	fullbright
+	animator SahuaginBaronSlimeAnim
+}
+
+decal SahuaginBaronSlimeScorch2
+{
+	pic VBLSSCR2
+	shade "60 ff 60"
+	x-scale 0.5
+	y-scale 0.5
+	randomflipx
+	randomflipy
+	fullbright
+	animator SahuaginBaronSlimeAnim
+
+}
+
+decal SahuaginBaronSlimeScorch3
+{
+	pic VBLSSCR3
+	shade "60 ff 60"
+	x-scale 0.5
+	y-scale 0.5
+	randomflipx
+	randomflipy
+	fullbright
+	animator SahuaginBaronSlimeAnim
+}
+
+decalgroup SahuaginBaronSlimeScorch
+{
+	SahuaginBaronSlimeScorch1	1
+	SahuaginBaronSlimeScorch2	1
+	SahuaginBaronSlimeScorch3	1
+}

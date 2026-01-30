@@ -22,8 +22,6 @@ class Das : Actor
 		+BOSS;
 		+FLOORCLIP;
 		+NOTARGET;
-		+MISSILEMORE;
-		+MISSILEEVENMORE;
 
 		Scale 1.0;
 		Radius 20;

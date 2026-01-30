@@ -7,3 +7,5 @@
 #include "actors/fiddler.gl"
 
 #include "actors/grimlock.gl"
+
+#include "actors/sahuagin_baron.gl"

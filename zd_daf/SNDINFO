@@ -180,3 +180,100 @@ $Random Grimlock/Death	{ 3WRTDEA1 3WRTDEA2 3WRTDEA3 3WRTDEA4 }
 3WRTDEA3	3WRTDEA3
 3WRTDEA4	3WRTDEA4
 
+//===========================================================================
+//
+// Sahuagin Baron Sounds
+//
+//===========================================================================
+
+SahuaginBaron/attack1	VBLIATK1
+SahuaginBaron/attack2	VBLIATK2
+SahuaginBaron/attack3	VBLIATK3
+SahuaginBaron/attack4	VBLIATK4
+SahuaginBaron/see	VBLISEE
+SahuaginBaron/death	VBLIDETH
+$random SahuaginBaron/pain { SahuaginBaronpain1 SahuaginBaronpain2 SahuaginBaronpain2 }
+SahuaginBaronpain1	VBLIPAI1
+SahuaginBaronpain2	VBLIPAI2
+SahuaginBaronpain3	VBLIPAI3
+$random SahuaginBaron/act { SahuaginBaronact1 SahuaginBaronact2 }
+SahuaginBaronact1	VBLIACT1
+SahuaginBaronact2	VBLIACT2
+SahuaginBaron/slime	VBLISLM1
+SahuaginBaron/slimesplat	VBLISLM2
+$pitchset SahuaginBaron/attack1 0.667 0.766
+$pitchset SahuaginBaron/attack2 0.667 0.766
+$pitchset SahuaginBaron/attack3 0.667 0.766
+$pitchset SahuaginBaron/attack4 0.667 0.766
+$pitchset SahuaginBaron/see 0.667 0.766
+$pitchset SahuaginBaronact1 0.667 0.766
+$pitchset SahuaginBaronact2 0.667 0.766
+$pitchset SahuaginBaronpain1 0.667 0.766
+$pitchset SahuaginBaronpain2 0.667 0.766
+$pitchset SahuaginBaronpain3 0.667 0.766
+$pitchset SahuaginBaron/death 0.667 0.766
+$pitchset SahuaginBaron/slime 0.75 1.5
+$pitchset SahuaginBaron/slimesplat 0.9 1.1
+$volume SahuaginBaron/slime 0.5
+$volume SahuaginBaron/slimesplat 0.5
+$limit SahuaginBaron/slime 0
+$limit SahuaginBaron/slimesplat 0
+
+$random SahuaginBaronWasp/buzz { SahuaginBaronWasp1 SahuaginBaronWasp2 }
+SahuaginBaronWasp1	VBLIWSP1
+SahuaginBaronWasp2	VBLIWSP2
+SahuaginBaronWasp3	VBLIWSP3
+SahuaginBaronWasp/death	VBLIWSP4
+$pitchset SahuaginBaronWasp/death 0.667 0.766
+$volume SahuaginBaronWasp/death 0.5
+$limit SahuaginBaronWasp1 3
+$limit SahuaginBaronWasp2 3
+$limit SahuaginBaronWasp3 3
+
+//===========================================================================
+//
+// Intellect Devourer Sounds
+//
+//===========================================================================
+
+IntellectDevourer/Sight	TRITSIG1
+IntellectDevourer/Sight2	TRITSIG2
+IntellectDevourer/Sight3	TRITSIG3
+IntellectDevourer/Sight4	TRITSIG4
+IntellectDevourer/Active	TRITACT1
+IntellectDevourer/Active2	TRITACT2
+IntellectDevourer/Active3	TRITACT3
+$Random Trite/Attack { TRITATT1 TRITATT2 TRITATT3 }
+TRITATT1		TRITATT1
+TRITATT2		TRITATT2
+TRITATT3		TRITATT3
+$Random Trite/MeleeHit { TRITHIT1 TRITHIT2 }
+TRITHIT1		TRITHIT1
+TRITHIT2		TRITHIT2
+$Random Trite/Step { TRITSTE1 TRITSTE2 TRITSTE3 TRITSTE4 }
+TRITSTE1		TRITSTE1
+TRITSTE2		TRITSTE2
+TRITSTE3		TRITSTE3
+TRITSTE4		TRITSTE4
+Trite/WebStart		TRITWEB1
+Trite/WebEnd		TRITWEB2
+$Random Trite/Pain { TRITPAI1 TRITPAI2 TRITPAI3 }
+TRITPAI1		TRITPAI1
+TRITPAI2		TRITPAI2
+TRITPAI3		TRITPAI3
+$Random Trite/Death { TRITDEA1 TRITDEA2 TRITDEA3 }
+TRITDEA1		TRITDEA1
+TRITDEA2		TRITDEA2
+TRITDEA3		TRITDEA3
+$Random Trite/Splat { TRITSPL1 TRITSPL2 }
+TRITSPL1		TRITSPL1
+TRITSPL2		TRITSPL2
+
+$Volume Trite/Sight 0.5
+$Volume Trite/Active 0.5
+$Volume Trite/Attack 0.5
+$Volume Trite/MeleeHit 0.5
+$Volume Trite/Pain 0.5
+$Volume Trite/Death 0.5
+$Volume Trite/Splat 0.5
+$Volume Trite/Step 0.2

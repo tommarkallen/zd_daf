@@ -16,3 +16,7 @@ version "4.14.2"
 #include "actors/succubus.zs"
 
 #include "actors/grimlock.zs"
+
+#include "actors/sahuagin_baron.zs"
+
+#include "actors/intellect_devourer.zs"

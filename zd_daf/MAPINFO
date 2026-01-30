@@ -68,7 +68,6 @@ DoomEdNums
     16003 = Fiddler
     16004 = Shtank
     
-
     // Test Monsters
 	17000 = BlueImp
 	17001 = MotherImp
@@ -81,9 +80,12 @@ DoomEdNums
 	17004 = MindFlayer
     17005 = MindWitness
     17006 = Sahuagin
-    17008 = Grimlock
+    17007 = SahuaginBaron
+    17008 = SahuaginBaronWasphive
+    17009 = Grimlock
+    17010 = IntellectDevourer
 
     // Tanar'ri
-    17009 = Succubus
+    17101 = Succubus
 
 }

@@ -20,7 +20,6 @@ class Fiddler : Actor
         Species "PlayerCharacter";
         Monster;
         +FLOORCLIP;
-        +DONTHURTSPECIES;
 
         Scale 1.0;
         Radius 22;
