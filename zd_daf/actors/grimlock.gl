@@ -1,0 +1,4 @@
+// GLDEFS for Grimlock (Wraith)
+// Add brightmaps, dynamic lights, or other GLDEFS as needed for Grimlock sprites.
+// Example placeholder:
+// brightmap sprite:3WRT range 0 9 { map "sprites/grimlock/3WRTA1.png" }

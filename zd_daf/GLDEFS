@@ -5,3 +5,5 @@
 
 #include "actors/succubus.gl"
 #include "actors/fiddler.gl"
+
+#include "actors/grimlock.gl"

@@ -14,3 +14,5 @@ version "4.14.2"
 #include "actors/sahuagin.zs"
 #include "actors/shtank.zs"
 #include "actors/succubus.zs"
+
+#include "actors/grimlock.zs"

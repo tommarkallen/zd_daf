@@ -147,3 +147,36 @@ fiddler/activate DSDHACT
 fiddler/pain DSDHPAIN
 fiddler/death DSDHDTH
 fiddler/xdeath DSDHXDTH
+
+//===========================================================================
+//
+// Grimlock Sounds
+//
+//===========================================================================
+
+Grimlock/Sight	3WRTSIGH
+$Random Grimlock/Idle	{ 3WRTIDL1 3WRTIDL2 3WRTIDL3 3WRTIDL4 }
+3WRTIDL1	3WRTIDL1
+3WRTIDL2	3WRTIDL2
+3WRTIDL3	3WRTIDL3
+3WRTIDL4	3WRTIDL4
+$Random Grimlock/Active	{ 3WRTACT1 3WRTACT2 }
+3WRTACT1	3WRTACT1
+3WRTACT2	3WRTACT2
+$Random Grimlock/Attack	{ 3WRTATK1 3WRTATK2 }
+3WRTATK1	3WRTATK1
+3WRTATK2	3WRTATK2
+$Random Grimlock/Hit	{ 3WRTHIT1 3WRTHIT2 3WRTHIT3 }
+3WRTHIT1	3WRTHIT1
+3WRTHIT2	3WRTHIT2
+3WRTHIT3	3WRTHIT3
+$Random Grimlock/Pain	{ 3WRTPAI1 3WRTPAI2 3WRTPAI3 }
+3WRTPAI1	3WRTPAI1
+3WRTPAI2	3WRTPAI2
+3WRTPAI3	3WRTPAI3
+$Random Grimlock/Death	{ 3WRTDEA1 3WRTDEA2 3WRTDEA3 3WRTDEA4 }
+3WRTDEA1	3WRTDEA1
+3WRTDEA2	3WRTDEA2
+3WRTDEA3	3WRTDEA3
+3WRTDEA4	3WRTDEA4
+

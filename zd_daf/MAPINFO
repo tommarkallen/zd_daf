@@ -58,25 +58,32 @@ DoomEdNums
     14003 = Anemone03
 
     // Weapons
-    18000 = FlashLightAngled
-    18001 = QuakeAxe
+    15000 = FlashLightAngled
+    15001 = QuakeAxe
 
-    // Monsters
+    // Characters
+    16000 = Das
+    16001 = DasDog
+    // 16002 = Pogo
+    16003 = Fiddler
+    16004 = Shtank
+    
+
+    // Test Monsters
 	17000 = BlueImp
 	17001 = MotherImp
 
+    // Chaos Daemons
 	17002 = PinkHorror
 	17003 = BlueHorror
 
+    // Illithids
 	17004 = MindFlayer
     17005 = MindWitness
     17006 = Sahuagin
-    17007 = Succubus
-    
-    // Characters
-    17008 = Shtank
-    17009 = Das
-    17010 = DasDog
-    17011 = Fiddler
+    17008 = Grimlock
+
+    // Tanar'ri
+    17009 = Succubus
 
 }
