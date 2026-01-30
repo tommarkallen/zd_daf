@@ -1,0 +1,123 @@
+
+pulselight SUCCUBUS
+{
+    color 1.0 0.6 0.0
+    size 13
+    secondarySize 24
+    interval 1.0
+    offset 0 0 0
+}
+
+object Succubus
+{
+    frame SUC1A { light SUCCUBUS }
+    frame SUC1B { light SUCCUBUS }
+    frame SUC1C { light SUCCUBUS }
+    frame SUC1D { light SUCCUBUS }
+    frame SUC1E { light SUCCUBUS }
+    frame SUC1F { light SUCCUBUS }
+    frame SUC1G { light SUCCUBUS }
+    frame SUC1H { light SUCCUBUS }
+    frame SUC1I { light SUCCUBUS }
+    frame SUC1J { light SUCCUBUS }
+    frame SUC1K { light SUCCUBUS }
+    frame SUC1L { light SUCCUBUS }
+    frame SUFYA { light SUCCUBUS }
+    frame SUFYB { light SUCCUBUS }
+    frame SUFYC { light SUCCUBUS }
+    frame SUFYD { light SUCCUBUS }
+    frame SUFYE { light SUCCUBUS }
+    frame SUFYF { light SUCCUBUS }
+    frame SUFYG { light SUCCUBUS }
+    frame SUFYH { light SUCCUBUS }
+    frame SUFYI { light SUCCUBUS }
+    frame SUFYJ { light SUCCUBUS }
+    frame SUFYK { light SUCCUBUS }
+    frame SUFYL { light SUCCUBUS }
+}
+
+object SuccubusWalk
+{
+    frame SUC1A { light SUCCUBUS }
+    frame SUC1B { light SUCCUBUS }
+    frame SUC1C { light SUCCUBUS }
+    frame SUC1D { light SUCCUBUS }
+    frame SUC1E { light SUCCUBUS }
+    frame SUC1F { light SUCCUBUS }
+    frame SUC1G { light SUCCUBUS }
+    frame SUC1H { light SUCCUBUS }
+    frame SUC1I { light SUCCUBUS }
+    frame SUC1J { light SUCCUBUS }
+    frame SUC1K { light SUCCUBUS }
+    frame SUC1L { light SUCCUBUS }
+}
+
+object SuccubusFly
+{
+    frame SUFYA { light SUCCUBUS }
+    frame SUFYB { light SUCCUBUS }
+    frame SUFYC { light SUCCUBUS }
+    frame SUFYD { light SUCCUBUS }
+    frame SUFYE { light SUCCUBUS }
+    frame SUFYF { light SUCCUBUS }
+    frame SUFYG { light SUCCUBUS }
+    frame SUFYH { light SUCCUBUS }
+    frame SUFYI { light SUCCUBUS }
+    frame SUFYJ { light SUCCUBUS }
+    frame SUFYK { light SUCCUBUS }
+    frame SUFYL { light SUCCUBUS }
+}
+
+pointlight DS01
+{
+    color 1.0 1.0 0.0
+    size 24
+}
+
+
+pulselight DS01b
+{
+    color 1.0 1.0 0.0
+    size 16
+    secondarySize 24
+    interval 0.5
+    offset 0 0 0
+}
+
+object FireBall1
+{
+    frame BRB2B { light DS01 }
+    frame BRB2C { light DS01b }
+    frame BRB2D { light DS01b }
+    frame BRB2E { light DS01b }
+}
+
+
+object Fire2
+{
+    frame FRTFA { light DS01 }
+    frame FRTFB { light DS01 }
+    frame FRTFC { light DS01 }
+    frame FRTFD { light DS01 }
+    frame FRTFE { light DS01 }
+    frame FRTFF { light DS01 }
+    frame FRTFG { light DS01 }
+    frame FRTFH { light DS01 }
+    frame FRTFI { light DS01 }
+    frame FRTFJ { light DS01 }
+    frame FRTFK { light DS01 }
+    frame FRTFL { light DS01 }
+    frame FRTFM { light DS01 }
+    frame FRTFN { light DS01 }
+    frame FRTFO { light DS01 }
+}
+
+
+pulselight DS02
+{
+    color 0.0 0.0 1.0
+    size 48
+    secondarySize 64
+    interval 0.5
+    offset 0 0 0
+}

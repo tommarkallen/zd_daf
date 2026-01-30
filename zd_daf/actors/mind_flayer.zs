@@ -26,9 +26,9 @@ class MindFlayer : Actor
 		Radius 30;
 		Height 88;
 
-		Health 1000;
+		Health 990;
 		Speed 14;
-		Mass 1000;
+		Mass 800;
 		PainChance 80;
 		MeleeDamage 20;
 		MeleeRange 96;
@@ -104,20 +104,20 @@ class MindFlayer : Actor
 		CUTH N 10 A_Scream;
 		CUTH O 10;
 		CUTH P 10 A_NoBlocking;
-		CUTH P 0 A_SpawnItemEx(
-				"MindFlayer",
-				-12, 0, 10,
-				 4, 0, 8,
-				0,
-				SXF_NOCHECKPOSITION
-			);
-		CUTH P 0 A_SpawnItemEx(
-				"MindFlayer",
-				-12, 0, 10,
-				 4, 0, 8,
-				0,
-				SXF_NOCHECKPOSITION
-			);
+		// CUTH P 0 A_SpawnItemEx(
+		// 		"MindFlayer",
+		// 		-12, 0, 10,
+		// 		 4, 0, 8,
+		// 		0,
+		// 		SXF_NOCHECKPOSITION
+		// 	);
+		// CUTH P 0 A_SpawnItemEx(
+		// 		"MindFlayer",
+		// 		-12, 0, 10,
+		// 		 4, 0, 8,
+		// 		0,
+		// 		SXF_NOCHECKPOSITION
+		// 	);
 		CUTH Q -1;
 		Stop;
 

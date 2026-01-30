@@ -46,3 +46,31 @@ mindwitness/active		DSGREACT
 mindwitness/pain		DSGREPAI
 mindwitness/attack1	dsvulsh1
 mindwitness/attack2	dsvulsh2
+
+//===========================================================================
+//
+// Succubus Sounds
+//
+//===========================================================================
+
+$random succubus/sight   { succubus/sight1  succubus/sight2 }
+succubus/pain            succpain
+succubus/death           succdth
+succubus/sight1          succsit1
+succubus/active          succact
+weapons/succbrn          succbrn
+weapons/succxxpl         succxxpl
+
+$random succubus/active { succubus/active1 succubus/active2 }
+$random succubus/attack { succubus/attack2 succubus/attack2 succubus/attack2 succubus/attack2 succubus/attack2 succubus/attack2 succubus/attack1 }
+succubus/sight1		    succsit1
+succubus/sight2		    succsit2
+succubus/active1		succact1
+succubus/active2		succact2
+succubus/attack1		succact1
+succubus/attack2		succheal
+succubus/pain		    succpain
+succubus/death		    succdth
+weapons/succbrn		    succbrn
+weapons/succxxpl        succxxpl
+succubus/resurrected	succheal
