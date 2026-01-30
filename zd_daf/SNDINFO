@@ -74,3 +74,65 @@ succubus/death		    succdth
 weapons/succbrn		    succbrn
 weapons/succxxpl        succxxpl
 succubus/resurrected	succheal
+
+//===========================================================================
+//
+// Shtank Sounds
+//
+//===========================================================================
+
+$random shtank/attack { shtank/attack1 shtank/attack2 }
+$random shtank/death { shtank/death1 shtank/death2 shtank/death3 }
+$random shtank/pain { shtank/pain1 shtank/pain2 shtank/pain3 shtank/pain4 shtank/pain5 shtank/pain6 }
+$random shtank/active { shtank/active1 shtank/active2 shtank/active3 shtank/active4 shtank/active4 }
+shtank/tntfuse TNTFUSE
+shtank/toss TOSS
+shtank/explodcl EXPLODCL
+shtank/land LAND
+shtank/sight SPOT
+shtank/attack1 ATT1
+shtank/attack2 ATT2
+shtank/death1 DIE1
+shtank/death2 DIE2
+shtank/death3 DIE3
+shtank/pain1 PAN1
+shtank/pain2 PAN2
+shtank/pain3 PAN3
+shtank/pain4 PAN4
+shtank/pain5 PAN5
+shtank/pain6 PAN6
+shtank/active1 ROM1
+shtank/active2 ROM2
+shtank/active3 ROM3
+shtank/active4 ROM4
+shtank/active5 ROM5
+
+//===========================================================================
+//
+// Das Sounds
+//
+//===========================================================================
+
+$random das/speech { das/speech1 das/speech2 das/speech3 das/speech4 das/speech5 das/speech6 }
+das/speech1					martnt1
+das/speech2					martnt2
+das/speech3					martnt3
+das/speech4					martnt4
+das/speech5					martnt5
+das/speech6					martnt6
+
+$random das/death { das/death1 das/death2 }
+das/death1					mardie1
+das/death2					mardie2
+
+$random das/pain { das/pain1 das/pain2 das/pain3 }
+das/pain1					marpain1
+das/pain2					marpain2
+das/pain3					marpain3
+
+das/charge					mareyes
+das/melee					marmelee
+axe/see						maraxfly
+axe/death					maraxhit
+
+dasdog/death				dsfirxpl // spoilers: the dog dies

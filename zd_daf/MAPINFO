@@ -55,19 +55,23 @@ DoomEdNums
     14001 = Anemone01
     14002 = Anemone02
     14003 = Anemone03
-	
-	17000 = BlueImp
-	17001 = MotherImp
-	17002 = PinkHorror
-	17003 = BlueHorror
-	17004 = MindFlayer
-    17005 = MindWitness
 
     18000 = FlashLightAngled
     18001 = QuakeAxe
 
-    17006 = Sahuagin
+	17000 = BlueImp
+	17001 = MotherImp
 
+	17002 = PinkHorror
+	17003 = BlueHorror
+
+	17004 = MindFlayer
+    17005 = MindWitness
+    17006 = Sahuagin
     17007 = Succubus
+    
+    17008 = Shtank
+    17009 = Das
+    17010 = DasDog
 
 }
