@@ -136,3 +136,14 @@ axe/see						maraxfly
 axe/death					maraxhit
 
 dasdog/death				dsfirxpl // spoilers: the dog dies
+
+//===========================================================================
+//
+// Fiddler Sounds
+//
+//===========================================================================
+
+fiddler/activate DSDHACT
+fiddler/pain DSDHPAIN
+fiddler/death DSDHDTH
+fiddler/xdeath DSDHXDTH

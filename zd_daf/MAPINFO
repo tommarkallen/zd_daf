@@ -52,13 +52,16 @@ map ABYSS047 "Argent Palace, 47th Abyss Layer"
 
 DoomEdNums
 {
+    // Models
     14001 = Anemone01
     14002 = Anemone02
     14003 = Anemone03
 
+    // Weapons
     18000 = FlashLightAngled
     18001 = QuakeAxe
 
+    // Monsters
 	17000 = BlueImp
 	17001 = MotherImp
 
@@ -70,8 +73,10 @@ DoomEdNums
     17006 = Sahuagin
     17007 = Succubus
     
+    // Characters
     17008 = Shtank
     17009 = Das
     17010 = DasDog
+    17011 = Fiddler
 
 }

@@ -2,4 +2,6 @@
 #include "actors/mind_witness.gl"
 #include "actors/sahuagin.gl"
 #include "actors/shtank.gl"
+
 #include "actors/succubus.gl"
+#include "actors/fiddler.gl"
