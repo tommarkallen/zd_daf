@@ -1,6 +1,6 @@
 //===========================================================================
 //
-// MindFlayer GL Defs
+// MindFlayer and Ulitharid GL Defs
 //
 //===========================================================================
 
@@ -12,7 +12,17 @@ object MindFlayerBall
     frame OLDPD { light OLDP_X4 }
     frame OLDPE { light OLDP_X5 }
     frame OLDPF { light OLDP_X6 }
- }
+}
+
+object UlitharidBall
+{
+    frame OLDPA { light OLDP_X1 }
+    frame OLDPB { light OLDP_X2 }
+    frame OLDPC { light OLDP_X3 }
+    frame OLDPD { light OLDP_X4 }
+    frame OLDPE { light OLDP_X5 }
+    frame OLDPF { light OLDP_X6 }
+}
 
  flickerlight OLDP_X1
 {

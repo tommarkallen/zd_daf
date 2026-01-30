@@ -111,14 +111,15 @@ DoomEdNums
     // 19400 = Sibriex
 
     // Illithids
-	19500 = MindFlayer
-    19501 = MindWitness
-    19502 = Sahuagin
-    19503 = SahuaginBaron
-    19504 = SahuaginBaronWasphive
-    19505 = Grimlock
-    19506 = IntellectDevourer
-
+	19500 = IntellectDevourer
+    19501 = MindFlayer
+    19502 = Ulitharid
+    19503 = MindWitness
+    19504 = Sahuagin
+    19505 = SahuaginBaron
+    19506 = SahuaginBaronWasphive
+    19507 = Grimlock
+    
     // Chaos Daemons
 	19600 = PinkHorror
 	19601 = BlueHorror

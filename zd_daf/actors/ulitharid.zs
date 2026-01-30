@@ -1,5 +1,5 @@
 //===========================================================================
-// Illithid - Mind Flayer
+// Illithid - Ulitharid
 //
 // Based on "Deep One" from Realm667
 // Original submission: Dr. Doctor
@@ -11,12 +11,12 @@
 // Used under Realm667's free non-commercial use license. Do not sell.
 //===========================================================================
 
-class MindFlayer : Actor
+class Ulitharid : Actor
 {
 	Default
 	{
     	//$Category Monsters/Illithids
-    	//$Title "Mind Flayer"
+    	//$Title "Ulitharid"
 		Monster;
 		Species "Illithid";
 		+FLOORCLIP;
@@ -34,10 +34,10 @@ class MindFlayer : Actor
 		MeleeRange 96;
 
 		BloodColor "purple";
-        // Translation "112:127=192:207";
+        Translation "112:127=192:207";
 
-		Obituary "%o was psychically blasted by a Mind Flayer.";
-		HitObituary "%o's brain was extracted by a Mind Flayer.";
+		Obituary "%o's mind was shattered by an Ulitharid.";
+		HitObituary "%o's brain was extracted by an Ulitharid.";
 
 		SeeSound "mindflayer/sight";
 		PainSound "mindflayer/pain";
@@ -74,25 +74,25 @@ class MindFlayer : Actor
 		CUTH J 0 A_JumpIfCloser(128, "Melee");
 		CUTH J 8 A_FaceTarget;
 
-		CUTH K 1 A_SpawnProjectile("MindFlayerBigBall", 42, 15, angle = random(-30,30));
+		CUTH K 1 A_SpawnProjectile("UlitharidBigBall", 42, 15, angle = random(-30,30));
 		CUTH J 0 A_FaceTarget;
-		CUTH K 1 A_SpawnProjectile("MindFlayerBall", 42, 15, angle = random(-30,30));
+		CUTH K 1 A_SpawnProjectile("UlitharidBall", 42, 15, angle = random(-30,30));
 		CUTH J 0 A_FaceTarget;
-		CUTH K 1 A_SpawnProjectile("MindFlayerBall", 42, 15, angle = random(-30,30));
+		CUTH K 1 A_SpawnProjectile("UlitharidBall", 42, 15, angle = random(-30,30));
 		CUTH J 0 A_FaceTarget;
-		CUTH K 1 A_SpawnProjectile("MindFlayerBall", 42, 15, angle = random(-30,30));
+		CUTH K 1 A_SpawnProjectile("UlitharidBall", 42, 15, angle = random(-30,30));
 		CUTH J 0 A_FaceTarget;
-		CUTH K 1 A_SpawnProjectile("MindFlayerBall", 42, 15, angle = random(-30,30));
+		CUTH K 1 A_SpawnProjectile("UlitharidBall", 42, 15, angle = random(-30,30));
 		CUTH J 0 A_FaceTarget;
-		CUTH K 1 A_SpawnProjectile("MindFlayerBall", 42, 15, angle = random(-30,30));
+		CUTH K 1 A_SpawnProjectile("UlitharidBall", 42, 15, angle = random(-30,30));
 		CUTH J 0 A_FaceTarget;
-		CUTH K 1 A_SpawnProjectile("MindFlayerBall", 42, 15, angle = random(-30,30));
+		CUTH K 1 A_SpawnProjectile("UlitharidBall", 42, 15, angle = random(-30,30));
 
 		CUTH K 8 Bright A_CPosRefire;
 		Goto See2;
 
 	Pain:
-		CUTH L 0 A_TakeInventory("squidinviso", 255);
+		CUTH L 0 A_TakeInventory("UlitharidInviso", 255);
 		CUTH L 2 A_SetRenderStyle(1.0, STYLE_Normal);
 		CUTH L 2 A_Pain;
 		Goto See2;
@@ -104,6 +104,20 @@ class MindFlayer : Actor
 		CUTH N 10 A_Scream;
 		CUTH O 10;
 		CUTH P 10 A_NoBlocking;
+		CUTH P 0 A_SpawnItemEx(
+				"IntellectDevourer",
+				-12, random(-10,10), 10,
+				 4, random(-10,10), 8,
+				0,
+				SXF_NOCHECKPOSITION
+			);
+		CUTH P 0 A_SpawnItemEx(
+				"IntellectDevourer",
+				12, random(-10,10), 10,
+				 4, random(-10,10), 8,
+				0,
+				SXF_NOCHECKPOSITION
+			);
 		CUTH Q -1;
 		Stop;
 
@@ -123,7 +137,7 @@ class MindFlayer : Actor
 
 }
 
-class MindFlayerBall : Actor
+class UlitharidBall : Actor
 {
 	Default
 	{
@@ -161,7 +175,7 @@ class MindFlayerBall : Actor
 	}
 }
 
-class MindFlayerBigBall : Actor
+class UlitharidBigBall : Actor
 {
 	Default
 	{
@@ -201,7 +215,7 @@ class MindFlayerBigBall : Actor
 	}
 }
 
-class squidinviso : Inventory
+class UlitharidInviso : Inventory
 {
 	Default
 	{

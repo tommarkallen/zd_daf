@@ -106,10 +106,3 @@ class IntellectDevourer : Actor
 //The Web state is activated through the ACS fuction SetActorState
 //and is used to lower the Trite to the floor as though it was on a web.
 //(Note that this only really helps if it's spawned above the floor.)
-
-
-//==========Credits
-//Decorate: Ghastly_dragon
-//Sprites: Monolith, Id Software
-//Sprite Edit: Captain Toenail
-//Sounds: Id Software
