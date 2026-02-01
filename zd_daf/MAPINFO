@@ -53,9 +53,9 @@ map ABYSS047 "Argent Palace, 47th Abyss Layer"
 DoomEdNums
 {
     // Models
-    14001 = Anemone01
-    14002 = Anemone02
-    14003 = Anemone03
+    18000 = Anemone01
+    18002 = Anemone02
+    18003 = Anemone03
 
     // Weapons
     15000 = FlashLightAngled

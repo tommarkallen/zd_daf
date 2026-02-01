@@ -47,8 +47,11 @@ class Fiddler : Actor
         DEHU AABBCCDD 2 A_Chase;
         Loop;
     Missile:
-        DEHU E 4 A_FaceTarget;
-        DEHU F 4 Bright A_SPosAttack;
+        DEHU E 8 A_FaceTarget;
+        DEHU F 6 Bright {
+            A_PlaySound("weapons/shotgf");
+            A_CustomBulletAttack(3, 2, 1, 20, "BulletPuff");
+        }
         DEHU E 8;
         Goto See;
     Pain:

@@ -96,8 +96,16 @@ class Das : Actor
 		MRAU E 0 Bright A_ChangeFlag("NOBLOOD", 0);
 		MRAU E 0 Bright A_ChangeFlag("NODAMAGE", 0);
 		MRAU E 7 A_FaceTarget;
-		MRAU F 0 Bright A_PlaySound("weapons/sshotf");
-		MRAU F 5 Bright A_CustomBulletAttack(8, 7, 5, 3);
+		// MRAU F 0 Bright A_PlaySound("weapons/sshotf");
+		// MRAU F 5 Bright A_CustomBulletAttack(8, 7, 5, 3);
+        MRAU F 3 Bright {
+            A_PlaySound("weapons/shotgf");
+            A_CustomBulletAttack(3, 2, 8, 1, "BulletPuff");
+        }
+		MRAU F 3 Bright {
+            A_PlaySound("weapons/shotgf");
+            A_CustomBulletAttack(3, 2, 8, 1, "BulletPuff");
+        }
 		MRAU E 5 A_FaceTarget;
 		Goto See;
 	MissileCharge:
