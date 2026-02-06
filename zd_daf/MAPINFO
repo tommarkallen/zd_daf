@@ -52,14 +52,14 @@ map ABYSS047 "Argent Palace, 47th Abyss Layer"
 
 DoomEdNums
 {
+    // Weapons
+    15000 = FlashLightAngled
+    15001 = QuakeAxe
+
     // Models
     18000 = Anemone01
     18002 = Anemone02
     18003 = Anemone03
-
-    // Weapons
-    15000 = FlashLightAngled
-    15001 = QuakeAxe
 
     // Characters
     19000 = Das
@@ -68,7 +68,7 @@ DoomEdNums
     19003 = Fiddler
     19004 = Shtank
 
-    // Tanar'ri
+    // Demons - Tanar'ri
     19100 = Succubus
     // 19101 = Vrock
     // 19102 = Hezrou
@@ -87,7 +87,7 @@ DoomEdNums
     // 19115 = Chasme
     // 19116 = Goristro
 
-    // Baatezu
+    // Devils - Baatezu
     // 19200 = PitFiend
     // 19201 = HornedDevil
     // 19202 = Erinyes
@@ -100,17 +100,17 @@ DoomEdNums
     // 19209 = SpinedDevil
     // 19210 = BeardedDevil
     
-    // Yugoloths
+    // Daemons - Yugoloths
     // 19300 = Mezzoloth
     // 19301 = Nycaloth
     // 19302 = Ultroloth
     // 19303 = Canoloth
     // 19304 = Daemonette
 
-    // Obyriths
+    // Demons - Obyriths
     // 19400 = Sibriex
 
-    // Illithids
+    // Abberations - Illithids
 	19500 = IntellectDevourer
     19501 = MindFlayer
     19502 = Ulitharid
@@ -120,7 +120,7 @@ DoomEdNums
     19506 = SahuaginBaronWasphive
     19507 = Grimlock
     
-    // Chaos Daemons
+    // Daemons - Chaos Daemons
 	19600 = PinkHorror
 	19601 = BlueHorror
 

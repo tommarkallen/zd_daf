@@ -277,3 +277,13 @@ $Volume IntellectDevourer/Pain 0.5
 $Volume IntellectDevourer/Death 0.5
 $Volume IntellectDevourer/Splat 0.5
 $Volume IntellectDevourer/Step 0.2
+
+//===========================================================================
+//
+// Arcane Axe Sounds
+//
+//===========================================================================
+
+weapons/quakeaxe ax1
+weapons/quakeaxe/hitsolid axhit2
+weapons/quakeaxe/hitflesh axhit

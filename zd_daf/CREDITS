@@ -1,5 +1,10 @@
+==============================================================================
 ZD_DAF CREDITS
-===============
+==============================================================================
+
+==============================================================================
+Monsters
+==============================================================================
 
 Mind Flayer (Illithid) is based on "Deep One" from Realm667
   Original submission: Dr. Doctor
@@ -18,7 +23,6 @@ Sahuagin Baron is based on "Blight Lord" from Realm667
   Sprite Edit: DeVloek
   Idea Base: various evil creatures from the swamps
   Source: https://www.realm667.com/repository/beastiary/other-style#credits
-
 
 Intellect Devourer is based on "Trite" from Realm667
   Submitted: Ghastly_dragon
@@ -98,3 +102,15 @@ Fiddler is based on "Undead Hunter" from Realm667
   Idea Base: Undead Priest
   Source: https://www.realm667.com/repository/beastiary/doom-style?start=240#credits-9
   Used under Realm667's free non-commercial use license. Do not sell.
+
+==============================================================================
+Weapons
+==============================================================================
+
+Weapon: Arcane Axe
+  Code: Wills, Gothic, DeVloek
+  GLDEFS: Gothic
+  Sprites: MatthewB & Stas "dwere" Kuznetsov (model), id Software
+  Sprite Edit: Gothic
+  Sounds: id Software, Action Forms
+  Idea Base: Shadow Axe from Arcane Dimensions

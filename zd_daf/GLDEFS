@@ -1,11 +1,16 @@
-#include "actors/mind_flayer.gl"
-#include "actors/mind_witness.gl"
-#include "actors/sahuagin.gl"
+// Weapons
+#include "actors/arcane_axe.gl"
+
+// Models
+
+// Monsters
+#include "actors/fiddler.gl"
 #include "actors/shtank.gl"
 
 #include "actors/succubus.gl"
-#include "actors/fiddler.gl"
 
+#include "actors/mind_flayer.gl"
+#include "actors/mind_witness.gl"
+#include "actors/sahuagin.gl"
 #include "actors/grimlock.gl"
-
 #include "actors/sahuagin_baron.gl"
