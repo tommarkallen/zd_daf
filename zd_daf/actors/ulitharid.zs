@@ -26,7 +26,7 @@ class Ulitharid : Actor
 		Radius 30;
 		Height 88;
 
-		Health 990;
+		Health 1270;
 		Speed 14;
 		Mass 800;
 		PainChance 80;
