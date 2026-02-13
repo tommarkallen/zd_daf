@@ -1,5 +1,6 @@
 // Weapons
 #include "actors/arcane_axe.gl"
+#include "actors/flashlight.gl"
 
 // Models
 

@@ -2,6 +2,7 @@ version "4.14.2"
 
 // Weapons
 #include "actors/arcane_axe.zs"
+#include "actors/flashlight.zs"
 
 // Models
 #include "actors/plants.zs"

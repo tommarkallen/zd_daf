@@ -287,3 +287,12 @@ $Volume IntellectDevourer/Step 0.2
 weapons/quakeaxe ax1
 weapons/quakeaxe/hitsolid axhit2
 weapons/quakeaxe/hitflesh axhit
+
+//===========================================================================
+//
+// Flashlight Sounds
+//
+//===========================================================================
+
+flashlight/on	fshlite1
+flashlight/off	fshlite2
