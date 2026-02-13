@@ -1,5 +1,5 @@
 //===========================================================================
-// Illithid - Ulitharid
+// Illithid - MindFlayerArcanist
 //
 // Based on "Deep One" from Realm667
 // Original submission: Dr. Doctor
@@ -11,12 +11,12 @@
 // Used under Realm667's free non-commercial use license. Do not sell.
 //===========================================================================
 
-class Ulitharid : Actor
+class MindFlayerArcanist : Actor
 {
 	Default
 	{
     	//$Category Monsters/Illithids
-    	//$Title "Ulitharid"
+    	//$Title "Mind Flayer Arcanist"
 		Monster;
 		Species "Illithid";
 		+FLOORCLIP;
@@ -34,12 +34,12 @@ class Ulitharid : Actor
 		MeleeRange 96;
 
 		BloodColor "purple";
-        Translation "112:127=192:207"; // blue Ulitharid
+        Translation "112:127=16:47"; // red MindFlayerArcanist
+		// Translation "112:127=192:207"; // blue Ulitharid
 		// Translation "112:127=80:111"; // grey Alhoon
-		// Translation "112:127=16:47"; // red MindFlayerArcanist
 
-		Obituary "%o's mind was annihilated by an Ulitharid.";
-		HitObituary "%o's brain was ripped out by an Ulitharid.";
+		Obituary "%o's mind was shredded by a Mind Flayer Arcanist.";
+		HitObituary "%o's brain was magically devoured by a Mind Flayer Arcanist.";
 
 		SeeSound "mindflayer/sight";
 		PainSound "mindflayer/pain";
@@ -76,25 +76,25 @@ class Ulitharid : Actor
 		CUTH J 0 A_JumpIfCloser(128, "Melee");
 		CUTH J 8 A_FaceTarget;
 
-		CUTH K 1 A_SpawnProjectile("UlitharidBigBall", 42, 15, angle = random(-30,30));
+		CUTH K 1 A_SpawnProjectile("MindFlayerArcanistBigBall", 42, 15, angle = random(-30,30));
 		CUTH J 0 A_FaceTarget;
-		CUTH K 1 A_SpawnProjectile("UlitharidBall", 42, 15, angle = random(-30,30));
+		CUTH K 1 A_SpawnProjectile("MindFlayerArcanistBall", 42, 15, angle = random(-30,30));
 		CUTH J 0 A_FaceTarget;
-		CUTH K 1 A_SpawnProjectile("UlitharidBall", 42, 15, angle = random(-30,30));
+		CUTH K 1 A_SpawnProjectile("MindFlayerArcanistBall", 42, 15, angle = random(-30,30));
 		CUTH J 0 A_FaceTarget;
-		CUTH K 1 A_SpawnProjectile("UlitharidBall", 42, 15, angle = random(-30,30));
+		CUTH K 1 A_SpawnProjectile("MindFlayerArcanistBall", 42, 15, angle = random(-30,30));
 		CUTH J 0 A_FaceTarget;
-		CUTH K 1 A_SpawnProjectile("UlitharidBall", 42, 15, angle = random(-30,30));
+		CUTH K 1 A_SpawnProjectile("MindFlayerArcanistBall", 42, 15, angle = random(-30,30));
 		CUTH J 0 A_FaceTarget;
-		CUTH K 1 A_SpawnProjectile("UlitharidBall", 42, 15, angle = random(-30,30));
+		CUTH K 1 A_SpawnProjectile("MindFlayerArcanistBall", 42, 15, angle = random(-30,30));
 		CUTH J 0 A_FaceTarget;
-		CUTH K 1 A_SpawnProjectile("UlitharidBall", 42, 15, angle = random(-30,30));
+		CUTH K 1 A_SpawnProjectile("MindFlayerArcanistBall", 42, 15, angle = random(-30,30));
 
 		CUTH K 8 Bright A_CPosRefire;
 		Goto See2;
 
 	Pain:
-		CUTH L 0 A_TakeInventory("UlitharidInviso", 255);
+		CUTH L 0 A_TakeInventory("MindFlayerArcanistInviso", 255);
 		CUTH L 2 A_SetRenderStyle(1.0, STYLE_Normal);
 		CUTH L 2 A_Pain;
 		Goto See2;
@@ -109,14 +109,14 @@ class Ulitharid : Actor
 		CUTH P 0 A_SpawnItemEx(
 				"IntellectDevourer",
 				-12, random(-10,10), 10,
-				 4, random(-10,10), 8,
+					 4, random(-10,10), 8,
 				0,
 				SXF_NOCHECKPOSITION
 			);
 		CUTH P 0 A_SpawnItemEx(
 				"IntellectDevourer",
 				12, random(-10,10), 10,
-				 4, random(-10,10), 8,
+					 4, random(-10,10), 8,
 				0,
 				SXF_NOCHECKPOSITION
 			);
@@ -139,7 +139,7 @@ class Ulitharid : Actor
 
 }
 
-class UlitharidBall : Actor
+class MindFlayerArcanistBall : Actor
 {
 	Default
 	{
@@ -147,9 +147,9 @@ class UlitharidBall : Actor
 		Height 8;
 		Speed 18;
 		Damage 4;
-        Translation "112:127=192:207"; // blue Ulitharid
+        Translation "112:127=250:254"; // purple MindFlayerArcanist
+		// Translation "112:127=192:207"; // blue Ulitharid
 		// Translation "112:127=250:254"; // purple Alhoon
-		// Translation "112:127=250:254"; // purple MindFlayerArcanist
 
 		Projectile;
 		+RANDOMIZE;
@@ -180,7 +180,7 @@ class UlitharidBall : Actor
 	}
 }
 
-class UlitharidBigBall : Actor
+class MindFlayerArcanistBigBall : Actor
 {
 	Default
 	{
@@ -189,9 +189,9 @@ class UlitharidBigBall : Actor
 		Scale 2.0;
 		Speed 10;
 		Damage 16;
-        Translation "112:127=192:207"; // blue Ulitharid
+        Translation "112:127=250:254"; // purple MindFlayerArcanist
+		// Translation "112:127=192:207"; // blue Ulitharid
 		// Translation "112:127=250:254"; // purple Alhoon
-		// Translation "112:127=250:254"; // purple MindFlayerArcanist
 
 		Projectile;
 		+RANDOMIZE;
@@ -222,7 +222,7 @@ class UlitharidBigBall : Actor
 	}
 }
 
-class UlitharidInviso : Inventory
+class MindFlayerArcanistInviso : Inventory
 {
 	Default
 	{

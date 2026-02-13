@@ -27,6 +27,9 @@ version "4.14.2"
 #include "actors/sahuagin.zs"
 #include "actors/sahuagin_baron.zs"
 #include "actors/grimlock.zs"
+// New Illithids
+#include "actors/alhoon.zs"
+#include "actors/mind_flayer_arcanist.zs"
 
 class HRCeilingLight : Actor
 {
