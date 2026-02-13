@@ -53,7 +53,7 @@ map ABYSS047 "Argent Palace, 47th Abyss Layer"
 DoomEdNums
 {
     // Weapons
-    //15000 = FlashLightAngled
+    15000 = FlashLightAngled
     15001 = QuakeAxe
 
     // Models
@@ -127,5 +127,7 @@ DoomEdNums
     // Other
 	19700 = BlueImp
 	19701 = MotherImp
+
+    20001 = HRCeilingLight
 
 }

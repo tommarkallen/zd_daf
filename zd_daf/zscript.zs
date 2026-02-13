@@ -26,3 +26,20 @@ version "4.14.2"
 #include "actors/sahuagin.zs"
 #include "actors/sahuagin_baron.zs"
 #include "actors/grimlock.zs"
+
+class HRCeilingLight : Actor
+{
+    Default
+    {
+        Height 32;
+        +NOGRAVITY
+        +SPAWNCEILING
+    }
+    
+    States
+    {
+    Spawn:
+        HRCL A -1;
+        Stop;
+    }
+}
