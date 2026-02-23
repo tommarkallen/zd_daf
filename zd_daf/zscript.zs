@@ -31,35 +31,5 @@ version "4.14.2"
 #include "actors/alhoon.zs"
 #include "actors/mind_flayer_arcanist.zs"
 
-class HRCeilingLight : Actor
-{
-    Default
-    {
-        Height 32;
-        +NOGRAVITY
-        +SPAWNCEILING
-    }
-    
-    States
-    {
-    Spawn:
-        HRCL A -1;
-        Stop;
-    }
-}
-
-
-
-Class DAF_TEST : Actor {
-	Default {
-		Radius 96;
-		Height 112;
-		
-	}
-
-	States {
-		Spawn:
-			PLAY A -1;
-			Stop;
-	}
-}
+// Furniture
+#include "actors/giger_lights.zs"

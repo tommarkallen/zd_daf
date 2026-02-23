@@ -60,7 +60,6 @@ DoomEdNums
     18000 = Anemone01
     18002 = Anemone02
     18003 = Anemone03
-    18004 = DAF_TEST
 
     // Characters
     19000 = Das
@@ -132,6 +131,16 @@ DoomEdNums
 	19700 = BlueImp
 	19701 = MotherImp
 
-    20001 = HRCeilingLight
-
+    // Furniture
+    20000 = HRCeilingLight
+    20001 = HRFloorLamp
+    20002 = HRTallLight
+    20003 = HRPillar
+    20004 = Reactor
+    20005 = HRLadder
+    20006 = HRNerve
+    20007 = HRPillar2
+    20008 = HRConsole
+    20009 = HRConduit
 }
+
