@@ -47,3 +47,19 @@ class HRCeilingLight : Actor
         Stop;
     }
 }
+
+
+
+Class DAF_TEST : Actor {
+	Default {
+		Radius 96;
+		Height 112;
+		
+	}
+
+	States {
+		Spawn:
+			PLAY A -1;
+			Stop;
+	}
+}

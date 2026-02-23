@@ -60,6 +60,7 @@ DoomEdNums
     18000 = Anemone01
     18002 = Anemone02
     18003 = Anemone03
+    18004 = DAF_TEST
 
     // Characters
     19000 = Das

@@ -1,1 +1,13 @@
 #include "models/defs/plants.modeldef"
+
+
+Model DAF_TEST
+{
+    Path "models"
+	Model 0 "DAF_TEST.obj"
+
+	USEACTORPITCH
+	USEACTORROLL
+   
+	FrameIndex PLAY A 0 0
+}
