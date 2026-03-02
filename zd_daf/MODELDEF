@@ -1,1 +1,2 @@
 #include "models/defs/plants.modeldef"
+#include "models/defs/architecture.modeldef"

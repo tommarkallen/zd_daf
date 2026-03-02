@@ -1,0 +1,10 @@
+Model ColumnAmpule
+{
+	Path "models"
+	Model 0 "column_ampule.obj"
+
+	USEACTORPITCH
+	USEACTORROLL
+   
+	FrameIndex PLAY A 0 0
+}

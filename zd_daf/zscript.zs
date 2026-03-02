@@ -6,6 +6,7 @@ version "4.14.2"
 
 // Models
 #include "actors/plants.zs"
+#include "actors/architecture.zs"
 
 // Characters
 #include "actors/das.zs"

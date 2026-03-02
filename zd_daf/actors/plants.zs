@@ -4,7 +4,7 @@ class Anemone01 : Actor {
         //$Title "Anemone01"
         Radius 12;
         Height 24;
-        Mass 10;
+
         +SOLID
 		+NODAMAGE
 		+NOTARGET
@@ -12,7 +12,7 @@ class Anemone01 : Actor {
     }
     States {
 		Spawn:
-			ANEA A -1;
+			PLAY A -1;
 			Stop;
     }
 }
@@ -25,7 +25,7 @@ class Anemone02 : Actor
         //$Title "Anemone02"
         Radius 12;
         Height 24;
-        Mass 10;
+
         +SOLID
 		+NODAMAGE
 		+NOTARGET
@@ -35,7 +35,7 @@ class Anemone02 : Actor
     States
     {
     Spawn:
-        ANEB A -1;
+        PLAY A -1;
         Stop;
     }
 }
@@ -48,7 +48,7 @@ class Anemone03 : Actor
         //$Title "Anemone03"
         Radius 12;
         Height 24;
-        Mass 10;
+
         +SOLID
 		+NODAMAGE
 		+NOTARGET
@@ -58,7 +58,7 @@ class Anemone03 : Actor
     States
     {
     Spawn:
-        ANEC A -1;
+        PLAY A -1;
         Stop;
     }
 }
