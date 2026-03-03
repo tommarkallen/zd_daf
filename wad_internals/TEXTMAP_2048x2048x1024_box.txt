@@ -1,0 +1,90 @@
+namespace = "zdoom";
+vertex // 0
+{
+x = -1024.0;
+y = -1024.0;
+}
+
+vertex // 1
+{
+x = -1024.0;
+y = 1024.0;
+}
+
+vertex // 2
+{
+x = 1024.0;
+y = 1024.0;
+}
+
+vertex // 3
+{
+x = 1024.0;
+y = -1024.0;
+}
+
+linedef // 0
+{
+v1 = 0;
+v2 = 1;
+sidefront = 0;
+blocking = true;
+}
+
+linedef // 1
+{
+v1 = 1;
+v2 = 2;
+sidefront = 1;
+blocking = true;
+}
+
+linedef // 2
+{
+v1 = 2;
+v2 = 3;
+sidefront = 2;
+blocking = true;
+}
+
+linedef // 3
+{
+v1 = 3;
+v2 = 0;
+sidefront = 3;
+blocking = true;
+}
+
+sidedef // 0
+{
+sector = 0;
+texturemiddle = "FLAT19";
+}
+
+sidedef // 1
+{
+sector = 0;
+texturemiddle = "FLAT19";
+}
+
+sidedef // 2
+{
+sector = 0;
+texturemiddle = "FLAT19";
+}
+
+sidedef // 3
+{
+sector = 0;
+texturemiddle = "FLAT19";
+}
+
+sector // 0
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT19";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+

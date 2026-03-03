@@ -1,0 +1,8327 @@
+// ===========================================================
+// UZUMAKI r = 24.0 * theta
+// Center: (0.0, 0.0)
+// Loops: 5, Arm width: 64.0
+// Segments: 120 (24/loop)
+// Containing sector: 0
+// Outer radius range: 64.0 -> 818.0
+// ===========================================================
+
+// ---- VERTICES (idx 4 to 245) ----
+
+vertex // 4
+{
+x = 64.0;
+y = 0.0;
+}
+vertex // 5
+{
+x = 0.0;
+y = 0.0;
+}
+vertex // 6
+{
+x = 67.888;
+y = 18.191;
+}
+vertex // 7
+{
+x = 6.069;
+y = 1.626;
+}
+vertex // 8
+{
+x = 66.308;
+y = 38.283;
+}
+vertex // 9
+{
+x = 10.883;
+y = 6.283;
+}
+vertex // 10
+{
+x = 58.583;
+y = 58.583;
+}
+vertex // 11
+{
+x = 13.329;
+y = 13.329;
+}
+vertex // 12
+{
+x = 44.566;
+y = 77.191;
+}
+vertex // 13
+{
+x = 12.566;
+y = 21.766;
+}
+vertex // 14
+{
+x = 24.695;
+y = 92.165;
+}
+vertex // 15
+{
+x = 8.131;
+y = 30.345;
+}
+vertex // 16
+{
+x = 0.0;
+y = 101.699;
+}
+vertex // 17
+{
+x = 0.0;
+y = 37.699;
+}
+vertex // 18
+{
+x = -27.948;
+y = 104.303;
+}
+vertex // 19
+{
+x = -11.383;
+y = 42.484;
+}
+vertex // 20
+{
+x = -57.133;
+y = 98.957;
+}
+vertex // 21
+{
+x = -25.133;
+y = 43.531;
+}
+vertex // 22
+{
+x = -85.241;
+y = 85.241;
+}
+vertex // 23
+{
+x = -39.986;
+y = 39.986;
+}
+vertex // 24
+{
+x = -109.84;
+y = 63.416;
+}
+vertex // 25
+{
+x = -54.414;
+y = 31.416;
+}
+vertex // 26
+{
+x = -128.579;
+y = 34.453;
+}
+vertex // 27
+{
+x = -66.76;
+y = 17.888;
+}
+vertex // 28
+{
+x = -139.398;
+y = 0.0;
+}
+vertex // 29
+{
+x = -75.398;
+y = 0.0;
+}
+vertex // 30
+{
+x = -140.717;
+y = -37.705;
+}
+vertex // 31
+{
+x = -78.898;
+y = -21.141;
+}
+vertex // 32
+{
+x = -131.605;
+y = -75.982;
+}
+vertex // 33
+{
+x = -76.18;
+y = -43.982;
+}
+vertex // 34
+{
+x = -111.898;
+y = -111.898;
+}
+vertex // 35
+{
+x = -66.643;
+y = -66.643;
+}
+vertex // 36
+{
+x = -82.265;
+y = -142.488;
+}
+vertex // 37
+{
+x = -50.265;
+y = -87.062;
+}
+vertex // 38
+{
+x = -44.21;
+y = -164.994;
+}
+vertex // 39
+{
+x = -27.646;
+y = -103.175;
+}
+vertex // 40
+{
+x = -0.0;
+y = -177.097;
+}
+vertex // 41
+{
+x = -0.0;
+y = -113.097;
+}
+vertex // 42
+{
+x = 47.462;
+y = -177.132;
+}
+vertex // 43
+{
+x = 30.898;
+y = -115.313;
+}
+vertex // 44
+{
+x = 94.832;
+y = -164.254;
+}
+vertex // 45
+{
+x = 62.832;
+y = -108.828;
+}
+vertex // 46
+{
+x = 138.555;
+y = -138.555;
+}
+vertex // 47
+{
+x = 93.301;
+y = -93.301;
+}
+vertex // 48
+{
+x = 175.136;
+y = -101.115;
+}
+vertex // 49
+{
+x = 119.711;
+y = -69.115;
+}
+vertex // 50
+{
+x = 201.408;
+y = -53.967;
+}
+vertex // 51
+{
+x = 139.589;
+y = -37.403;
+}
+vertex // 52
+{
+x = 214.796;
+y = -0.0;
+}
+vertex // 53
+{
+x = 150.796;
+y = -0.0;
+}
+vertex // 54
+{
+x = 213.547;
+y = 57.22;
+}
+vertex // 55
+{
+x = 151.727;
+y = 40.655;
+}
+vertex // 56
+{
+x = 196.902;
+y = 113.681;
+}
+vertex // 57
+{
+x = 141.476;
+y = 81.681;
+}
+vertex // 58
+{
+x = 165.213;
+y = 165.213;
+}
+vertex // 59
+{
+x = 119.958;
+y = 119.958;
+}
+vertex // 60
+{
+x = 119.965;
+y = 207.785;
+}
+vertex // 61
+{
+x = 87.965;
+y = 152.359;
+}
+vertex // 62
+{
+x = 63.724;
+y = 237.823;
+}
+vertex // 63
+{
+x = 47.16;
+y = 176.004;
+}
+vertex // 64
+{
+x = 0.0;
+y = 252.496;
+}
+vertex // 65
+{
+x = 0.0;
+y = 188.496;
+}
+vertex // 66
+{
+x = -66.977;
+y = 249.961;
+}
+vertex // 67
+{
+x = -50.412;
+y = 188.142;
+}
+vertex // 68
+{
+x = -132.531;
+y = 229.55;
+}
+vertex // 69
+{
+x = -100.531;
+y = 174.125;
+}
+vertex // 70
+{
+x = -191.87;
+y = 191.87;
+}
+vertex // 71
+{
+x = -146.615;
+y = 146.615;
+}
+vertex // 72
+{
+x = -240.433;
+y = 138.814;
+}
+vertex // 73
+{
+x = -185.008;
+y = 106.814;
+}
+vertex // 74
+{
+x = -274.237;
+y = 73.482;
+}
+vertex // 75
+{
+x = -212.418;
+y = 56.917;
+}
+vertex // 76
+{
+x = -290.195;
+y = 0.0;
+}
+vertex // 77
+{
+x = -226.195;
+y = 0.0;
+}
+vertex // 78
+{
+x = -286.376;
+y = -76.734;
+}
+vertex // 79
+{
+x = -224.556;
+y = -60.17;
+}
+vertex // 80
+{
+x = -262.199;
+y = -151.381;
+}
+vertex // 81
+{
+x = -206.773;
+y = -119.381;
+}
+vertex // 82
+{
+x = -218.527;
+y = -218.527;
+}
+vertex // 83
+{
+x = -173.272;
+y = -173.272;
+}
+vertex // 84
+{
+x = -157.664;
+y = -273.082;
+}
+vertex // 85
+{
+x = -125.664;
+y = -217.656;
+}
+vertex // 86
+{
+x = -83.239;
+y = -310.652;
+}
+vertex // 87
+{
+x = -66.675;
+y = -248.833;
+}
+vertex // 88
+{
+x = -0.0;
+y = -327.894;
+}
+vertex // 89
+{
+x = -0.0;
+y = -263.894;
+}
+vertex // 90
+{
+x = 86.491;
+y = -322.79;
+}
+vertex // 91
+{
+x = 69.927;
+y = -260.971;
+}
+vertex // 92
+{
+x = 170.23;
+y = -294.847;
+}
+vertex // 93
+{
+x = 138.23;
+y = -239.422;
+}
+vertex // 94
+{
+x = 245.185;
+y = -245.185;
+}
+vertex // 95
+{
+x = 199.93;
+y = -199.93;
+}
+vertex // 96
+{
+x = 305.73;
+y = -176.513;
+}
+vertex // 97
+{
+x = 250.304;
+y = -144.513;
+}
+vertex // 98
+{
+x = 347.067;
+y = -92.996;
+}
+vertex // 99
+{
+x = 285.247;
+y = -76.432;
+}
+vertex // 100
+{
+x = 365.593;
+y = -0.0;
+}
+vertex // 101
+{
+x = 301.593;
+y = -0.0;
+}
+vertex // 102
+{
+x = 359.205;
+y = 96.249;
+}
+vertex // 103
+{
+x = 297.385;
+y = 79.684;
+}
+vertex // 104
+{
+x = 327.496;
+y = 189.08;
+}
+vertex // 105
+{
+x = 272.07;
+y = 157.08;
+}
+vertex // 106
+{
+x = 271.842;
+y = 271.842;
+}
+vertex // 107
+{
+x = 226.587;
+y = 226.587;
+}
+vertex // 108
+{
+x = 195.363;
+y = 338.378;
+}
+vertex // 109
+{
+x = 163.363;
+y = 282.953;
+}
+vertex // 110
+{
+x = 102.753;
+y = 383.481;
+}
+vertex // 111
+{
+x = 86.189;
+y = 321.662;
+}
+vertex // 112
+{
+x = 0.0;
+y = 403.292;
+}
+vertex // 113
+{
+x = 0.0;
+y = 339.292;
+}
+vertex // 114
+{
+x = -106.006;
+y = 395.619;
+}
+vertex // 115
+{
+x = -89.441;
+y = 333.8;
+}
+vertex // 116
+{
+x = -207.929;
+y = 360.144;
+}
+vertex // 117
+{
+x = -175.929;
+y = 304.718;
+}
+vertex // 118
+{
+x = -298.499;
+y = 298.499;
+}
+vertex // 119
+{
+x = -253.244;
+y = 253.244;
+}
+vertex // 120
+{
+x = -371.027;
+y = 214.212;
+}
+vertex // 121
+{
+x = -315.601;
+y = 182.212;
+}
+vertex // 122
+{
+x = -419.896;
+y = 112.511;
+}
+vertex // 123
+{
+x = -358.076;
+y = 95.946;
+}
+vertex // 124
+{
+x = -440.991;
+y = 0.0;
+}
+vertex // 125
+{
+x = -376.991;
+y = 0.0;
+}
+vertex // 126
+{
+x = -432.034;
+y = -115.763;
+}
+vertex // 127
+{
+x = -370.215;
+y = -99.199;
+}
+vertex // 128
+{
+x = -392.792;
+y = -226.779;
+}
+vertex // 129
+{
+x = -337.367;
+y = -194.779;
+}
+vertex // 130
+{
+x = -325.156;
+y = -325.156;
+}
+vertex // 131
+{
+x = -279.902;
+y = -279.902;
+}
+vertex // 132
+{
+x = -233.062;
+y = -403.675;
+}
+vertex // 133
+{
+x = -201.062;
+y = -348.249;
+}
+vertex // 134
+{
+x = -122.268;
+y = -456.31;
+}
+vertex // 135
+{
+x = -105.704;
+y = -394.491;
+}
+vertex // 136
+{
+x = -0.0;
+y = -478.69;
+}
+vertex // 137
+{
+x = -0.0;
+y = -414.69;
+}
+vertex // 138
+{
+x = 125.52;
+y = -468.448;
+}
+vertex // 139
+{
+x = 108.956;
+y = -406.629;
+}
+vertex // 140
+{
+x = 245.628;
+y = -425.441;
+}
+vertex // 141
+{
+x = 213.628;
+y = -370.015;
+}
+vertex // 142
+{
+x = 351.814;
+y = -351.814;
+}
+vertex // 143
+{
+x = 306.559;
+y = -306.559;
+}
+vertex // 144
+{
+x = 436.323;
+y = -251.911;
+}
+vertex // 145
+{
+x = 380.898;
+y = -219.911;
+}
+vertex // 146
+{
+x = 492.725;
+y = -132.025;
+}
+vertex // 147
+{
+x = 430.905;
+y = -115.461;
+}
+vertex // 148
+{
+x = 516.389;
+y = -0.0;
+}
+vertex // 149
+{
+x = 452.389;
+y = -0.0;
+}
+vertex // 150
+{
+x = 504.863;
+y = 135.278;
+}
+vertex // 151
+{
+x = 443.044;
+y = 118.713;
+}
+vertex // 152
+{
+x = 458.089;
+y = 264.478;
+}
+vertex // 153
+{
+x = 402.663;
+y = 232.478;
+}
+vertex // 154
+{
+x = 378.471;
+y = 378.471;
+}
+vertex // 155
+{
+x = 333.216;
+y = 333.216;
+}
+vertex // 156
+{
+x = 270.761;
+y = 468.972;
+}
+vertex // 157
+{
+x = 238.761;
+y = 413.546;
+}
+vertex // 158
+{
+x = 141.782;
+y = 529.139;
+}
+vertex // 159
+{
+x = 125.218;
+y = 467.32;
+}
+vertex // 160
+{
+x = 0.0;
+y = 554.088;
+}
+vertex // 161
+{
+x = 0.0;
+y = 490.088;
+}
+vertex // 162
+{
+x = -145.035;
+y = 541.277;
+}
+vertex // 163
+{
+x = -128.47;
+y = 479.458;
+}
+vertex // 164
+{
+x = -283.327;
+y = 490.737;
+}
+vertex // 165
+{
+x = -251.327;
+y = 435.312;
+}
+vertex // 166
+{
+x = -405.128;
+y = 405.128;
+}
+vertex // 167
+{
+x = -359.874;
+y = 359.874;
+}
+vertex // 168
+{
+x = -501.62;
+y = 289.611;
+}
+vertex // 169
+{
+x = -446.195;
+y = 257.611;
+}
+vertex // 170
+{
+x = -565.554;
+y = 151.54;
+}
+vertex // 171
+{
+x = -503.735;
+y = 134.975;
+}
+vertex // 172
+{
+x = -591.788;
+y = 0.0;
+}
+vertex // 173
+{
+x = -527.788;
+y = 0.0;
+}
+vertex // 174
+{
+x = -577.692;
+y = -154.792;
+}
+vertex // 175
+{
+x = -515.873;
+y = -138.228;
+}
+vertex // 176
+{
+x = -523.386;
+y = -302.177;
+}
+vertex // 177
+{
+x = -467.96;
+y = -270.177;
+}
+vertex // 178
+{
+x = -431.786;
+y = -431.786;
+}
+vertex // 179
+{
+x = -386.531;
+y = -386.531;
+}
+vertex // 180
+{
+x = -308.46;
+y = -534.269;
+}
+vertex // 181
+{
+x = -276.46;
+y = -478.843;
+}
+vertex // 182
+{
+x = -161.297;
+y = -601.968;
+}
+vertex // 183
+{
+x = -144.733;
+y = -540.149;
+}
+vertex // 184
+{
+x = -0.0;
+y = -629.487;
+}
+vertex // 185
+{
+x = -0.0;
+y = -565.487;
+}
+vertex // 186
+{
+x = 164.549;
+y = -614.107;
+}
+vertex // 187
+{
+x = 147.985;
+y = -552.287;
+}
+vertex // 188
+{
+x = 321.027;
+y = -556.034;
+}
+vertex // 189
+{
+x = 289.027;
+y = -500.609;
+}
+vertex // 190
+{
+x = 458.443;
+y = -458.443;
+}
+vertex // 191
+{
+x = 413.188;
+y = -413.188;
+}
+vertex // 192
+{
+x = 566.917;
+y = -327.31;
+}
+vertex // 193
+{
+x = 511.491;
+y = -295.31;
+}
+vertex // 194
+{
+x = 638.383;
+y = -171.054;
+}
+vertex // 195
+{
+x = 576.564;
+y = -154.49;
+}
+vertex // 196
+{
+x = 667.186;
+y = -0.0;
+}
+vertex // 197
+{
+x = 603.186;
+y = -0.0;
+}
+vertex // 198
+{
+x = 650.521;
+y = 174.307;
+}
+vertex // 199
+{
+x = 588.702;
+y = 157.742;
+}
+vertex // 200
+{
+x = 588.683;
+y = 339.876;
+}
+vertex // 201
+{
+x = 533.257;
+y = 307.876;
+}
+vertex // 202
+{
+x = 485.1;
+y = 485.1;
+}
+vertex // 203
+{
+x = 439.845;
+y = 439.845;
+}
+vertex // 204
+{
+x = 346.159;
+y = 599.565;
+}
+vertex // 205
+{
+x = 314.159;
+y = 544.14;
+}
+vertex // 206
+{
+x = 180.811;
+y = 674.797;
+}
+vertex // 207
+{
+x = 164.247;
+y = 612.978;
+}
+vertex // 208
+{
+x = 0.0;
+y = 704.885;
+}
+vertex // 209
+{
+x = 0.0;
+y = 640.885;
+}
+vertex // 210
+{
+x = -184.064;
+y = 686.936;
+}
+vertex // 211
+{
+x = -167.499;
+y = 625.116;
+}
+vertex // 212
+{
+x = -358.726;
+y = 621.331;
+}
+vertex // 213
+{
+x = -326.726;
+y = 565.905;
+}
+vertex // 214
+{
+x = -511.758;
+y = 511.758;
+}
+vertex // 215
+{
+x = -466.503;
+y = 466.503;
+}
+vertex // 216
+{
+x = -632.214;
+y = 365.009;
+}
+vertex // 217
+{
+x = -576.788;
+y = 333.009;
+}
+vertex // 218
+{
+x = -711.212;
+y = 190.569;
+}
+vertex // 219
+{
+x = -649.393;
+y = 174.004;
+}
+vertex // 220
+{
+x = -742.584;
+y = 0.0;
+}
+vertex // 221
+{
+x = -678.584;
+y = 0.0;
+}
+vertex // 222
+{
+x = -723.35;
+y = -193.821;
+}
+vertex // 223
+{
+x = -661.531;
+y = -177.257;
+}
+vertex // 224
+{
+x = -653.979;
+y = -377.575;
+}
+vertex // 225
+{
+x = -598.554;
+y = -345.575;
+}
+vertex // 226
+{
+x = -538.415;
+y = -538.415;
+}
+vertex // 227
+{
+x = -493.16;
+y = -493.16;
+}
+vertex // 228
+{
+x = -383.858;
+y = -664.862;
+}
+vertex // 229
+{
+x = -351.858;
+y = -609.437;
+}
+vertex // 230
+{
+x = -200.326;
+y = -747.627;
+}
+vertex // 231
+{
+x = -183.762;
+y = -685.807;
+}
+vertex // 232
+{
+x = -0.0;
+y = -780.283;
+}
+vertex // 233
+{
+x = -0.0;
+y = -716.283;
+}
+vertex // 234
+{
+x = 203.578;
+y = -759.765;
+}
+vertex // 235
+{
+x = 187.014;
+y = -697.945;
+}
+vertex // 236
+{
+x = 396.425;
+y = -686.628;
+}
+vertex // 237
+{
+x = 364.425;
+y = -631.202;
+}
+vertex // 238
+{
+x = 565.072;
+y = -565.072;
+}
+vertex // 239
+{
+x = 519.817;
+y = -519.817;
+}
+vertex // 240
+{
+x = 697.511;
+y = -402.708;
+}
+vertex // 241
+{
+x = 642.085;
+y = -370.708;
+}
+vertex // 242
+{
+x = 784.041;
+y = -210.083;
+}
+vertex // 243
+{
+x = 722.222;
+y = -193.519;
+}
+vertex // 244
+{
+x = 817.982;
+y = -0.0;
+}
+vertex // 245
+{
+x = 753.982;
+y = -0.0;
+}
+
+// ---- LINEDEFS (idx 4 to 364) ----
+
+linedef // 4
+{
+v1 = 4;
+v2 = 5;
+sidefront = 4;
+sideback = 5;
+twosided = true;
+blocking = false;
+}
+linedef // 5
+{
+v1 = 4;
+v2 = 6;
+sidefront = 6;
+sideback = 7;
+twosided = true;
+blocking = false;
+}
+linedef // 6
+{
+v1 = 6;
+v2 = 7;
+sidefront = 8;
+sideback = 9;
+twosided = true;
+blocking = false;
+}
+linedef // 7
+{
+v1 = 5;
+v2 = 7;
+sidefront = 10;
+sideback = 11;
+twosided = true;
+blocking = false;
+}
+linedef // 8
+{
+v1 = 6;
+v2 = 8;
+sidefront = 12;
+sideback = 13;
+twosided = true;
+blocking = false;
+}
+linedef // 9
+{
+v1 = 8;
+v2 = 9;
+sidefront = 14;
+sideback = 15;
+twosided = true;
+blocking = false;
+}
+linedef // 10
+{
+v1 = 7;
+v2 = 9;
+sidefront = 16;
+sideback = 17;
+twosided = true;
+blocking = false;
+}
+linedef // 11
+{
+v1 = 8;
+v2 = 10;
+sidefront = 18;
+sideback = 19;
+twosided = true;
+blocking = false;
+}
+linedef // 12
+{
+v1 = 10;
+v2 = 11;
+sidefront = 20;
+sideback = 21;
+twosided = true;
+blocking = false;
+}
+linedef // 13
+{
+v1 = 9;
+v2 = 11;
+sidefront = 22;
+sideback = 23;
+twosided = true;
+blocking = false;
+}
+linedef // 14
+{
+v1 = 10;
+v2 = 12;
+sidefront = 24;
+sideback = 25;
+twosided = true;
+blocking = false;
+}
+linedef // 15
+{
+v1 = 12;
+v2 = 13;
+sidefront = 26;
+sideback = 27;
+twosided = true;
+blocking = false;
+}
+linedef // 16
+{
+v1 = 11;
+v2 = 13;
+sidefront = 28;
+sideback = 29;
+twosided = true;
+blocking = false;
+}
+linedef // 17
+{
+v1 = 12;
+v2 = 14;
+sidefront = 30;
+sideback = 31;
+twosided = true;
+blocking = false;
+}
+linedef // 18
+{
+v1 = 14;
+v2 = 15;
+sidefront = 32;
+sideback = 33;
+twosided = true;
+blocking = false;
+}
+linedef // 19
+{
+v1 = 13;
+v2 = 15;
+sidefront = 34;
+sideback = 35;
+twosided = true;
+blocking = false;
+}
+linedef // 20
+{
+v1 = 14;
+v2 = 16;
+sidefront = 36;
+sideback = 37;
+twosided = true;
+blocking = false;
+}
+linedef // 21
+{
+v1 = 16;
+v2 = 17;
+sidefront = 38;
+sideback = 39;
+twosided = true;
+blocking = false;
+}
+linedef // 22
+{
+v1 = 15;
+v2 = 17;
+sidefront = 40;
+sideback = 41;
+twosided = true;
+blocking = false;
+}
+linedef // 23
+{
+v1 = 16;
+v2 = 18;
+sidefront = 42;
+sideback = 43;
+twosided = true;
+blocking = false;
+}
+linedef // 24
+{
+v1 = 18;
+v2 = 19;
+sidefront = 44;
+sideback = 45;
+twosided = true;
+blocking = false;
+}
+linedef // 25
+{
+v1 = 17;
+v2 = 19;
+sidefront = 46;
+sideback = 47;
+twosided = true;
+blocking = false;
+}
+linedef // 26
+{
+v1 = 18;
+v2 = 20;
+sidefront = 48;
+sideback = 49;
+twosided = true;
+blocking = false;
+}
+linedef // 27
+{
+v1 = 20;
+v2 = 21;
+sidefront = 50;
+sideback = 51;
+twosided = true;
+blocking = false;
+}
+linedef // 28
+{
+v1 = 19;
+v2 = 21;
+sidefront = 52;
+sideback = 53;
+twosided = true;
+blocking = false;
+}
+linedef // 29
+{
+v1 = 20;
+v2 = 22;
+sidefront = 54;
+sideback = 55;
+twosided = true;
+blocking = false;
+}
+linedef // 30
+{
+v1 = 22;
+v2 = 23;
+sidefront = 56;
+sideback = 57;
+twosided = true;
+blocking = false;
+}
+linedef // 31
+{
+v1 = 21;
+v2 = 23;
+sidefront = 58;
+sideback = 59;
+twosided = true;
+blocking = false;
+}
+linedef // 32
+{
+v1 = 22;
+v2 = 24;
+sidefront = 60;
+sideback = 61;
+twosided = true;
+blocking = false;
+}
+linedef // 33
+{
+v1 = 24;
+v2 = 25;
+sidefront = 62;
+sideback = 63;
+twosided = true;
+blocking = false;
+}
+linedef // 34
+{
+v1 = 23;
+v2 = 25;
+sidefront = 64;
+sideback = 65;
+twosided = true;
+blocking = false;
+}
+linedef // 35
+{
+v1 = 24;
+v2 = 26;
+sidefront = 66;
+sideback = 67;
+twosided = true;
+blocking = false;
+}
+linedef // 36
+{
+v1 = 26;
+v2 = 27;
+sidefront = 68;
+sideback = 69;
+twosided = true;
+blocking = false;
+}
+linedef // 37
+{
+v1 = 25;
+v2 = 27;
+sidefront = 70;
+sideback = 71;
+twosided = true;
+blocking = false;
+}
+linedef // 38
+{
+v1 = 26;
+v2 = 28;
+sidefront = 72;
+sideback = 73;
+twosided = true;
+blocking = false;
+}
+linedef // 39
+{
+v1 = 28;
+v2 = 29;
+sidefront = 74;
+sideback = 75;
+twosided = true;
+blocking = false;
+}
+linedef // 40
+{
+v1 = 27;
+v2 = 29;
+sidefront = 76;
+sideback = 77;
+twosided = true;
+blocking = false;
+}
+linedef // 41
+{
+v1 = 28;
+v2 = 30;
+sidefront = 78;
+sideback = 79;
+twosided = true;
+blocking = false;
+}
+linedef // 42
+{
+v1 = 30;
+v2 = 31;
+sidefront = 80;
+sideback = 81;
+twosided = true;
+blocking = false;
+}
+linedef // 43
+{
+v1 = 29;
+v2 = 31;
+sidefront = 82;
+sideback = 83;
+twosided = true;
+blocking = false;
+}
+linedef // 44
+{
+v1 = 30;
+v2 = 32;
+sidefront = 84;
+sideback = 85;
+twosided = true;
+blocking = false;
+}
+linedef // 45
+{
+v1 = 32;
+v2 = 33;
+sidefront = 86;
+sideback = 87;
+twosided = true;
+blocking = false;
+}
+linedef // 46
+{
+v1 = 31;
+v2 = 33;
+sidefront = 88;
+sideback = 89;
+twosided = true;
+blocking = false;
+}
+linedef // 47
+{
+v1 = 32;
+v2 = 34;
+sidefront = 90;
+sideback = 91;
+twosided = true;
+blocking = false;
+}
+linedef // 48
+{
+v1 = 34;
+v2 = 35;
+sidefront = 92;
+sideback = 93;
+twosided = true;
+blocking = false;
+}
+linedef // 49
+{
+v1 = 33;
+v2 = 35;
+sidefront = 94;
+sideback = 95;
+twosided = true;
+blocking = false;
+}
+linedef // 50
+{
+v1 = 34;
+v2 = 36;
+sidefront = 96;
+sideback = 97;
+twosided = true;
+blocking = false;
+}
+linedef // 51
+{
+v1 = 36;
+v2 = 37;
+sidefront = 98;
+sideback = 99;
+twosided = true;
+blocking = false;
+}
+linedef // 52
+{
+v1 = 35;
+v2 = 37;
+sidefront = 100;
+sideback = 101;
+twosided = true;
+blocking = false;
+}
+linedef // 53
+{
+v1 = 36;
+v2 = 38;
+sidefront = 102;
+sideback = 103;
+twosided = true;
+blocking = false;
+}
+linedef // 54
+{
+v1 = 38;
+v2 = 39;
+sidefront = 104;
+sideback = 105;
+twosided = true;
+blocking = false;
+}
+linedef // 55
+{
+v1 = 37;
+v2 = 39;
+sidefront = 106;
+sideback = 107;
+twosided = true;
+blocking = false;
+}
+linedef // 56
+{
+v1 = 38;
+v2 = 40;
+sidefront = 108;
+sideback = 109;
+twosided = true;
+blocking = false;
+}
+linedef // 57
+{
+v1 = 40;
+v2 = 41;
+sidefront = 110;
+sideback = 111;
+twosided = true;
+blocking = false;
+}
+linedef // 58
+{
+v1 = 39;
+v2 = 41;
+sidefront = 112;
+sideback = 113;
+twosided = true;
+blocking = false;
+}
+linedef // 59
+{
+v1 = 40;
+v2 = 42;
+sidefront = 114;
+sideback = 115;
+twosided = true;
+blocking = false;
+}
+linedef // 60
+{
+v1 = 42;
+v2 = 43;
+sidefront = 116;
+sideback = 117;
+twosided = true;
+blocking = false;
+}
+linedef // 61
+{
+v1 = 41;
+v2 = 43;
+sidefront = 118;
+sideback = 119;
+twosided = true;
+blocking = false;
+}
+linedef // 62
+{
+v1 = 42;
+v2 = 44;
+sidefront = 120;
+sideback = 121;
+twosided = true;
+blocking = false;
+}
+linedef // 63
+{
+v1 = 44;
+v2 = 45;
+sidefront = 122;
+sideback = 123;
+twosided = true;
+blocking = false;
+}
+linedef // 64
+{
+v1 = 43;
+v2 = 45;
+sidefront = 124;
+sideback = 125;
+twosided = true;
+blocking = false;
+}
+linedef // 65
+{
+v1 = 44;
+v2 = 46;
+sidefront = 126;
+sideback = 127;
+twosided = true;
+blocking = false;
+}
+linedef // 66
+{
+v1 = 46;
+v2 = 47;
+sidefront = 128;
+sideback = 129;
+twosided = true;
+blocking = false;
+}
+linedef // 67
+{
+v1 = 45;
+v2 = 47;
+sidefront = 130;
+sideback = 131;
+twosided = true;
+blocking = false;
+}
+linedef // 68
+{
+v1 = 46;
+v2 = 48;
+sidefront = 132;
+sideback = 133;
+twosided = true;
+blocking = false;
+}
+linedef // 69
+{
+v1 = 48;
+v2 = 49;
+sidefront = 134;
+sideback = 135;
+twosided = true;
+blocking = false;
+}
+linedef // 70
+{
+v1 = 47;
+v2 = 49;
+sidefront = 136;
+sideback = 137;
+twosided = true;
+blocking = false;
+}
+linedef // 71
+{
+v1 = 48;
+v2 = 50;
+sidefront = 138;
+sideback = 139;
+twosided = true;
+blocking = false;
+}
+linedef // 72
+{
+v1 = 50;
+v2 = 51;
+sidefront = 140;
+sideback = 141;
+twosided = true;
+blocking = false;
+}
+linedef // 73
+{
+v1 = 49;
+v2 = 51;
+sidefront = 142;
+sideback = 143;
+twosided = true;
+blocking = false;
+}
+linedef // 74
+{
+v1 = 50;
+v2 = 52;
+sidefront = 144;
+sideback = 145;
+twosided = true;
+blocking = false;
+}
+linedef // 75
+{
+v1 = 52;
+v2 = 53;
+sidefront = 146;
+sideback = 147;
+twosided = true;
+blocking = false;
+}
+linedef // 76
+{
+v1 = 51;
+v2 = 53;
+sidefront = 148;
+sideback = 149;
+twosided = true;
+blocking = false;
+}
+linedef // 77
+{
+v1 = 52;
+v2 = 54;
+sidefront = 150;
+sideback = 151;
+twosided = true;
+blocking = false;
+}
+linedef // 78
+{
+v1 = 54;
+v2 = 55;
+sidefront = 152;
+sideback = 153;
+twosided = true;
+blocking = false;
+}
+linedef // 79
+{
+v1 = 53;
+v2 = 55;
+sidefront = 154;
+sideback = 155;
+twosided = true;
+blocking = false;
+}
+linedef // 80
+{
+v1 = 54;
+v2 = 56;
+sidefront = 156;
+sideback = 157;
+twosided = true;
+blocking = false;
+}
+linedef // 81
+{
+v1 = 56;
+v2 = 57;
+sidefront = 158;
+sideback = 159;
+twosided = true;
+blocking = false;
+}
+linedef // 82
+{
+v1 = 55;
+v2 = 57;
+sidefront = 160;
+sideback = 161;
+twosided = true;
+blocking = false;
+}
+linedef // 83
+{
+v1 = 56;
+v2 = 58;
+sidefront = 162;
+sideback = 163;
+twosided = true;
+blocking = false;
+}
+linedef // 84
+{
+v1 = 58;
+v2 = 59;
+sidefront = 164;
+sideback = 165;
+twosided = true;
+blocking = false;
+}
+linedef // 85
+{
+v1 = 57;
+v2 = 59;
+sidefront = 166;
+sideback = 167;
+twosided = true;
+blocking = false;
+}
+linedef // 86
+{
+v1 = 58;
+v2 = 60;
+sidefront = 168;
+sideback = 169;
+twosided = true;
+blocking = false;
+}
+linedef // 87
+{
+v1 = 60;
+v2 = 61;
+sidefront = 170;
+sideback = 171;
+twosided = true;
+blocking = false;
+}
+linedef // 88
+{
+v1 = 59;
+v2 = 61;
+sidefront = 172;
+sideback = 173;
+twosided = true;
+blocking = false;
+}
+linedef // 89
+{
+v1 = 60;
+v2 = 62;
+sidefront = 174;
+sideback = 175;
+twosided = true;
+blocking = false;
+}
+linedef // 90
+{
+v1 = 62;
+v2 = 63;
+sidefront = 176;
+sideback = 177;
+twosided = true;
+blocking = false;
+}
+linedef // 91
+{
+v1 = 61;
+v2 = 63;
+sidefront = 178;
+sideback = 179;
+twosided = true;
+blocking = false;
+}
+linedef // 92
+{
+v1 = 62;
+v2 = 64;
+sidefront = 180;
+sideback = 181;
+twosided = true;
+blocking = false;
+}
+linedef // 93
+{
+v1 = 64;
+v2 = 65;
+sidefront = 182;
+sideback = 183;
+twosided = true;
+blocking = false;
+}
+linedef // 94
+{
+v1 = 63;
+v2 = 65;
+sidefront = 184;
+sideback = 185;
+twosided = true;
+blocking = false;
+}
+linedef // 95
+{
+v1 = 64;
+v2 = 66;
+sidefront = 186;
+sideback = 187;
+twosided = true;
+blocking = false;
+}
+linedef // 96
+{
+v1 = 66;
+v2 = 67;
+sidefront = 188;
+sideback = 189;
+twosided = true;
+blocking = false;
+}
+linedef // 97
+{
+v1 = 65;
+v2 = 67;
+sidefront = 190;
+sideback = 191;
+twosided = true;
+blocking = false;
+}
+linedef // 98
+{
+v1 = 66;
+v2 = 68;
+sidefront = 192;
+sideback = 193;
+twosided = true;
+blocking = false;
+}
+linedef // 99
+{
+v1 = 68;
+v2 = 69;
+sidefront = 194;
+sideback = 195;
+twosided = true;
+blocking = false;
+}
+linedef // 100
+{
+v1 = 67;
+v2 = 69;
+sidefront = 196;
+sideback = 197;
+twosided = true;
+blocking = false;
+}
+linedef // 101
+{
+v1 = 68;
+v2 = 70;
+sidefront = 198;
+sideback = 199;
+twosided = true;
+blocking = false;
+}
+linedef // 102
+{
+v1 = 70;
+v2 = 71;
+sidefront = 200;
+sideback = 201;
+twosided = true;
+blocking = false;
+}
+linedef // 103
+{
+v1 = 69;
+v2 = 71;
+sidefront = 202;
+sideback = 203;
+twosided = true;
+blocking = false;
+}
+linedef // 104
+{
+v1 = 70;
+v2 = 72;
+sidefront = 204;
+sideback = 205;
+twosided = true;
+blocking = false;
+}
+linedef // 105
+{
+v1 = 72;
+v2 = 73;
+sidefront = 206;
+sideback = 207;
+twosided = true;
+blocking = false;
+}
+linedef // 106
+{
+v1 = 71;
+v2 = 73;
+sidefront = 208;
+sideback = 209;
+twosided = true;
+blocking = false;
+}
+linedef // 107
+{
+v1 = 72;
+v2 = 74;
+sidefront = 210;
+sideback = 211;
+twosided = true;
+blocking = false;
+}
+linedef // 108
+{
+v1 = 74;
+v2 = 75;
+sidefront = 212;
+sideback = 213;
+twosided = true;
+blocking = false;
+}
+linedef // 109
+{
+v1 = 73;
+v2 = 75;
+sidefront = 214;
+sideback = 215;
+twosided = true;
+blocking = false;
+}
+linedef // 110
+{
+v1 = 74;
+v2 = 76;
+sidefront = 216;
+sideback = 217;
+twosided = true;
+blocking = false;
+}
+linedef // 111
+{
+v1 = 76;
+v2 = 77;
+sidefront = 218;
+sideback = 219;
+twosided = true;
+blocking = false;
+}
+linedef // 112
+{
+v1 = 75;
+v2 = 77;
+sidefront = 220;
+sideback = 221;
+twosided = true;
+blocking = false;
+}
+linedef // 113
+{
+v1 = 76;
+v2 = 78;
+sidefront = 222;
+sideback = 223;
+twosided = true;
+blocking = false;
+}
+linedef // 114
+{
+v1 = 78;
+v2 = 79;
+sidefront = 224;
+sideback = 225;
+twosided = true;
+blocking = false;
+}
+linedef // 115
+{
+v1 = 77;
+v2 = 79;
+sidefront = 226;
+sideback = 227;
+twosided = true;
+blocking = false;
+}
+linedef // 116
+{
+v1 = 78;
+v2 = 80;
+sidefront = 228;
+sideback = 229;
+twosided = true;
+blocking = false;
+}
+linedef // 117
+{
+v1 = 80;
+v2 = 81;
+sidefront = 230;
+sideback = 231;
+twosided = true;
+blocking = false;
+}
+linedef // 118
+{
+v1 = 79;
+v2 = 81;
+sidefront = 232;
+sideback = 233;
+twosided = true;
+blocking = false;
+}
+linedef // 119
+{
+v1 = 80;
+v2 = 82;
+sidefront = 234;
+sideback = 235;
+twosided = true;
+blocking = false;
+}
+linedef // 120
+{
+v1 = 82;
+v2 = 83;
+sidefront = 236;
+sideback = 237;
+twosided = true;
+blocking = false;
+}
+linedef // 121
+{
+v1 = 81;
+v2 = 83;
+sidefront = 238;
+sideback = 239;
+twosided = true;
+blocking = false;
+}
+linedef // 122
+{
+v1 = 82;
+v2 = 84;
+sidefront = 240;
+sideback = 241;
+twosided = true;
+blocking = false;
+}
+linedef // 123
+{
+v1 = 84;
+v2 = 85;
+sidefront = 242;
+sideback = 243;
+twosided = true;
+blocking = false;
+}
+linedef // 124
+{
+v1 = 83;
+v2 = 85;
+sidefront = 244;
+sideback = 245;
+twosided = true;
+blocking = false;
+}
+linedef // 125
+{
+v1 = 84;
+v2 = 86;
+sidefront = 246;
+sideback = 247;
+twosided = true;
+blocking = false;
+}
+linedef // 126
+{
+v1 = 86;
+v2 = 87;
+sidefront = 248;
+sideback = 249;
+twosided = true;
+blocking = false;
+}
+linedef // 127
+{
+v1 = 85;
+v2 = 87;
+sidefront = 250;
+sideback = 251;
+twosided = true;
+blocking = false;
+}
+linedef // 128
+{
+v1 = 86;
+v2 = 88;
+sidefront = 252;
+sideback = 253;
+twosided = true;
+blocking = false;
+}
+linedef // 129
+{
+v1 = 88;
+v2 = 89;
+sidefront = 254;
+sideback = 255;
+twosided = true;
+blocking = false;
+}
+linedef // 130
+{
+v1 = 87;
+v2 = 89;
+sidefront = 256;
+sideback = 257;
+twosided = true;
+blocking = false;
+}
+linedef // 131
+{
+v1 = 88;
+v2 = 90;
+sidefront = 258;
+sideback = 259;
+twosided = true;
+blocking = false;
+}
+linedef // 132
+{
+v1 = 90;
+v2 = 91;
+sidefront = 260;
+sideback = 261;
+twosided = true;
+blocking = false;
+}
+linedef // 133
+{
+v1 = 89;
+v2 = 91;
+sidefront = 262;
+sideback = 263;
+twosided = true;
+blocking = false;
+}
+linedef // 134
+{
+v1 = 90;
+v2 = 92;
+sidefront = 264;
+sideback = 265;
+twosided = true;
+blocking = false;
+}
+linedef // 135
+{
+v1 = 92;
+v2 = 93;
+sidefront = 266;
+sideback = 267;
+twosided = true;
+blocking = false;
+}
+linedef // 136
+{
+v1 = 91;
+v2 = 93;
+sidefront = 268;
+sideback = 269;
+twosided = true;
+blocking = false;
+}
+linedef // 137
+{
+v1 = 92;
+v2 = 94;
+sidefront = 270;
+sideback = 271;
+twosided = true;
+blocking = false;
+}
+linedef // 138
+{
+v1 = 94;
+v2 = 95;
+sidefront = 272;
+sideback = 273;
+twosided = true;
+blocking = false;
+}
+linedef // 139
+{
+v1 = 93;
+v2 = 95;
+sidefront = 274;
+sideback = 275;
+twosided = true;
+blocking = false;
+}
+linedef // 140
+{
+v1 = 94;
+v2 = 96;
+sidefront = 276;
+sideback = 277;
+twosided = true;
+blocking = false;
+}
+linedef // 141
+{
+v1 = 96;
+v2 = 97;
+sidefront = 278;
+sideback = 279;
+twosided = true;
+blocking = false;
+}
+linedef // 142
+{
+v1 = 95;
+v2 = 97;
+sidefront = 280;
+sideback = 281;
+twosided = true;
+blocking = false;
+}
+linedef // 143
+{
+v1 = 96;
+v2 = 98;
+sidefront = 282;
+sideback = 283;
+twosided = true;
+blocking = false;
+}
+linedef // 144
+{
+v1 = 98;
+v2 = 99;
+sidefront = 284;
+sideback = 285;
+twosided = true;
+blocking = false;
+}
+linedef // 145
+{
+v1 = 97;
+v2 = 99;
+sidefront = 286;
+sideback = 287;
+twosided = true;
+blocking = false;
+}
+linedef // 146
+{
+v1 = 98;
+v2 = 100;
+sidefront = 288;
+sideback = 289;
+twosided = true;
+blocking = false;
+}
+linedef // 147
+{
+v1 = 100;
+v2 = 101;
+sidefront = 290;
+sideback = 291;
+twosided = true;
+blocking = false;
+}
+linedef // 148
+{
+v1 = 99;
+v2 = 101;
+sidefront = 292;
+sideback = 293;
+twosided = true;
+blocking = false;
+}
+linedef // 149
+{
+v1 = 100;
+v2 = 102;
+sidefront = 294;
+sideback = 295;
+twosided = true;
+blocking = false;
+}
+linedef // 150
+{
+v1 = 102;
+v2 = 103;
+sidefront = 296;
+sideback = 297;
+twosided = true;
+blocking = false;
+}
+linedef // 151
+{
+v1 = 101;
+v2 = 103;
+sidefront = 298;
+sideback = 299;
+twosided = true;
+blocking = false;
+}
+linedef // 152
+{
+v1 = 102;
+v2 = 104;
+sidefront = 300;
+sideback = 301;
+twosided = true;
+blocking = false;
+}
+linedef // 153
+{
+v1 = 104;
+v2 = 105;
+sidefront = 302;
+sideback = 303;
+twosided = true;
+blocking = false;
+}
+linedef // 154
+{
+v1 = 103;
+v2 = 105;
+sidefront = 304;
+sideback = 305;
+twosided = true;
+blocking = false;
+}
+linedef // 155
+{
+v1 = 104;
+v2 = 106;
+sidefront = 306;
+sideback = 307;
+twosided = true;
+blocking = false;
+}
+linedef // 156
+{
+v1 = 106;
+v2 = 107;
+sidefront = 308;
+sideback = 309;
+twosided = true;
+blocking = false;
+}
+linedef // 157
+{
+v1 = 105;
+v2 = 107;
+sidefront = 310;
+sideback = 311;
+twosided = true;
+blocking = false;
+}
+linedef // 158
+{
+v1 = 106;
+v2 = 108;
+sidefront = 312;
+sideback = 313;
+twosided = true;
+blocking = false;
+}
+linedef // 159
+{
+v1 = 108;
+v2 = 109;
+sidefront = 314;
+sideback = 315;
+twosided = true;
+blocking = false;
+}
+linedef // 160
+{
+v1 = 107;
+v2 = 109;
+sidefront = 316;
+sideback = 317;
+twosided = true;
+blocking = false;
+}
+linedef // 161
+{
+v1 = 108;
+v2 = 110;
+sidefront = 318;
+sideback = 319;
+twosided = true;
+blocking = false;
+}
+linedef // 162
+{
+v1 = 110;
+v2 = 111;
+sidefront = 320;
+sideback = 321;
+twosided = true;
+blocking = false;
+}
+linedef // 163
+{
+v1 = 109;
+v2 = 111;
+sidefront = 322;
+sideback = 323;
+twosided = true;
+blocking = false;
+}
+linedef // 164
+{
+v1 = 110;
+v2 = 112;
+sidefront = 324;
+sideback = 325;
+twosided = true;
+blocking = false;
+}
+linedef // 165
+{
+v1 = 112;
+v2 = 113;
+sidefront = 326;
+sideback = 327;
+twosided = true;
+blocking = false;
+}
+linedef // 166
+{
+v1 = 111;
+v2 = 113;
+sidefront = 328;
+sideback = 329;
+twosided = true;
+blocking = false;
+}
+linedef // 167
+{
+v1 = 112;
+v2 = 114;
+sidefront = 330;
+sideback = 331;
+twosided = true;
+blocking = false;
+}
+linedef // 168
+{
+v1 = 114;
+v2 = 115;
+sidefront = 332;
+sideback = 333;
+twosided = true;
+blocking = false;
+}
+linedef // 169
+{
+v1 = 113;
+v2 = 115;
+sidefront = 334;
+sideback = 335;
+twosided = true;
+blocking = false;
+}
+linedef // 170
+{
+v1 = 114;
+v2 = 116;
+sidefront = 336;
+sideback = 337;
+twosided = true;
+blocking = false;
+}
+linedef // 171
+{
+v1 = 116;
+v2 = 117;
+sidefront = 338;
+sideback = 339;
+twosided = true;
+blocking = false;
+}
+linedef // 172
+{
+v1 = 115;
+v2 = 117;
+sidefront = 340;
+sideback = 341;
+twosided = true;
+blocking = false;
+}
+linedef // 173
+{
+v1 = 116;
+v2 = 118;
+sidefront = 342;
+sideback = 343;
+twosided = true;
+blocking = false;
+}
+linedef // 174
+{
+v1 = 118;
+v2 = 119;
+sidefront = 344;
+sideback = 345;
+twosided = true;
+blocking = false;
+}
+linedef // 175
+{
+v1 = 117;
+v2 = 119;
+sidefront = 346;
+sideback = 347;
+twosided = true;
+blocking = false;
+}
+linedef // 176
+{
+v1 = 118;
+v2 = 120;
+sidefront = 348;
+sideback = 349;
+twosided = true;
+blocking = false;
+}
+linedef // 177
+{
+v1 = 120;
+v2 = 121;
+sidefront = 350;
+sideback = 351;
+twosided = true;
+blocking = false;
+}
+linedef // 178
+{
+v1 = 119;
+v2 = 121;
+sidefront = 352;
+sideback = 353;
+twosided = true;
+blocking = false;
+}
+linedef // 179
+{
+v1 = 120;
+v2 = 122;
+sidefront = 354;
+sideback = 355;
+twosided = true;
+blocking = false;
+}
+linedef // 180
+{
+v1 = 122;
+v2 = 123;
+sidefront = 356;
+sideback = 357;
+twosided = true;
+blocking = false;
+}
+linedef // 181
+{
+v1 = 121;
+v2 = 123;
+sidefront = 358;
+sideback = 359;
+twosided = true;
+blocking = false;
+}
+linedef // 182
+{
+v1 = 122;
+v2 = 124;
+sidefront = 360;
+sideback = 361;
+twosided = true;
+blocking = false;
+}
+linedef // 183
+{
+v1 = 124;
+v2 = 125;
+sidefront = 362;
+sideback = 363;
+twosided = true;
+blocking = false;
+}
+linedef // 184
+{
+v1 = 123;
+v2 = 125;
+sidefront = 364;
+sideback = 365;
+twosided = true;
+blocking = false;
+}
+linedef // 185
+{
+v1 = 124;
+v2 = 126;
+sidefront = 366;
+sideback = 367;
+twosided = true;
+blocking = false;
+}
+linedef // 186
+{
+v1 = 126;
+v2 = 127;
+sidefront = 368;
+sideback = 369;
+twosided = true;
+blocking = false;
+}
+linedef // 187
+{
+v1 = 125;
+v2 = 127;
+sidefront = 370;
+sideback = 371;
+twosided = true;
+blocking = false;
+}
+linedef // 188
+{
+v1 = 126;
+v2 = 128;
+sidefront = 372;
+sideback = 373;
+twosided = true;
+blocking = false;
+}
+linedef // 189
+{
+v1 = 128;
+v2 = 129;
+sidefront = 374;
+sideback = 375;
+twosided = true;
+blocking = false;
+}
+linedef // 190
+{
+v1 = 127;
+v2 = 129;
+sidefront = 376;
+sideback = 377;
+twosided = true;
+blocking = false;
+}
+linedef // 191
+{
+v1 = 128;
+v2 = 130;
+sidefront = 378;
+sideback = 379;
+twosided = true;
+blocking = false;
+}
+linedef // 192
+{
+v1 = 130;
+v2 = 131;
+sidefront = 380;
+sideback = 381;
+twosided = true;
+blocking = false;
+}
+linedef // 193
+{
+v1 = 129;
+v2 = 131;
+sidefront = 382;
+sideback = 383;
+twosided = true;
+blocking = false;
+}
+linedef // 194
+{
+v1 = 130;
+v2 = 132;
+sidefront = 384;
+sideback = 385;
+twosided = true;
+blocking = false;
+}
+linedef // 195
+{
+v1 = 132;
+v2 = 133;
+sidefront = 386;
+sideback = 387;
+twosided = true;
+blocking = false;
+}
+linedef // 196
+{
+v1 = 131;
+v2 = 133;
+sidefront = 388;
+sideback = 389;
+twosided = true;
+blocking = false;
+}
+linedef // 197
+{
+v1 = 132;
+v2 = 134;
+sidefront = 390;
+sideback = 391;
+twosided = true;
+blocking = false;
+}
+linedef // 198
+{
+v1 = 134;
+v2 = 135;
+sidefront = 392;
+sideback = 393;
+twosided = true;
+blocking = false;
+}
+linedef // 199
+{
+v1 = 133;
+v2 = 135;
+sidefront = 394;
+sideback = 395;
+twosided = true;
+blocking = false;
+}
+linedef // 200
+{
+v1 = 134;
+v2 = 136;
+sidefront = 396;
+sideback = 397;
+twosided = true;
+blocking = false;
+}
+linedef // 201
+{
+v1 = 136;
+v2 = 137;
+sidefront = 398;
+sideback = 399;
+twosided = true;
+blocking = false;
+}
+linedef // 202
+{
+v1 = 135;
+v2 = 137;
+sidefront = 400;
+sideback = 401;
+twosided = true;
+blocking = false;
+}
+linedef // 203
+{
+v1 = 136;
+v2 = 138;
+sidefront = 402;
+sideback = 403;
+twosided = true;
+blocking = false;
+}
+linedef // 204
+{
+v1 = 138;
+v2 = 139;
+sidefront = 404;
+sideback = 405;
+twosided = true;
+blocking = false;
+}
+linedef // 205
+{
+v1 = 137;
+v2 = 139;
+sidefront = 406;
+sideback = 407;
+twosided = true;
+blocking = false;
+}
+linedef // 206
+{
+v1 = 138;
+v2 = 140;
+sidefront = 408;
+sideback = 409;
+twosided = true;
+blocking = false;
+}
+linedef // 207
+{
+v1 = 140;
+v2 = 141;
+sidefront = 410;
+sideback = 411;
+twosided = true;
+blocking = false;
+}
+linedef // 208
+{
+v1 = 139;
+v2 = 141;
+sidefront = 412;
+sideback = 413;
+twosided = true;
+blocking = false;
+}
+linedef // 209
+{
+v1 = 140;
+v2 = 142;
+sidefront = 414;
+sideback = 415;
+twosided = true;
+blocking = false;
+}
+linedef // 210
+{
+v1 = 142;
+v2 = 143;
+sidefront = 416;
+sideback = 417;
+twosided = true;
+blocking = false;
+}
+linedef // 211
+{
+v1 = 141;
+v2 = 143;
+sidefront = 418;
+sideback = 419;
+twosided = true;
+blocking = false;
+}
+linedef // 212
+{
+v1 = 142;
+v2 = 144;
+sidefront = 420;
+sideback = 421;
+twosided = true;
+blocking = false;
+}
+linedef // 213
+{
+v1 = 144;
+v2 = 145;
+sidefront = 422;
+sideback = 423;
+twosided = true;
+blocking = false;
+}
+linedef // 214
+{
+v1 = 143;
+v2 = 145;
+sidefront = 424;
+sideback = 425;
+twosided = true;
+blocking = false;
+}
+linedef // 215
+{
+v1 = 144;
+v2 = 146;
+sidefront = 426;
+sideback = 427;
+twosided = true;
+blocking = false;
+}
+linedef // 216
+{
+v1 = 146;
+v2 = 147;
+sidefront = 428;
+sideback = 429;
+twosided = true;
+blocking = false;
+}
+linedef // 217
+{
+v1 = 145;
+v2 = 147;
+sidefront = 430;
+sideback = 431;
+twosided = true;
+blocking = false;
+}
+linedef // 218
+{
+v1 = 146;
+v2 = 148;
+sidefront = 432;
+sideback = 433;
+twosided = true;
+blocking = false;
+}
+linedef // 219
+{
+v1 = 148;
+v2 = 149;
+sidefront = 434;
+sideback = 435;
+twosided = true;
+blocking = false;
+}
+linedef // 220
+{
+v1 = 147;
+v2 = 149;
+sidefront = 436;
+sideback = 437;
+twosided = true;
+blocking = false;
+}
+linedef // 221
+{
+v1 = 148;
+v2 = 150;
+sidefront = 438;
+sideback = 439;
+twosided = true;
+blocking = false;
+}
+linedef // 222
+{
+v1 = 150;
+v2 = 151;
+sidefront = 440;
+sideback = 441;
+twosided = true;
+blocking = false;
+}
+linedef // 223
+{
+v1 = 149;
+v2 = 151;
+sidefront = 442;
+sideback = 443;
+twosided = true;
+blocking = false;
+}
+linedef // 224
+{
+v1 = 150;
+v2 = 152;
+sidefront = 444;
+sideback = 445;
+twosided = true;
+blocking = false;
+}
+linedef // 225
+{
+v1 = 152;
+v2 = 153;
+sidefront = 446;
+sideback = 447;
+twosided = true;
+blocking = false;
+}
+linedef // 226
+{
+v1 = 151;
+v2 = 153;
+sidefront = 448;
+sideback = 449;
+twosided = true;
+blocking = false;
+}
+linedef // 227
+{
+v1 = 152;
+v2 = 154;
+sidefront = 450;
+sideback = 451;
+twosided = true;
+blocking = false;
+}
+linedef // 228
+{
+v1 = 154;
+v2 = 155;
+sidefront = 452;
+sideback = 453;
+twosided = true;
+blocking = false;
+}
+linedef // 229
+{
+v1 = 153;
+v2 = 155;
+sidefront = 454;
+sideback = 455;
+twosided = true;
+blocking = false;
+}
+linedef // 230
+{
+v1 = 154;
+v2 = 156;
+sidefront = 456;
+sideback = 457;
+twosided = true;
+blocking = false;
+}
+linedef // 231
+{
+v1 = 156;
+v2 = 157;
+sidefront = 458;
+sideback = 459;
+twosided = true;
+blocking = false;
+}
+linedef // 232
+{
+v1 = 155;
+v2 = 157;
+sidefront = 460;
+sideback = 461;
+twosided = true;
+blocking = false;
+}
+linedef // 233
+{
+v1 = 156;
+v2 = 158;
+sidefront = 462;
+sideback = 463;
+twosided = true;
+blocking = false;
+}
+linedef // 234
+{
+v1 = 158;
+v2 = 159;
+sidefront = 464;
+sideback = 465;
+twosided = true;
+blocking = false;
+}
+linedef // 235
+{
+v1 = 157;
+v2 = 159;
+sidefront = 466;
+sideback = 467;
+twosided = true;
+blocking = false;
+}
+linedef // 236
+{
+v1 = 158;
+v2 = 160;
+sidefront = 468;
+sideback = 469;
+twosided = true;
+blocking = false;
+}
+linedef // 237
+{
+v1 = 160;
+v2 = 161;
+sidefront = 470;
+sideback = 471;
+twosided = true;
+blocking = false;
+}
+linedef // 238
+{
+v1 = 159;
+v2 = 161;
+sidefront = 472;
+sideback = 473;
+twosided = true;
+blocking = false;
+}
+linedef // 239
+{
+v1 = 160;
+v2 = 162;
+sidefront = 474;
+sideback = 475;
+twosided = true;
+blocking = false;
+}
+linedef // 240
+{
+v1 = 162;
+v2 = 163;
+sidefront = 476;
+sideback = 477;
+twosided = true;
+blocking = false;
+}
+linedef // 241
+{
+v1 = 161;
+v2 = 163;
+sidefront = 478;
+sideback = 479;
+twosided = true;
+blocking = false;
+}
+linedef // 242
+{
+v1 = 162;
+v2 = 164;
+sidefront = 480;
+sideback = 481;
+twosided = true;
+blocking = false;
+}
+linedef // 243
+{
+v1 = 164;
+v2 = 165;
+sidefront = 482;
+sideback = 483;
+twosided = true;
+blocking = false;
+}
+linedef // 244
+{
+v1 = 163;
+v2 = 165;
+sidefront = 484;
+sideback = 485;
+twosided = true;
+blocking = false;
+}
+linedef // 245
+{
+v1 = 164;
+v2 = 166;
+sidefront = 486;
+sideback = 487;
+twosided = true;
+blocking = false;
+}
+linedef // 246
+{
+v1 = 166;
+v2 = 167;
+sidefront = 488;
+sideback = 489;
+twosided = true;
+blocking = false;
+}
+linedef // 247
+{
+v1 = 165;
+v2 = 167;
+sidefront = 490;
+sideback = 491;
+twosided = true;
+blocking = false;
+}
+linedef // 248
+{
+v1 = 166;
+v2 = 168;
+sidefront = 492;
+sideback = 493;
+twosided = true;
+blocking = false;
+}
+linedef // 249
+{
+v1 = 168;
+v2 = 169;
+sidefront = 494;
+sideback = 495;
+twosided = true;
+blocking = false;
+}
+linedef // 250
+{
+v1 = 167;
+v2 = 169;
+sidefront = 496;
+sideback = 497;
+twosided = true;
+blocking = false;
+}
+linedef // 251
+{
+v1 = 168;
+v2 = 170;
+sidefront = 498;
+sideback = 499;
+twosided = true;
+blocking = false;
+}
+linedef // 252
+{
+v1 = 170;
+v2 = 171;
+sidefront = 500;
+sideback = 501;
+twosided = true;
+blocking = false;
+}
+linedef // 253
+{
+v1 = 169;
+v2 = 171;
+sidefront = 502;
+sideback = 503;
+twosided = true;
+blocking = false;
+}
+linedef // 254
+{
+v1 = 170;
+v2 = 172;
+sidefront = 504;
+sideback = 505;
+twosided = true;
+blocking = false;
+}
+linedef // 255
+{
+v1 = 172;
+v2 = 173;
+sidefront = 506;
+sideback = 507;
+twosided = true;
+blocking = false;
+}
+linedef // 256
+{
+v1 = 171;
+v2 = 173;
+sidefront = 508;
+sideback = 509;
+twosided = true;
+blocking = false;
+}
+linedef // 257
+{
+v1 = 172;
+v2 = 174;
+sidefront = 510;
+sideback = 511;
+twosided = true;
+blocking = false;
+}
+linedef // 258
+{
+v1 = 174;
+v2 = 175;
+sidefront = 512;
+sideback = 513;
+twosided = true;
+blocking = false;
+}
+linedef // 259
+{
+v1 = 173;
+v2 = 175;
+sidefront = 514;
+sideback = 515;
+twosided = true;
+blocking = false;
+}
+linedef // 260
+{
+v1 = 174;
+v2 = 176;
+sidefront = 516;
+sideback = 517;
+twosided = true;
+blocking = false;
+}
+linedef // 261
+{
+v1 = 176;
+v2 = 177;
+sidefront = 518;
+sideback = 519;
+twosided = true;
+blocking = false;
+}
+linedef // 262
+{
+v1 = 175;
+v2 = 177;
+sidefront = 520;
+sideback = 521;
+twosided = true;
+blocking = false;
+}
+linedef // 263
+{
+v1 = 176;
+v2 = 178;
+sidefront = 522;
+sideback = 523;
+twosided = true;
+blocking = false;
+}
+linedef // 264
+{
+v1 = 178;
+v2 = 179;
+sidefront = 524;
+sideback = 525;
+twosided = true;
+blocking = false;
+}
+linedef // 265
+{
+v1 = 177;
+v2 = 179;
+sidefront = 526;
+sideback = 527;
+twosided = true;
+blocking = false;
+}
+linedef // 266
+{
+v1 = 178;
+v2 = 180;
+sidefront = 528;
+sideback = 529;
+twosided = true;
+blocking = false;
+}
+linedef // 267
+{
+v1 = 180;
+v2 = 181;
+sidefront = 530;
+sideback = 531;
+twosided = true;
+blocking = false;
+}
+linedef // 268
+{
+v1 = 179;
+v2 = 181;
+sidefront = 532;
+sideback = 533;
+twosided = true;
+blocking = false;
+}
+linedef // 269
+{
+v1 = 180;
+v2 = 182;
+sidefront = 534;
+sideback = 535;
+twosided = true;
+blocking = false;
+}
+linedef // 270
+{
+v1 = 182;
+v2 = 183;
+sidefront = 536;
+sideback = 537;
+twosided = true;
+blocking = false;
+}
+linedef // 271
+{
+v1 = 181;
+v2 = 183;
+sidefront = 538;
+sideback = 539;
+twosided = true;
+blocking = false;
+}
+linedef // 272
+{
+v1 = 182;
+v2 = 184;
+sidefront = 540;
+sideback = 541;
+twosided = true;
+blocking = false;
+}
+linedef // 273
+{
+v1 = 184;
+v2 = 185;
+sidefront = 542;
+sideback = 543;
+twosided = true;
+blocking = false;
+}
+linedef // 274
+{
+v1 = 183;
+v2 = 185;
+sidefront = 544;
+sideback = 545;
+twosided = true;
+blocking = false;
+}
+linedef // 275
+{
+v1 = 184;
+v2 = 186;
+sidefront = 546;
+sideback = 547;
+twosided = true;
+blocking = false;
+}
+linedef // 276
+{
+v1 = 186;
+v2 = 187;
+sidefront = 548;
+sideback = 549;
+twosided = true;
+blocking = false;
+}
+linedef // 277
+{
+v1 = 185;
+v2 = 187;
+sidefront = 550;
+sideback = 551;
+twosided = true;
+blocking = false;
+}
+linedef // 278
+{
+v1 = 186;
+v2 = 188;
+sidefront = 552;
+sideback = 553;
+twosided = true;
+blocking = false;
+}
+linedef // 279
+{
+v1 = 188;
+v2 = 189;
+sidefront = 554;
+sideback = 555;
+twosided = true;
+blocking = false;
+}
+linedef // 280
+{
+v1 = 187;
+v2 = 189;
+sidefront = 556;
+sideback = 557;
+twosided = true;
+blocking = false;
+}
+linedef // 281
+{
+v1 = 188;
+v2 = 190;
+sidefront = 558;
+sideback = 559;
+twosided = true;
+blocking = false;
+}
+linedef // 282
+{
+v1 = 190;
+v2 = 191;
+sidefront = 560;
+sideback = 561;
+twosided = true;
+blocking = false;
+}
+linedef // 283
+{
+v1 = 189;
+v2 = 191;
+sidefront = 562;
+sideback = 563;
+twosided = true;
+blocking = false;
+}
+linedef // 284
+{
+v1 = 190;
+v2 = 192;
+sidefront = 564;
+sideback = 565;
+twosided = true;
+blocking = false;
+}
+linedef // 285
+{
+v1 = 192;
+v2 = 193;
+sidefront = 566;
+sideback = 567;
+twosided = true;
+blocking = false;
+}
+linedef // 286
+{
+v1 = 191;
+v2 = 193;
+sidefront = 568;
+sideback = 569;
+twosided = true;
+blocking = false;
+}
+linedef // 287
+{
+v1 = 192;
+v2 = 194;
+sidefront = 570;
+sideback = 571;
+twosided = true;
+blocking = false;
+}
+linedef // 288
+{
+v1 = 194;
+v2 = 195;
+sidefront = 572;
+sideback = 573;
+twosided = true;
+blocking = false;
+}
+linedef // 289
+{
+v1 = 193;
+v2 = 195;
+sidefront = 574;
+sideback = 575;
+twosided = true;
+blocking = false;
+}
+linedef // 290
+{
+v1 = 194;
+v2 = 196;
+sidefront = 576;
+sideback = 577;
+twosided = true;
+blocking = false;
+}
+linedef // 291
+{
+v1 = 196;
+v2 = 197;
+sidefront = 578;
+sideback = 579;
+twosided = true;
+blocking = false;
+}
+linedef // 292
+{
+v1 = 195;
+v2 = 197;
+sidefront = 580;
+sideback = 581;
+twosided = true;
+blocking = false;
+}
+linedef // 293
+{
+v1 = 196;
+v2 = 198;
+sidefront = 582;
+sideback = 583;
+twosided = true;
+blocking = false;
+}
+linedef // 294
+{
+v1 = 198;
+v2 = 199;
+sidefront = 584;
+sideback = 585;
+twosided = true;
+blocking = false;
+}
+linedef // 295
+{
+v1 = 197;
+v2 = 199;
+sidefront = 586;
+sideback = 587;
+twosided = true;
+blocking = false;
+}
+linedef // 296
+{
+v1 = 198;
+v2 = 200;
+sidefront = 588;
+sideback = 589;
+twosided = true;
+blocking = false;
+}
+linedef // 297
+{
+v1 = 200;
+v2 = 201;
+sidefront = 590;
+sideback = 591;
+twosided = true;
+blocking = false;
+}
+linedef // 298
+{
+v1 = 199;
+v2 = 201;
+sidefront = 592;
+sideback = 593;
+twosided = true;
+blocking = false;
+}
+linedef // 299
+{
+v1 = 200;
+v2 = 202;
+sidefront = 594;
+sideback = 595;
+twosided = true;
+blocking = false;
+}
+linedef // 300
+{
+v1 = 202;
+v2 = 203;
+sidefront = 596;
+sideback = 597;
+twosided = true;
+blocking = false;
+}
+linedef // 301
+{
+v1 = 201;
+v2 = 203;
+sidefront = 598;
+sideback = 599;
+twosided = true;
+blocking = false;
+}
+linedef // 302
+{
+v1 = 202;
+v2 = 204;
+sidefront = 600;
+sideback = 601;
+twosided = true;
+blocking = false;
+}
+linedef // 303
+{
+v1 = 204;
+v2 = 205;
+sidefront = 602;
+sideback = 603;
+twosided = true;
+blocking = false;
+}
+linedef // 304
+{
+v1 = 203;
+v2 = 205;
+sidefront = 604;
+sideback = 605;
+twosided = true;
+blocking = false;
+}
+linedef // 305
+{
+v1 = 204;
+v2 = 206;
+sidefront = 606;
+sideback = 607;
+twosided = true;
+blocking = false;
+}
+linedef // 306
+{
+v1 = 206;
+v2 = 207;
+sidefront = 608;
+sideback = 609;
+twosided = true;
+blocking = false;
+}
+linedef // 307
+{
+v1 = 205;
+v2 = 207;
+sidefront = 610;
+sideback = 611;
+twosided = true;
+blocking = false;
+}
+linedef // 308
+{
+v1 = 206;
+v2 = 208;
+sidefront = 612;
+sideback = 613;
+twosided = true;
+blocking = false;
+}
+linedef // 309
+{
+v1 = 208;
+v2 = 209;
+sidefront = 614;
+sideback = 615;
+twosided = true;
+blocking = false;
+}
+linedef // 310
+{
+v1 = 207;
+v2 = 209;
+sidefront = 616;
+sideback = 617;
+twosided = true;
+blocking = false;
+}
+linedef // 311
+{
+v1 = 208;
+v2 = 210;
+sidefront = 618;
+sideback = 619;
+twosided = true;
+blocking = false;
+}
+linedef // 312
+{
+v1 = 210;
+v2 = 211;
+sidefront = 620;
+sideback = 621;
+twosided = true;
+blocking = false;
+}
+linedef // 313
+{
+v1 = 209;
+v2 = 211;
+sidefront = 622;
+sideback = 623;
+twosided = true;
+blocking = false;
+}
+linedef // 314
+{
+v1 = 210;
+v2 = 212;
+sidefront = 624;
+sideback = 625;
+twosided = true;
+blocking = false;
+}
+linedef // 315
+{
+v1 = 212;
+v2 = 213;
+sidefront = 626;
+sideback = 627;
+twosided = true;
+blocking = false;
+}
+linedef // 316
+{
+v1 = 211;
+v2 = 213;
+sidefront = 628;
+sideback = 629;
+twosided = true;
+blocking = false;
+}
+linedef // 317
+{
+v1 = 212;
+v2 = 214;
+sidefront = 630;
+sideback = 631;
+twosided = true;
+blocking = false;
+}
+linedef // 318
+{
+v1 = 214;
+v2 = 215;
+sidefront = 632;
+sideback = 633;
+twosided = true;
+blocking = false;
+}
+linedef // 319
+{
+v1 = 213;
+v2 = 215;
+sidefront = 634;
+sideback = 635;
+twosided = true;
+blocking = false;
+}
+linedef // 320
+{
+v1 = 214;
+v2 = 216;
+sidefront = 636;
+sideback = 637;
+twosided = true;
+blocking = false;
+}
+linedef // 321
+{
+v1 = 216;
+v2 = 217;
+sidefront = 638;
+sideback = 639;
+twosided = true;
+blocking = false;
+}
+linedef // 322
+{
+v1 = 215;
+v2 = 217;
+sidefront = 640;
+sideback = 641;
+twosided = true;
+blocking = false;
+}
+linedef // 323
+{
+v1 = 216;
+v2 = 218;
+sidefront = 642;
+sideback = 643;
+twosided = true;
+blocking = false;
+}
+linedef // 324
+{
+v1 = 218;
+v2 = 219;
+sidefront = 644;
+sideback = 645;
+twosided = true;
+blocking = false;
+}
+linedef // 325
+{
+v1 = 217;
+v2 = 219;
+sidefront = 646;
+sideback = 647;
+twosided = true;
+blocking = false;
+}
+linedef // 326
+{
+v1 = 218;
+v2 = 220;
+sidefront = 648;
+sideback = 649;
+twosided = true;
+blocking = false;
+}
+linedef // 327
+{
+v1 = 220;
+v2 = 221;
+sidefront = 650;
+sideback = 651;
+twosided = true;
+blocking = false;
+}
+linedef // 328
+{
+v1 = 219;
+v2 = 221;
+sidefront = 652;
+sideback = 653;
+twosided = true;
+blocking = false;
+}
+linedef // 329
+{
+v1 = 220;
+v2 = 222;
+sidefront = 654;
+sideback = 655;
+twosided = true;
+blocking = false;
+}
+linedef // 330
+{
+v1 = 222;
+v2 = 223;
+sidefront = 656;
+sideback = 657;
+twosided = true;
+blocking = false;
+}
+linedef // 331
+{
+v1 = 221;
+v2 = 223;
+sidefront = 658;
+sideback = 659;
+twosided = true;
+blocking = false;
+}
+linedef // 332
+{
+v1 = 222;
+v2 = 224;
+sidefront = 660;
+sideback = 661;
+twosided = true;
+blocking = false;
+}
+linedef // 333
+{
+v1 = 224;
+v2 = 225;
+sidefront = 662;
+sideback = 663;
+twosided = true;
+blocking = false;
+}
+linedef // 334
+{
+v1 = 223;
+v2 = 225;
+sidefront = 664;
+sideback = 665;
+twosided = true;
+blocking = false;
+}
+linedef // 335
+{
+v1 = 224;
+v2 = 226;
+sidefront = 666;
+sideback = 667;
+twosided = true;
+blocking = false;
+}
+linedef // 336
+{
+v1 = 226;
+v2 = 227;
+sidefront = 668;
+sideback = 669;
+twosided = true;
+blocking = false;
+}
+linedef // 337
+{
+v1 = 225;
+v2 = 227;
+sidefront = 670;
+sideback = 671;
+twosided = true;
+blocking = false;
+}
+linedef // 338
+{
+v1 = 226;
+v2 = 228;
+sidefront = 672;
+sideback = 673;
+twosided = true;
+blocking = false;
+}
+linedef // 339
+{
+v1 = 228;
+v2 = 229;
+sidefront = 674;
+sideback = 675;
+twosided = true;
+blocking = false;
+}
+linedef // 340
+{
+v1 = 227;
+v2 = 229;
+sidefront = 676;
+sideback = 677;
+twosided = true;
+blocking = false;
+}
+linedef // 341
+{
+v1 = 228;
+v2 = 230;
+sidefront = 678;
+sideback = 679;
+twosided = true;
+blocking = false;
+}
+linedef // 342
+{
+v1 = 230;
+v2 = 231;
+sidefront = 680;
+sideback = 681;
+twosided = true;
+blocking = false;
+}
+linedef // 343
+{
+v1 = 229;
+v2 = 231;
+sidefront = 682;
+sideback = 683;
+twosided = true;
+blocking = false;
+}
+linedef // 344
+{
+v1 = 230;
+v2 = 232;
+sidefront = 684;
+sideback = 685;
+twosided = true;
+blocking = false;
+}
+linedef // 345
+{
+v1 = 232;
+v2 = 233;
+sidefront = 686;
+sideback = 687;
+twosided = true;
+blocking = false;
+}
+linedef // 346
+{
+v1 = 231;
+v2 = 233;
+sidefront = 688;
+sideback = 689;
+twosided = true;
+blocking = false;
+}
+linedef // 347
+{
+v1 = 232;
+v2 = 234;
+sidefront = 690;
+sideback = 691;
+twosided = true;
+blocking = false;
+}
+linedef // 348
+{
+v1 = 234;
+v2 = 235;
+sidefront = 692;
+sideback = 693;
+twosided = true;
+blocking = false;
+}
+linedef // 349
+{
+v1 = 233;
+v2 = 235;
+sidefront = 694;
+sideback = 695;
+twosided = true;
+blocking = false;
+}
+linedef // 350
+{
+v1 = 234;
+v2 = 236;
+sidefront = 696;
+sideback = 697;
+twosided = true;
+blocking = false;
+}
+linedef // 351
+{
+v1 = 236;
+v2 = 237;
+sidefront = 698;
+sideback = 699;
+twosided = true;
+blocking = false;
+}
+linedef // 352
+{
+v1 = 235;
+v2 = 237;
+sidefront = 700;
+sideback = 701;
+twosided = true;
+blocking = false;
+}
+linedef // 353
+{
+v1 = 236;
+v2 = 238;
+sidefront = 702;
+sideback = 703;
+twosided = true;
+blocking = false;
+}
+linedef // 354
+{
+v1 = 238;
+v2 = 239;
+sidefront = 704;
+sideback = 705;
+twosided = true;
+blocking = false;
+}
+linedef // 355
+{
+v1 = 237;
+v2 = 239;
+sidefront = 706;
+sideback = 707;
+twosided = true;
+blocking = false;
+}
+linedef // 356
+{
+v1 = 238;
+v2 = 240;
+sidefront = 708;
+sideback = 709;
+twosided = true;
+blocking = false;
+}
+linedef // 357
+{
+v1 = 240;
+v2 = 241;
+sidefront = 710;
+sideback = 711;
+twosided = true;
+blocking = false;
+}
+linedef // 358
+{
+v1 = 239;
+v2 = 241;
+sidefront = 712;
+sideback = 713;
+twosided = true;
+blocking = false;
+}
+linedef // 359
+{
+v1 = 240;
+v2 = 242;
+sidefront = 714;
+sideback = 715;
+twosided = true;
+blocking = false;
+}
+linedef // 360
+{
+v1 = 242;
+v2 = 243;
+sidefront = 716;
+sideback = 717;
+twosided = true;
+blocking = false;
+}
+linedef // 361
+{
+v1 = 241;
+v2 = 243;
+sidefront = 718;
+sideback = 719;
+twosided = true;
+blocking = false;
+}
+linedef // 362
+{
+v1 = 242;
+v2 = 244;
+sidefront = 720;
+sideback = 721;
+twosided = true;
+blocking = false;
+}
+linedef // 363
+{
+v1 = 244;
+v2 = 245;
+sidefront = 722;
+sideback = 723;
+twosided = true;
+blocking = false;
+}
+linedef // 364
+{
+v1 = 243;
+v2 = 245;
+sidefront = 724;
+sideback = 725;
+twosided = true;
+blocking = false;
+}
+
+// ---- SIDEDEFS (idx 4 to 725) ----
+
+sidedef // 4
+{
+sector = 1;
+}
+sidedef // 5
+{
+sector = 0;
+}
+sidedef // 6
+{
+sector = 0;
+}
+sidedef // 7
+{
+sector = 1;
+}
+sidedef // 8
+{
+sector = 2;
+}
+sidedef // 9
+{
+sector = 1;
+}
+sidedef // 10
+{
+sector = 1;
+}
+sidedef // 11
+{
+sector = 0;
+}
+sidedef // 12
+{
+sector = 0;
+}
+sidedef // 13
+{
+sector = 2;
+}
+sidedef // 14
+{
+sector = 3;
+}
+sidedef // 15
+{
+sector = 2;
+}
+sidedef // 16
+{
+sector = 2;
+}
+sidedef // 17
+{
+sector = 0;
+}
+sidedef // 18
+{
+sector = 0;
+}
+sidedef // 19
+{
+sector = 3;
+}
+sidedef // 20
+{
+sector = 4;
+}
+sidedef // 21
+{
+sector = 3;
+}
+sidedef // 22
+{
+sector = 3;
+}
+sidedef // 23
+{
+sector = 0;
+}
+sidedef // 24
+{
+sector = 0;
+}
+sidedef // 25
+{
+sector = 4;
+}
+sidedef // 26
+{
+sector = 5;
+}
+sidedef // 27
+{
+sector = 4;
+}
+sidedef // 28
+{
+sector = 4;
+}
+sidedef // 29
+{
+sector = 0;
+}
+sidedef // 30
+{
+sector = 0;
+}
+sidedef // 31
+{
+sector = 5;
+}
+sidedef // 32
+{
+sector = 6;
+}
+sidedef // 33
+{
+sector = 5;
+}
+sidedef // 34
+{
+sector = 5;
+}
+sidedef // 35
+{
+sector = 0;
+}
+sidedef // 36
+{
+sector = 0;
+}
+sidedef // 37
+{
+sector = 6;
+}
+sidedef // 38
+{
+sector = 7;
+}
+sidedef // 39
+{
+sector = 6;
+}
+sidedef // 40
+{
+sector = 6;
+}
+sidedef // 41
+{
+sector = 0;
+}
+sidedef // 42
+{
+sector = 0;
+}
+sidedef // 43
+{
+sector = 7;
+}
+sidedef // 44
+{
+sector = 8;
+}
+sidedef // 45
+{
+sector = 7;
+}
+sidedef // 46
+{
+sector = 7;
+}
+sidedef // 47
+{
+sector = 0;
+}
+sidedef // 48
+{
+sector = 0;
+}
+sidedef // 49
+{
+sector = 8;
+}
+sidedef // 50
+{
+sector = 9;
+}
+sidedef // 51
+{
+sector = 8;
+}
+sidedef // 52
+{
+sector = 8;
+}
+sidedef // 53
+{
+sector = 0;
+}
+sidedef // 54
+{
+sector = 0;
+}
+sidedef // 55
+{
+sector = 9;
+}
+sidedef // 56
+{
+sector = 10;
+}
+sidedef // 57
+{
+sector = 9;
+}
+sidedef // 58
+{
+sector = 9;
+}
+sidedef // 59
+{
+sector = 0;
+}
+sidedef // 60
+{
+sector = 0;
+}
+sidedef // 61
+{
+sector = 10;
+}
+sidedef // 62
+{
+sector = 11;
+}
+sidedef // 63
+{
+sector = 10;
+}
+sidedef // 64
+{
+sector = 10;
+}
+sidedef // 65
+{
+sector = 0;
+}
+sidedef // 66
+{
+sector = 0;
+}
+sidedef // 67
+{
+sector = 11;
+}
+sidedef // 68
+{
+sector = 12;
+}
+sidedef // 69
+{
+sector = 11;
+}
+sidedef // 70
+{
+sector = 11;
+}
+sidedef // 71
+{
+sector = 0;
+}
+sidedef // 72
+{
+sector = 0;
+}
+sidedef // 73
+{
+sector = 12;
+}
+sidedef // 74
+{
+sector = 13;
+}
+sidedef // 75
+{
+sector = 12;
+}
+sidedef // 76
+{
+sector = 12;
+}
+sidedef // 77
+{
+sector = 0;
+}
+sidedef // 78
+{
+sector = 0;
+}
+sidedef // 79
+{
+sector = 13;
+}
+sidedef // 80
+{
+sector = 14;
+}
+sidedef // 81
+{
+sector = 13;
+}
+sidedef // 82
+{
+sector = 13;
+}
+sidedef // 83
+{
+sector = 0;
+}
+sidedef // 84
+{
+sector = 0;
+}
+sidedef // 85
+{
+sector = 14;
+}
+sidedef // 86
+{
+sector = 15;
+}
+sidedef // 87
+{
+sector = 14;
+}
+sidedef // 88
+{
+sector = 14;
+}
+sidedef // 89
+{
+sector = 0;
+}
+sidedef // 90
+{
+sector = 0;
+}
+sidedef // 91
+{
+sector = 15;
+}
+sidedef // 92
+{
+sector = 16;
+}
+sidedef // 93
+{
+sector = 15;
+}
+sidedef // 94
+{
+sector = 15;
+}
+sidedef // 95
+{
+sector = 0;
+}
+sidedef // 96
+{
+sector = 0;
+}
+sidedef // 97
+{
+sector = 16;
+}
+sidedef // 98
+{
+sector = 17;
+}
+sidedef // 99
+{
+sector = 16;
+}
+sidedef // 100
+{
+sector = 16;
+}
+sidedef // 101
+{
+sector = 0;
+}
+sidedef // 102
+{
+sector = 0;
+}
+sidedef // 103
+{
+sector = 17;
+}
+sidedef // 104
+{
+sector = 18;
+}
+sidedef // 105
+{
+sector = 17;
+}
+sidedef // 106
+{
+sector = 17;
+}
+sidedef // 107
+{
+sector = 0;
+}
+sidedef // 108
+{
+sector = 0;
+}
+sidedef // 109
+{
+sector = 18;
+}
+sidedef // 110
+{
+sector = 19;
+}
+sidedef // 111
+{
+sector = 18;
+}
+sidedef // 112
+{
+sector = 18;
+}
+sidedef // 113
+{
+sector = 0;
+}
+sidedef // 114
+{
+sector = 0;
+}
+sidedef // 115
+{
+sector = 19;
+}
+sidedef // 116
+{
+sector = 20;
+}
+sidedef // 117
+{
+sector = 19;
+}
+sidedef // 118
+{
+sector = 19;
+}
+sidedef // 119
+{
+sector = 0;
+}
+sidedef // 120
+{
+sector = 0;
+}
+sidedef // 121
+{
+sector = 20;
+}
+sidedef // 122
+{
+sector = 21;
+}
+sidedef // 123
+{
+sector = 20;
+}
+sidedef // 124
+{
+sector = 20;
+}
+sidedef // 125
+{
+sector = 0;
+}
+sidedef // 126
+{
+sector = 0;
+}
+sidedef // 127
+{
+sector = 21;
+}
+sidedef // 128
+{
+sector = 22;
+}
+sidedef // 129
+{
+sector = 21;
+}
+sidedef // 130
+{
+sector = 21;
+}
+sidedef // 131
+{
+sector = 0;
+}
+sidedef // 132
+{
+sector = 0;
+}
+sidedef // 133
+{
+sector = 22;
+}
+sidedef // 134
+{
+sector = 23;
+}
+sidedef // 135
+{
+sector = 22;
+}
+sidedef // 136
+{
+sector = 22;
+}
+sidedef // 137
+{
+sector = 0;
+}
+sidedef // 138
+{
+sector = 0;
+}
+sidedef // 139
+{
+sector = 23;
+}
+sidedef // 140
+{
+sector = 24;
+}
+sidedef // 141
+{
+sector = 23;
+}
+sidedef // 142
+{
+sector = 23;
+}
+sidedef // 143
+{
+sector = 0;
+}
+sidedef // 144
+{
+sector = 0;
+}
+sidedef // 145
+{
+sector = 24;
+}
+sidedef // 146
+{
+sector = 25;
+}
+sidedef // 147
+{
+sector = 24;
+}
+sidedef // 148
+{
+sector = 24;
+}
+sidedef // 149
+{
+sector = 0;
+}
+sidedef // 150
+{
+sector = 0;
+}
+sidedef // 151
+{
+sector = 25;
+}
+sidedef // 152
+{
+sector = 26;
+}
+sidedef // 153
+{
+sector = 25;
+}
+sidedef // 154
+{
+sector = 25;
+}
+sidedef // 155
+{
+sector = 0;
+}
+sidedef // 156
+{
+sector = 0;
+}
+sidedef // 157
+{
+sector = 26;
+}
+sidedef // 158
+{
+sector = 27;
+}
+sidedef // 159
+{
+sector = 26;
+}
+sidedef // 160
+{
+sector = 26;
+}
+sidedef // 161
+{
+sector = 0;
+}
+sidedef // 162
+{
+sector = 0;
+}
+sidedef // 163
+{
+sector = 27;
+}
+sidedef // 164
+{
+sector = 28;
+}
+sidedef // 165
+{
+sector = 27;
+}
+sidedef // 166
+{
+sector = 27;
+}
+sidedef // 167
+{
+sector = 0;
+}
+sidedef // 168
+{
+sector = 0;
+}
+sidedef // 169
+{
+sector = 28;
+}
+sidedef // 170
+{
+sector = 29;
+}
+sidedef // 171
+{
+sector = 28;
+}
+sidedef // 172
+{
+sector = 28;
+}
+sidedef // 173
+{
+sector = 0;
+}
+sidedef // 174
+{
+sector = 0;
+}
+sidedef // 175
+{
+sector = 29;
+}
+sidedef // 176
+{
+sector = 30;
+}
+sidedef // 177
+{
+sector = 29;
+}
+sidedef // 178
+{
+sector = 29;
+}
+sidedef // 179
+{
+sector = 0;
+}
+sidedef // 180
+{
+sector = 0;
+}
+sidedef // 181
+{
+sector = 30;
+}
+sidedef // 182
+{
+sector = 31;
+}
+sidedef // 183
+{
+sector = 30;
+}
+sidedef // 184
+{
+sector = 30;
+}
+sidedef // 185
+{
+sector = 0;
+}
+sidedef // 186
+{
+sector = 0;
+}
+sidedef // 187
+{
+sector = 31;
+}
+sidedef // 188
+{
+sector = 32;
+}
+sidedef // 189
+{
+sector = 31;
+}
+sidedef // 190
+{
+sector = 31;
+}
+sidedef // 191
+{
+sector = 0;
+}
+sidedef // 192
+{
+sector = 0;
+}
+sidedef // 193
+{
+sector = 32;
+}
+sidedef // 194
+{
+sector = 33;
+}
+sidedef // 195
+{
+sector = 32;
+}
+sidedef // 196
+{
+sector = 32;
+}
+sidedef // 197
+{
+sector = 0;
+}
+sidedef // 198
+{
+sector = 0;
+}
+sidedef // 199
+{
+sector = 33;
+}
+sidedef // 200
+{
+sector = 34;
+}
+sidedef // 201
+{
+sector = 33;
+}
+sidedef // 202
+{
+sector = 33;
+}
+sidedef // 203
+{
+sector = 0;
+}
+sidedef // 204
+{
+sector = 0;
+}
+sidedef // 205
+{
+sector = 34;
+}
+sidedef // 206
+{
+sector = 35;
+}
+sidedef // 207
+{
+sector = 34;
+}
+sidedef // 208
+{
+sector = 34;
+}
+sidedef // 209
+{
+sector = 0;
+}
+sidedef // 210
+{
+sector = 0;
+}
+sidedef // 211
+{
+sector = 35;
+}
+sidedef // 212
+{
+sector = 36;
+}
+sidedef // 213
+{
+sector = 35;
+}
+sidedef // 214
+{
+sector = 35;
+}
+sidedef // 215
+{
+sector = 0;
+}
+sidedef // 216
+{
+sector = 0;
+}
+sidedef // 217
+{
+sector = 36;
+}
+sidedef // 218
+{
+sector = 37;
+}
+sidedef // 219
+{
+sector = 36;
+}
+sidedef // 220
+{
+sector = 36;
+}
+sidedef // 221
+{
+sector = 0;
+}
+sidedef // 222
+{
+sector = 0;
+}
+sidedef // 223
+{
+sector = 37;
+}
+sidedef // 224
+{
+sector = 38;
+}
+sidedef // 225
+{
+sector = 37;
+}
+sidedef // 226
+{
+sector = 37;
+}
+sidedef // 227
+{
+sector = 0;
+}
+sidedef // 228
+{
+sector = 0;
+}
+sidedef // 229
+{
+sector = 38;
+}
+sidedef // 230
+{
+sector = 39;
+}
+sidedef // 231
+{
+sector = 38;
+}
+sidedef // 232
+{
+sector = 38;
+}
+sidedef // 233
+{
+sector = 0;
+}
+sidedef // 234
+{
+sector = 0;
+}
+sidedef // 235
+{
+sector = 39;
+}
+sidedef // 236
+{
+sector = 40;
+}
+sidedef // 237
+{
+sector = 39;
+}
+sidedef // 238
+{
+sector = 39;
+}
+sidedef // 239
+{
+sector = 0;
+}
+sidedef // 240
+{
+sector = 0;
+}
+sidedef // 241
+{
+sector = 40;
+}
+sidedef // 242
+{
+sector = 41;
+}
+sidedef // 243
+{
+sector = 40;
+}
+sidedef // 244
+{
+sector = 40;
+}
+sidedef // 245
+{
+sector = 0;
+}
+sidedef // 246
+{
+sector = 0;
+}
+sidedef // 247
+{
+sector = 41;
+}
+sidedef // 248
+{
+sector = 42;
+}
+sidedef // 249
+{
+sector = 41;
+}
+sidedef // 250
+{
+sector = 41;
+}
+sidedef // 251
+{
+sector = 0;
+}
+sidedef // 252
+{
+sector = 0;
+}
+sidedef // 253
+{
+sector = 42;
+}
+sidedef // 254
+{
+sector = 43;
+}
+sidedef // 255
+{
+sector = 42;
+}
+sidedef // 256
+{
+sector = 42;
+}
+sidedef // 257
+{
+sector = 0;
+}
+sidedef // 258
+{
+sector = 0;
+}
+sidedef // 259
+{
+sector = 43;
+}
+sidedef // 260
+{
+sector = 44;
+}
+sidedef // 261
+{
+sector = 43;
+}
+sidedef // 262
+{
+sector = 43;
+}
+sidedef // 263
+{
+sector = 0;
+}
+sidedef // 264
+{
+sector = 0;
+}
+sidedef // 265
+{
+sector = 44;
+}
+sidedef // 266
+{
+sector = 45;
+}
+sidedef // 267
+{
+sector = 44;
+}
+sidedef // 268
+{
+sector = 44;
+}
+sidedef // 269
+{
+sector = 0;
+}
+sidedef // 270
+{
+sector = 0;
+}
+sidedef // 271
+{
+sector = 45;
+}
+sidedef // 272
+{
+sector = 46;
+}
+sidedef // 273
+{
+sector = 45;
+}
+sidedef // 274
+{
+sector = 45;
+}
+sidedef // 275
+{
+sector = 0;
+}
+sidedef // 276
+{
+sector = 0;
+}
+sidedef // 277
+{
+sector = 46;
+}
+sidedef // 278
+{
+sector = 47;
+}
+sidedef // 279
+{
+sector = 46;
+}
+sidedef // 280
+{
+sector = 46;
+}
+sidedef // 281
+{
+sector = 0;
+}
+sidedef // 282
+{
+sector = 0;
+}
+sidedef // 283
+{
+sector = 47;
+}
+sidedef // 284
+{
+sector = 48;
+}
+sidedef // 285
+{
+sector = 47;
+}
+sidedef // 286
+{
+sector = 47;
+}
+sidedef // 287
+{
+sector = 0;
+}
+sidedef // 288
+{
+sector = 0;
+}
+sidedef // 289
+{
+sector = 48;
+}
+sidedef // 290
+{
+sector = 49;
+}
+sidedef // 291
+{
+sector = 48;
+}
+sidedef // 292
+{
+sector = 48;
+}
+sidedef // 293
+{
+sector = 0;
+}
+sidedef // 294
+{
+sector = 0;
+}
+sidedef // 295
+{
+sector = 49;
+}
+sidedef // 296
+{
+sector = 50;
+}
+sidedef // 297
+{
+sector = 49;
+}
+sidedef // 298
+{
+sector = 49;
+}
+sidedef // 299
+{
+sector = 0;
+}
+sidedef // 300
+{
+sector = 0;
+}
+sidedef // 301
+{
+sector = 50;
+}
+sidedef // 302
+{
+sector = 51;
+}
+sidedef // 303
+{
+sector = 50;
+}
+sidedef // 304
+{
+sector = 50;
+}
+sidedef // 305
+{
+sector = 0;
+}
+sidedef // 306
+{
+sector = 0;
+}
+sidedef // 307
+{
+sector = 51;
+}
+sidedef // 308
+{
+sector = 52;
+}
+sidedef // 309
+{
+sector = 51;
+}
+sidedef // 310
+{
+sector = 51;
+}
+sidedef // 311
+{
+sector = 0;
+}
+sidedef // 312
+{
+sector = 0;
+}
+sidedef // 313
+{
+sector = 52;
+}
+sidedef // 314
+{
+sector = 53;
+}
+sidedef // 315
+{
+sector = 52;
+}
+sidedef // 316
+{
+sector = 52;
+}
+sidedef // 317
+{
+sector = 0;
+}
+sidedef // 318
+{
+sector = 0;
+}
+sidedef // 319
+{
+sector = 53;
+}
+sidedef // 320
+{
+sector = 54;
+}
+sidedef // 321
+{
+sector = 53;
+}
+sidedef // 322
+{
+sector = 53;
+}
+sidedef // 323
+{
+sector = 0;
+}
+sidedef // 324
+{
+sector = 0;
+}
+sidedef // 325
+{
+sector = 54;
+}
+sidedef // 326
+{
+sector = 55;
+}
+sidedef // 327
+{
+sector = 54;
+}
+sidedef // 328
+{
+sector = 54;
+}
+sidedef // 329
+{
+sector = 0;
+}
+sidedef // 330
+{
+sector = 0;
+}
+sidedef // 331
+{
+sector = 55;
+}
+sidedef // 332
+{
+sector = 56;
+}
+sidedef // 333
+{
+sector = 55;
+}
+sidedef // 334
+{
+sector = 55;
+}
+sidedef // 335
+{
+sector = 0;
+}
+sidedef // 336
+{
+sector = 0;
+}
+sidedef // 337
+{
+sector = 56;
+}
+sidedef // 338
+{
+sector = 57;
+}
+sidedef // 339
+{
+sector = 56;
+}
+sidedef // 340
+{
+sector = 56;
+}
+sidedef // 341
+{
+sector = 0;
+}
+sidedef // 342
+{
+sector = 0;
+}
+sidedef // 343
+{
+sector = 57;
+}
+sidedef // 344
+{
+sector = 58;
+}
+sidedef // 345
+{
+sector = 57;
+}
+sidedef // 346
+{
+sector = 57;
+}
+sidedef // 347
+{
+sector = 0;
+}
+sidedef // 348
+{
+sector = 0;
+}
+sidedef // 349
+{
+sector = 58;
+}
+sidedef // 350
+{
+sector = 59;
+}
+sidedef // 351
+{
+sector = 58;
+}
+sidedef // 352
+{
+sector = 58;
+}
+sidedef // 353
+{
+sector = 0;
+}
+sidedef // 354
+{
+sector = 0;
+}
+sidedef // 355
+{
+sector = 59;
+}
+sidedef // 356
+{
+sector = 60;
+}
+sidedef // 357
+{
+sector = 59;
+}
+sidedef // 358
+{
+sector = 59;
+}
+sidedef // 359
+{
+sector = 0;
+}
+sidedef // 360
+{
+sector = 0;
+}
+sidedef // 361
+{
+sector = 60;
+}
+sidedef // 362
+{
+sector = 61;
+}
+sidedef // 363
+{
+sector = 60;
+}
+sidedef // 364
+{
+sector = 60;
+}
+sidedef // 365
+{
+sector = 0;
+}
+sidedef // 366
+{
+sector = 0;
+}
+sidedef // 367
+{
+sector = 61;
+}
+sidedef // 368
+{
+sector = 62;
+}
+sidedef // 369
+{
+sector = 61;
+}
+sidedef // 370
+{
+sector = 61;
+}
+sidedef // 371
+{
+sector = 0;
+}
+sidedef // 372
+{
+sector = 0;
+}
+sidedef // 373
+{
+sector = 62;
+}
+sidedef // 374
+{
+sector = 63;
+}
+sidedef // 375
+{
+sector = 62;
+}
+sidedef // 376
+{
+sector = 62;
+}
+sidedef // 377
+{
+sector = 0;
+}
+sidedef // 378
+{
+sector = 0;
+}
+sidedef // 379
+{
+sector = 63;
+}
+sidedef // 380
+{
+sector = 64;
+}
+sidedef // 381
+{
+sector = 63;
+}
+sidedef // 382
+{
+sector = 63;
+}
+sidedef // 383
+{
+sector = 0;
+}
+sidedef // 384
+{
+sector = 0;
+}
+sidedef // 385
+{
+sector = 64;
+}
+sidedef // 386
+{
+sector = 65;
+}
+sidedef // 387
+{
+sector = 64;
+}
+sidedef // 388
+{
+sector = 64;
+}
+sidedef // 389
+{
+sector = 0;
+}
+sidedef // 390
+{
+sector = 0;
+}
+sidedef // 391
+{
+sector = 65;
+}
+sidedef // 392
+{
+sector = 66;
+}
+sidedef // 393
+{
+sector = 65;
+}
+sidedef // 394
+{
+sector = 65;
+}
+sidedef // 395
+{
+sector = 0;
+}
+sidedef // 396
+{
+sector = 0;
+}
+sidedef // 397
+{
+sector = 66;
+}
+sidedef // 398
+{
+sector = 67;
+}
+sidedef // 399
+{
+sector = 66;
+}
+sidedef // 400
+{
+sector = 66;
+}
+sidedef // 401
+{
+sector = 0;
+}
+sidedef // 402
+{
+sector = 0;
+}
+sidedef // 403
+{
+sector = 67;
+}
+sidedef // 404
+{
+sector = 68;
+}
+sidedef // 405
+{
+sector = 67;
+}
+sidedef // 406
+{
+sector = 67;
+}
+sidedef // 407
+{
+sector = 0;
+}
+sidedef // 408
+{
+sector = 0;
+}
+sidedef // 409
+{
+sector = 68;
+}
+sidedef // 410
+{
+sector = 69;
+}
+sidedef // 411
+{
+sector = 68;
+}
+sidedef // 412
+{
+sector = 68;
+}
+sidedef // 413
+{
+sector = 0;
+}
+sidedef // 414
+{
+sector = 0;
+}
+sidedef // 415
+{
+sector = 69;
+}
+sidedef // 416
+{
+sector = 70;
+}
+sidedef // 417
+{
+sector = 69;
+}
+sidedef // 418
+{
+sector = 69;
+}
+sidedef // 419
+{
+sector = 0;
+}
+sidedef // 420
+{
+sector = 0;
+}
+sidedef // 421
+{
+sector = 70;
+}
+sidedef // 422
+{
+sector = 71;
+}
+sidedef // 423
+{
+sector = 70;
+}
+sidedef // 424
+{
+sector = 70;
+}
+sidedef // 425
+{
+sector = 0;
+}
+sidedef // 426
+{
+sector = 0;
+}
+sidedef // 427
+{
+sector = 71;
+}
+sidedef // 428
+{
+sector = 72;
+}
+sidedef // 429
+{
+sector = 71;
+}
+sidedef // 430
+{
+sector = 71;
+}
+sidedef // 431
+{
+sector = 0;
+}
+sidedef // 432
+{
+sector = 0;
+}
+sidedef // 433
+{
+sector = 72;
+}
+sidedef // 434
+{
+sector = 73;
+}
+sidedef // 435
+{
+sector = 72;
+}
+sidedef // 436
+{
+sector = 72;
+}
+sidedef // 437
+{
+sector = 0;
+}
+sidedef // 438
+{
+sector = 0;
+}
+sidedef // 439
+{
+sector = 73;
+}
+sidedef // 440
+{
+sector = 74;
+}
+sidedef // 441
+{
+sector = 73;
+}
+sidedef // 442
+{
+sector = 73;
+}
+sidedef // 443
+{
+sector = 0;
+}
+sidedef // 444
+{
+sector = 0;
+}
+sidedef // 445
+{
+sector = 74;
+}
+sidedef // 446
+{
+sector = 75;
+}
+sidedef // 447
+{
+sector = 74;
+}
+sidedef // 448
+{
+sector = 74;
+}
+sidedef // 449
+{
+sector = 0;
+}
+sidedef // 450
+{
+sector = 0;
+}
+sidedef // 451
+{
+sector = 75;
+}
+sidedef // 452
+{
+sector = 76;
+}
+sidedef // 453
+{
+sector = 75;
+}
+sidedef // 454
+{
+sector = 75;
+}
+sidedef // 455
+{
+sector = 0;
+}
+sidedef // 456
+{
+sector = 0;
+}
+sidedef // 457
+{
+sector = 76;
+}
+sidedef // 458
+{
+sector = 77;
+}
+sidedef // 459
+{
+sector = 76;
+}
+sidedef // 460
+{
+sector = 76;
+}
+sidedef // 461
+{
+sector = 0;
+}
+sidedef // 462
+{
+sector = 0;
+}
+sidedef // 463
+{
+sector = 77;
+}
+sidedef // 464
+{
+sector = 78;
+}
+sidedef // 465
+{
+sector = 77;
+}
+sidedef // 466
+{
+sector = 77;
+}
+sidedef // 467
+{
+sector = 0;
+}
+sidedef // 468
+{
+sector = 0;
+}
+sidedef // 469
+{
+sector = 78;
+}
+sidedef // 470
+{
+sector = 79;
+}
+sidedef // 471
+{
+sector = 78;
+}
+sidedef // 472
+{
+sector = 78;
+}
+sidedef // 473
+{
+sector = 0;
+}
+sidedef // 474
+{
+sector = 0;
+}
+sidedef // 475
+{
+sector = 79;
+}
+sidedef // 476
+{
+sector = 80;
+}
+sidedef // 477
+{
+sector = 79;
+}
+sidedef // 478
+{
+sector = 79;
+}
+sidedef // 479
+{
+sector = 0;
+}
+sidedef // 480
+{
+sector = 0;
+}
+sidedef // 481
+{
+sector = 80;
+}
+sidedef // 482
+{
+sector = 81;
+}
+sidedef // 483
+{
+sector = 80;
+}
+sidedef // 484
+{
+sector = 80;
+}
+sidedef // 485
+{
+sector = 0;
+}
+sidedef // 486
+{
+sector = 0;
+}
+sidedef // 487
+{
+sector = 81;
+}
+sidedef // 488
+{
+sector = 82;
+}
+sidedef // 489
+{
+sector = 81;
+}
+sidedef // 490
+{
+sector = 81;
+}
+sidedef // 491
+{
+sector = 0;
+}
+sidedef // 492
+{
+sector = 0;
+}
+sidedef // 493
+{
+sector = 82;
+}
+sidedef // 494
+{
+sector = 83;
+}
+sidedef // 495
+{
+sector = 82;
+}
+sidedef // 496
+{
+sector = 82;
+}
+sidedef // 497
+{
+sector = 0;
+}
+sidedef // 498
+{
+sector = 0;
+}
+sidedef // 499
+{
+sector = 83;
+}
+sidedef // 500
+{
+sector = 84;
+}
+sidedef // 501
+{
+sector = 83;
+}
+sidedef // 502
+{
+sector = 83;
+}
+sidedef // 503
+{
+sector = 0;
+}
+sidedef // 504
+{
+sector = 0;
+}
+sidedef // 505
+{
+sector = 84;
+}
+sidedef // 506
+{
+sector = 85;
+}
+sidedef // 507
+{
+sector = 84;
+}
+sidedef // 508
+{
+sector = 84;
+}
+sidedef // 509
+{
+sector = 0;
+}
+sidedef // 510
+{
+sector = 0;
+}
+sidedef // 511
+{
+sector = 85;
+}
+sidedef // 512
+{
+sector = 86;
+}
+sidedef // 513
+{
+sector = 85;
+}
+sidedef // 514
+{
+sector = 85;
+}
+sidedef // 515
+{
+sector = 0;
+}
+sidedef // 516
+{
+sector = 0;
+}
+sidedef // 517
+{
+sector = 86;
+}
+sidedef // 518
+{
+sector = 87;
+}
+sidedef // 519
+{
+sector = 86;
+}
+sidedef // 520
+{
+sector = 86;
+}
+sidedef // 521
+{
+sector = 0;
+}
+sidedef // 522
+{
+sector = 0;
+}
+sidedef // 523
+{
+sector = 87;
+}
+sidedef // 524
+{
+sector = 88;
+}
+sidedef // 525
+{
+sector = 87;
+}
+sidedef // 526
+{
+sector = 87;
+}
+sidedef // 527
+{
+sector = 0;
+}
+sidedef // 528
+{
+sector = 0;
+}
+sidedef // 529
+{
+sector = 88;
+}
+sidedef // 530
+{
+sector = 89;
+}
+sidedef // 531
+{
+sector = 88;
+}
+sidedef // 532
+{
+sector = 88;
+}
+sidedef // 533
+{
+sector = 0;
+}
+sidedef // 534
+{
+sector = 0;
+}
+sidedef // 535
+{
+sector = 89;
+}
+sidedef // 536
+{
+sector = 90;
+}
+sidedef // 537
+{
+sector = 89;
+}
+sidedef // 538
+{
+sector = 89;
+}
+sidedef // 539
+{
+sector = 0;
+}
+sidedef // 540
+{
+sector = 0;
+}
+sidedef // 541
+{
+sector = 90;
+}
+sidedef // 542
+{
+sector = 91;
+}
+sidedef // 543
+{
+sector = 90;
+}
+sidedef // 544
+{
+sector = 90;
+}
+sidedef // 545
+{
+sector = 0;
+}
+sidedef // 546
+{
+sector = 0;
+}
+sidedef // 547
+{
+sector = 91;
+}
+sidedef // 548
+{
+sector = 92;
+}
+sidedef // 549
+{
+sector = 91;
+}
+sidedef // 550
+{
+sector = 91;
+}
+sidedef // 551
+{
+sector = 0;
+}
+sidedef // 552
+{
+sector = 0;
+}
+sidedef // 553
+{
+sector = 92;
+}
+sidedef // 554
+{
+sector = 93;
+}
+sidedef // 555
+{
+sector = 92;
+}
+sidedef // 556
+{
+sector = 92;
+}
+sidedef // 557
+{
+sector = 0;
+}
+sidedef // 558
+{
+sector = 0;
+}
+sidedef // 559
+{
+sector = 93;
+}
+sidedef // 560
+{
+sector = 94;
+}
+sidedef // 561
+{
+sector = 93;
+}
+sidedef // 562
+{
+sector = 93;
+}
+sidedef // 563
+{
+sector = 0;
+}
+sidedef // 564
+{
+sector = 0;
+}
+sidedef // 565
+{
+sector = 94;
+}
+sidedef // 566
+{
+sector = 95;
+}
+sidedef // 567
+{
+sector = 94;
+}
+sidedef // 568
+{
+sector = 94;
+}
+sidedef // 569
+{
+sector = 0;
+}
+sidedef // 570
+{
+sector = 0;
+}
+sidedef // 571
+{
+sector = 95;
+}
+sidedef // 572
+{
+sector = 96;
+}
+sidedef // 573
+{
+sector = 95;
+}
+sidedef // 574
+{
+sector = 95;
+}
+sidedef // 575
+{
+sector = 0;
+}
+sidedef // 576
+{
+sector = 0;
+}
+sidedef // 577
+{
+sector = 96;
+}
+sidedef // 578
+{
+sector = 97;
+}
+sidedef // 579
+{
+sector = 96;
+}
+sidedef // 580
+{
+sector = 96;
+}
+sidedef // 581
+{
+sector = 0;
+}
+sidedef // 582
+{
+sector = 0;
+}
+sidedef // 583
+{
+sector = 97;
+}
+sidedef // 584
+{
+sector = 98;
+}
+sidedef // 585
+{
+sector = 97;
+}
+sidedef // 586
+{
+sector = 97;
+}
+sidedef // 587
+{
+sector = 0;
+}
+sidedef // 588
+{
+sector = 0;
+}
+sidedef // 589
+{
+sector = 98;
+}
+sidedef // 590
+{
+sector = 99;
+}
+sidedef // 591
+{
+sector = 98;
+}
+sidedef // 592
+{
+sector = 98;
+}
+sidedef // 593
+{
+sector = 0;
+}
+sidedef // 594
+{
+sector = 0;
+}
+sidedef // 595
+{
+sector = 99;
+}
+sidedef // 596
+{
+sector = 100;
+}
+sidedef // 597
+{
+sector = 99;
+}
+sidedef // 598
+{
+sector = 99;
+}
+sidedef // 599
+{
+sector = 0;
+}
+sidedef // 600
+{
+sector = 0;
+}
+sidedef // 601
+{
+sector = 100;
+}
+sidedef // 602
+{
+sector = 101;
+}
+sidedef // 603
+{
+sector = 100;
+}
+sidedef // 604
+{
+sector = 100;
+}
+sidedef // 605
+{
+sector = 0;
+}
+sidedef // 606
+{
+sector = 0;
+}
+sidedef // 607
+{
+sector = 101;
+}
+sidedef // 608
+{
+sector = 102;
+}
+sidedef // 609
+{
+sector = 101;
+}
+sidedef // 610
+{
+sector = 101;
+}
+sidedef // 611
+{
+sector = 0;
+}
+sidedef // 612
+{
+sector = 0;
+}
+sidedef // 613
+{
+sector = 102;
+}
+sidedef // 614
+{
+sector = 103;
+}
+sidedef // 615
+{
+sector = 102;
+}
+sidedef // 616
+{
+sector = 102;
+}
+sidedef // 617
+{
+sector = 0;
+}
+sidedef // 618
+{
+sector = 0;
+}
+sidedef // 619
+{
+sector = 103;
+}
+sidedef // 620
+{
+sector = 104;
+}
+sidedef // 621
+{
+sector = 103;
+}
+sidedef // 622
+{
+sector = 103;
+}
+sidedef // 623
+{
+sector = 0;
+}
+sidedef // 624
+{
+sector = 0;
+}
+sidedef // 625
+{
+sector = 104;
+}
+sidedef // 626
+{
+sector = 105;
+}
+sidedef // 627
+{
+sector = 104;
+}
+sidedef // 628
+{
+sector = 104;
+}
+sidedef // 629
+{
+sector = 0;
+}
+sidedef // 630
+{
+sector = 0;
+}
+sidedef // 631
+{
+sector = 105;
+}
+sidedef // 632
+{
+sector = 106;
+}
+sidedef // 633
+{
+sector = 105;
+}
+sidedef // 634
+{
+sector = 105;
+}
+sidedef // 635
+{
+sector = 0;
+}
+sidedef // 636
+{
+sector = 0;
+}
+sidedef // 637
+{
+sector = 106;
+}
+sidedef // 638
+{
+sector = 107;
+}
+sidedef // 639
+{
+sector = 106;
+}
+sidedef // 640
+{
+sector = 106;
+}
+sidedef // 641
+{
+sector = 0;
+}
+sidedef // 642
+{
+sector = 0;
+}
+sidedef // 643
+{
+sector = 107;
+}
+sidedef // 644
+{
+sector = 108;
+}
+sidedef // 645
+{
+sector = 107;
+}
+sidedef // 646
+{
+sector = 107;
+}
+sidedef // 647
+{
+sector = 0;
+}
+sidedef // 648
+{
+sector = 0;
+}
+sidedef // 649
+{
+sector = 108;
+}
+sidedef // 650
+{
+sector = 109;
+}
+sidedef // 651
+{
+sector = 108;
+}
+sidedef // 652
+{
+sector = 108;
+}
+sidedef // 653
+{
+sector = 0;
+}
+sidedef // 654
+{
+sector = 0;
+}
+sidedef // 655
+{
+sector = 109;
+}
+sidedef // 656
+{
+sector = 110;
+}
+sidedef // 657
+{
+sector = 109;
+}
+sidedef // 658
+{
+sector = 109;
+}
+sidedef // 659
+{
+sector = 0;
+}
+sidedef // 660
+{
+sector = 0;
+}
+sidedef // 661
+{
+sector = 110;
+}
+sidedef // 662
+{
+sector = 111;
+}
+sidedef // 663
+{
+sector = 110;
+}
+sidedef // 664
+{
+sector = 110;
+}
+sidedef // 665
+{
+sector = 0;
+}
+sidedef // 666
+{
+sector = 0;
+}
+sidedef // 667
+{
+sector = 111;
+}
+sidedef // 668
+{
+sector = 112;
+}
+sidedef // 669
+{
+sector = 111;
+}
+sidedef // 670
+{
+sector = 111;
+}
+sidedef // 671
+{
+sector = 0;
+}
+sidedef // 672
+{
+sector = 0;
+}
+sidedef // 673
+{
+sector = 112;
+}
+sidedef // 674
+{
+sector = 113;
+}
+sidedef // 675
+{
+sector = 112;
+}
+sidedef // 676
+{
+sector = 112;
+}
+sidedef // 677
+{
+sector = 0;
+}
+sidedef // 678
+{
+sector = 0;
+}
+sidedef // 679
+{
+sector = 113;
+}
+sidedef // 680
+{
+sector = 114;
+}
+sidedef // 681
+{
+sector = 113;
+}
+sidedef // 682
+{
+sector = 113;
+}
+sidedef // 683
+{
+sector = 0;
+}
+sidedef // 684
+{
+sector = 0;
+}
+sidedef // 685
+{
+sector = 114;
+}
+sidedef // 686
+{
+sector = 115;
+}
+sidedef // 687
+{
+sector = 114;
+}
+sidedef // 688
+{
+sector = 114;
+}
+sidedef // 689
+{
+sector = 0;
+}
+sidedef // 690
+{
+sector = 0;
+}
+sidedef // 691
+{
+sector = 115;
+}
+sidedef // 692
+{
+sector = 116;
+}
+sidedef // 693
+{
+sector = 115;
+}
+sidedef // 694
+{
+sector = 115;
+}
+sidedef // 695
+{
+sector = 0;
+}
+sidedef // 696
+{
+sector = 0;
+}
+sidedef // 697
+{
+sector = 116;
+}
+sidedef // 698
+{
+sector = 117;
+}
+sidedef // 699
+{
+sector = 116;
+}
+sidedef // 700
+{
+sector = 116;
+}
+sidedef // 701
+{
+sector = 0;
+}
+sidedef // 702
+{
+sector = 0;
+}
+sidedef // 703
+{
+sector = 117;
+}
+sidedef // 704
+{
+sector = 118;
+}
+sidedef // 705
+{
+sector = 117;
+}
+sidedef // 706
+{
+sector = 117;
+}
+sidedef // 707
+{
+sector = 0;
+}
+sidedef // 708
+{
+sector = 0;
+}
+sidedef // 709
+{
+sector = 118;
+}
+sidedef // 710
+{
+sector = 119;
+}
+sidedef // 711
+{
+sector = 118;
+}
+sidedef // 712
+{
+sector = 118;
+}
+sidedef // 713
+{
+sector = 0;
+}
+sidedef // 714
+{
+sector = 0;
+}
+sidedef // 715
+{
+sector = 119;
+}
+sidedef // 716
+{
+sector = 120;
+}
+sidedef // 717
+{
+sector = 119;
+}
+sidedef // 718
+{
+sector = 119;
+}
+sidedef // 719
+{
+sector = 0;
+}
+sidedef // 720
+{
+sector = 0;
+}
+sidedef // 721
+{
+sector = 120;
+}
+sidedef // 722
+{
+sector = 0;
+}
+sidedef // 723
+{
+sector = 120;
+}
+sidedef // 724
+{
+sector = 120;
+}
+sidedef // 725
+{
+sector = 0;
+}
+
+// ---- SECTORS (idx 1 to 120) ----
+
+sector // 1
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 2
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 3
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 4
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 5
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 6
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 7
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 8
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 9
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 10
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 11
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 12
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 13
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 14
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 15
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 16
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 17
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 18
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 19
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 20
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 21
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 22
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 23
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 24
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 25
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 26
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 27
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 28
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 29
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 30
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 31
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 32
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 33
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 34
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 35
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 36
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 37
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 38
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 39
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 40
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 41
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 42
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 43
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 44
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 45
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 46
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 47
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 48
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 49
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 50
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 51
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 52
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 53
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 54
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 55
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 56
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 57
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 58
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 59
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 60
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 61
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 62
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 63
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 64
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 65
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 66
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 67
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 68
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 69
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 70
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 71
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 72
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 73
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 74
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 75
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 76
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 77
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 78
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 79
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 80
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 81
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 82
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 83
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 84
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 85
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 86
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 87
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 88
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 89
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 90
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 91
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 92
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 93
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 94
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 95
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 96
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 97
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 98
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 99
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 100
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 101
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 102
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 103
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 104
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 105
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 106
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 107
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 108
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 109
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 110
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 111
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 112
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 113
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 114
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 115
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 116
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 117
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 118
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 119
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+sector // 120
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT14";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
