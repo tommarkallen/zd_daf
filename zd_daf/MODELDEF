@@ -1,2 +1,3 @@
 #include "models/defs/plants.modeldef"
 #include "models/defs/architecture.modeldef"
+#include "models/defs/uzumaki.modeldef"

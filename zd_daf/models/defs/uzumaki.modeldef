@@ -1,0 +1,10 @@
+Model Uzumaki
+{
+	Path "models"
+	Model 0 "uzumaki.obj"
+
+	USEACTORPITCH
+	USEACTORROLL
+   
+	FrameIndex PLAY A 0 0
+}
