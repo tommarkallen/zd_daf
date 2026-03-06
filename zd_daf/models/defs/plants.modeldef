@@ -33,6 +33,166 @@ Model Anemone03
 
 	USEACTORPITCH
 	USEACTORROLL
-	
+
 	FrameIndex PLAY A 0 0
+}
+
+Model Seaweed1
+{
+	Path "models"
+	Model 0 "seaweed.md3"
+	Skin 0 "skins/seaweed.png"
+	Scale 12.0 12.0 12.0
+
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex NO3D A 0 0
+	FrameIndex NO3D B 0 1
+	FrameIndex NO3D C 0 2
+	FrameIndex NO3D D 0 3
+	FrameIndex NO3D E 0 4
+	FrameIndex NO3D F 0 5
+	FrameIndex NO3D G 0 6
+	FrameIndex NO3D H 0 7
+	FrameIndex NO3D I 0 8
+	FrameIndex NO3D J 0 9
+	FrameIndex NO3D K 0 10
+	FrameIndex NO3D L 0 11
+	FrameIndex NO3D M 0 12
+	FrameIndex NO3D N 0 13
+	FrameIndex NO3D O 0 14
+	FrameIndex NO3D P 0 15
+	FrameIndex NO3D Q 0 16
+	FrameIndex NO3D R 0 17
+	FrameIndex NO3D S 0 18
+	FrameIndex NO3D T 0 19
+	FrameIndex NO3D U 0 20
+	FrameIndex NO3D V 0 21
+	FrameIndex NO3D W 0 22
+	FrameIndex NO3D X 0 23
+	FrameIndex NO3D Y 0 24
+	FrameIndex NO3D Z 0 25
+	FrameIndex NB3D A 0 26
+	FrameIndex NB3D B 0 27
+	FrameIndex NB3D C 0 28
+	FrameIndex NB3D D 0 29
+	FrameIndex NB3D E 0 30
+	FrameIndex NB3D F 0 31
+	FrameIndex NB3D G 0 32
+	FrameIndex NB3D H 0 33
+	FrameIndex NB3D I 0 34
+	FrameIndex NB3D J 0 35
+	FrameIndex NB3D K 0 36
+	FrameIndex NB3D L 0 37
+	FrameIndex NB3D M 0 38
+	FrameIndex NB3D N 0 39
+	FrameIndex NB3D O 0 40
+}
+
+Model Seaweed2
+{
+	Path "models"
+	Model 0 "seaweed2.md3"
+	Skin 0 "skins/seaweed.png"
+	Scale 12.0 12.0 5.0
+
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex NO3D A 0 0
+	FrameIndex NO3D B 0 1
+	FrameIndex NO3D C 0 2
+	FrameIndex NO3D D 0 3
+	FrameIndex NO3D E 0 4
+	FrameIndex NO3D F 0 5
+	FrameIndex NO3D G 0 6
+	FrameIndex NO3D H 0 7
+	FrameIndex NO3D I 0 8
+	FrameIndex NO3D J 0 9
+	FrameIndex NO3D K 0 10
+	FrameIndex NO3D L 0 11
+	FrameIndex NO3D M 0 12
+	FrameIndex NO3D N 0 13
+	FrameIndex NO3D O 0 14
+	FrameIndex NO3D P 0 15
+	FrameIndex NO3D Q 0 16
+	FrameIndex NO3D R 0 17
+	FrameIndex NO3D S 0 18
+	FrameIndex NO3D T 0 19
+	FrameIndex NO3D U 0 20
+	FrameIndex NO3D V 0 21
+	FrameIndex NO3D W 0 22
+	FrameIndex NO3D X 0 23
+	FrameIndex NO3D Y 0 24
+	FrameIndex NO3D Z 0 25
+	FrameIndex NB3D A 0 26
+	FrameIndex NB3D B 0 27
+	FrameIndex NB3D C 0 28
+	FrameIndex NB3D D 0 29
+	FrameIndex NB3D E 0 30
+	FrameIndex NB3D F 0 31
+	FrameIndex NB3D G 0 32
+	FrameIndex NB3D H 0 33
+	FrameIndex NB3D I 0 34
+	FrameIndex NB3D J 0 35
+	FrameIndex NB3D K 0 36
+	FrameIndex NB3D L 0 37
+	FrameIndex NB3D M 0 38
+	FrameIndex NB3D N 0 39
+}
+
+Model Seaweed3
+{
+	Path "models"
+	Model 0 "seaweed3.md3"
+	Skin 0 "skins/seaweed.png"
+	Scale 12.0 12.0 12.0
+
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	USEACTORROLL
+
+	FrameIndex NO3D A 0 0
+	FrameIndex NO3D B 0 1
+	FrameIndex NO3D C 0 2
+	FrameIndex NO3D D 0 3
+	FrameIndex NO3D E 0 4
+	FrameIndex NO3D F 0 5
+	FrameIndex NO3D G 0 6
+	FrameIndex NO3D H 0 7
+	FrameIndex NO3D I 0 8
+	FrameIndex NO3D J 0 9
+	FrameIndex NO3D K 0 10
+	FrameIndex NO3D L 0 11
+	FrameIndex NO3D M 0 12
+	FrameIndex NO3D N 0 13
+	FrameIndex NO3D O 0 14
+	FrameIndex NO3D P 0 15
+	FrameIndex NO3D Q 0 16
+	FrameIndex NO3D R 0 17
+	FrameIndex NO3D S 0 18
+	FrameIndex NO3D T 0 19
+	FrameIndex NO3D U 0 20
+	FrameIndex NO3D V 0 21
+	FrameIndex NO3D W 0 22
+	FrameIndex NO3D X 0 23
+	FrameIndex NO3D Y 0 24
+	FrameIndex NO3D Z 0 25
+	FrameIndex NB3D A 0 26
+	FrameIndex NB3D B 0 27
+	FrameIndex NB3D C 0 28
+	FrameIndex NB3D D 0 29
+	FrameIndex NB3D E 0 30
+	FrameIndex NB3D F 0 31
+	FrameIndex NB3D G 0 32
+	FrameIndex NB3D H 0 33
+	FrameIndex NB3D I 0 34
+	FrameIndex NB3D J 0 35
+	FrameIndex NB3D K 0 36
+	FrameIndex NB3D L 0 37
+	FrameIndex NB3D M 0 38
+	FrameIndex NB3D N 0 39
 }

@@ -1,0 +1,194 @@
+MIGRATING MODELS FROM ELEMENTALISM TO ZD_DAF
+============================================
+Context document for AI-assisted development.
+Covers the full migration process learned from migrating seaweed.md3/seaweed2.md3/seaweed3.md3.
+
+
+SOURCE LOCATION
+---------------
+Elementalism pack lives at:
+  c:\dev\zd\Elementalism_Phase1_Full_Release_v1.3\elementalism\
+
+A partial copy may also exist at:
+  c:\dev\zd_daf\elementalism\
+
+Prefer the full release copy for sourcing assets.
+
+
+WHAT TO MIGRATE (CHECKLIST)
+----------------------------
+For each model being migrated, you need:
+
+  1. Model file(s)      elementalism/models/<name>.md3 (or .obj)
+  2. Skin file(s)       elementalism/models/skins/<name>.png
+  3. Sprite lumps       elementalism/sprites/Models/<SPRT>A0.png ... (see below)
+  4. MODELDEF entry     from elementalism/models/Clay_Modeldef.txt
+  5. Actor definition   from elementalism/actors/Clay_Models.txt
+
+If any of these is missing, the model will fail to load, animate, or appear in UDB.
+
+
+FILE DESTINATIONS IN ZD_DAF
+-----------------------------
+  Model files   ->  zd_daf/models/<name>.md3
+  Skin files    ->  zd_daf/models/skins/<name>.png
+  Sprite lumps  ->  zd_daf/sprites/<name>/  (subdirectory named after the model)
+  MODELDEF      ->  zd_daf/models/defs/plants.modeldef  (for organic/plant models)
+                    zd_daf/models/defs/architecture.modeldef  (for structural models)
+  ZScript actor ->  zd_daf/actors/plants.zs  (or architecture.zs etc.)
+  DoomEdNum     ->  zd_daf/MAPINFO  DoomEdNums block
+
+
+MODELDEF TRANSLATION
+--------------------
+Elementalism uses:
+  Model 0 "Models/seaweed.md3"
+  Skin 0 "Models/skins/seaweed.png"
+
+ZD_DAF uses (Path sets the base, so paths are relative to it):
+  Path "models"
+  Model 0 "seaweed.md3"
+  Skin 0 "skins/seaweed.png"
+
+Flags to preserve:
+  DONTCULLBACKFACES   -- keep for foliage/thin geometry (seaweed, plants)
+  USEACTORPITCH       -- keep if elementalism had it
+  USEACTORROLL        -- add alongside USEACTORPITCH for zd_daf convention
+
+Do NOT copy the offset line (elementalism: "offset 0 0 0") -- it is implicit and omitted in zd_daf.
+
+Scale: copy directly from elementalism. Each model variant may have a different Z scale
+(e.g. seaweed2 uses Scale 12 12 5 to appear shorter).
+
+
+ANIMATED MODELS: FRAMEINDEX AND SPRITES
+-----------------------------------------
+Elementalism uses custom sprite names (e.g. NO3D, NB3D) as animation frame drivers.
+The MODELDEF maps each sprite frame to an MD3 keyframe index:
+
+  FrameIndex NO3D A 0 0    <- sprite NO3D frame A = MD3 frame 0
+  FrameIndex NO3D B 0 1    <- sprite NO3D frame B = MD3 frame 1
+  ...
+  FrameIndex NB3D A 0 26   <- sprite NB3D frame A = MD3 frame 26
+  ...
+
+Copy ALL FrameIndex lines from Clay_Modeldef.txt verbatim (adjust path prefix as above).
+Different model variants may have a different number of NB3D frames -- check carefully:
+  seaweed1 (seaweed.md3):  NO3D A-Z (frames 0-25) + NB3D A-O (frames 26-40) = 41 frames
+  seaweed2 (seaweed2.md3): NO3D A-Z (frames 0-25) + NB3D A-N (frames 26-39) = 40 frames
+  seaweed3 (seaweed3.md3): NO3D A-Z (frames 0-25) + NB3D A-N (frames 26-39) = 40 frames
+
+CRITICAL: The sprite lumps (e.g. NO3DA0.png, NB3DA0.png) must be present in zd_daf
+or UDB and GZDoom will error:
+  "Unable to find sprite lump NO3DA used by actor Seaweed1:18006"
+
+Source them from:  elementalism/sprites/Models/
+Copy them to:      zd_daf/sprites/<modelname>/
+
+You need all frames referenced by the actor states. For NO3D A-Z that is 26 files
+(NO3DA0.png through NO3DZ0.png). For NB3D A-O that is 15 files, etc.
+NB3D has 26 files in elementalism (A-Z) -- copy only the ones actually used by the actor.
+
+
+ACTOR ZSCRIPT TRANSLATION
+--------------------------
+Elementalism actors (in Clay_Models.txt) use ZDoom DECORATE syntax, not ZScript:
+
+  Actor seaweed1
+  {
+    -solid
+    +nogravity
+    States { Spawn: NO3D ABCDE...Z 4  NB3D ABCDE...O 4  loop }
+  }
+
+ZD_DAF uses ZScript with class syntax. Template for an animated model actor:
+
+  class Seaweed1 : Actor
+  {
+      Default
+      {
+          //$Category "Models/Plants"    <- UDB category browser
+          //$Title "Seaweed1"            <- UDB display name
+          Radius 8;
+          Height 64;
+
+          +NODAMAGE
+          +NOTARGET
+          +NOGRAVITY
+      }
+
+      States
+      {
+      Spawn:
+          NO3D ABCDEFGHIJKLMNOPQRSTUVWXYZ 4;
+          NB3D ABCDEFGHIJKLMNO 4;
+          Loop;
+      }
+  }
+
+Notes on flag translation:
+  elementalism "-solid"   ->  omit +SOLID (zd_daf default is not solid for decorative models)
+  elementalism "+nogravity" ->  +NOGRAVITY
+  Add +NODAMAGE and +NOTARGET for inert decorative props.
+
+The state sequences (NO3D ABCDE... 4) map directly to the MODELDEF FrameIndex entries.
+The number after the sprite frames (4) is tics per frame. Copy from elementalism.
+
+For STATIC models (no animation), use:
+  States { Spawn: PLAY A -1; Stop; }
+  And a single FrameIndex PLAY A 0 0 in the MODELDEF.
+
+
+DOOMEDNUM REGISTRY
+------------------
+Models are registered in zd_daf/MAPINFO under DoomEdNums.
+Current model range: 18000-18009 (as of this migration).
+Next available: 18009+
+
+  18000 = Anemone01
+  18002 = Anemone02
+  18003 = Anemone03
+  18004 = ColumnAmpule
+  18005 = Uzumaki
+  18006 = Seaweed1
+  18007 = Seaweed2
+  18008 = Seaweed3
+
+Add new entries after 18008. Keep the comment grouping (// Models).
+
+
+MODELDEF INCLUDE
+----------------
+zd_daf/MODELDEF includes all .modeldef files:
+  #include "models/defs/plants.modeldef"
+  #include "models/defs/architecture.modeldef"
+  #include "models/defs/uzumaki.modeldef"
+
+If you create a new .modeldef file for a new category, add an #include here.
+
+
+ZSCRIPT INCLUDE
+---------------
+zd_daf/zscript.zs includes all actor files via #include.
+Check that your target .zs file is already included. plants.zs and architecture.zs are.
+
+
+COMMON MISTAKES
+---------------
+1. Missing sprite lumps -- UDB gives "Unable to find sprite lump" warning.
+   Fix: copy the .png sprite files to zd_daf/sprites/<modelname>/
+
+2. Wrong model path -- e.g. leaving "Models/" prefix from elementalism.
+   Fix: use Path "models" and relative path "seaweed.md3" not "Models/seaweed.md3"
+
+3. Missing FrameIndex entries -- model loads but freezes on frame 0.
+   Fix: copy ALL FrameIndex lines from Clay_Modeldef.txt for that model.
+
+4. Actor uses DECORATE syntax (no "class", no semicolons) -- ZScript compile error.
+   Fix: convert to ZScript class syntax as shown above.
+
+5. Omitting DONTCULLBACKFACES for thin geometry -- model looks hollow/invisible from some angles.
+   Fix: add DONTCULLBACKFACES to the MODELDEF entry.
+
+6. Forgetting to add DoomEdNum -- actor doesn't appear in UDB Things browser.
+   Fix: add entry to MAPINFO DoomEdNums block.
