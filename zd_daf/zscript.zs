@@ -8,6 +8,9 @@ version "4.14.2"
 #include "actors/plants.zs"
 #include "actors/architecture.zs"
 #include "actors/uzumaki.zs"
+#include "actors/rocks.zs"
+#include "actors/chains.zs"
+#include "actors/dungeon_props.zs"
 
 // Characters
 #include "actors/das.zs"

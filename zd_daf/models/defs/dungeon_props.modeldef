@@ -1,0 +1,541 @@
+// ---- ROCKS ----------------------------------------------------------------
+// rocksdark1-4: four mesh shapes, skin ZKHXRK03 (dark stone, zoon_tex)
+// rocksbrown1-4: skin SLROCK1 (aa_tex, brown earthy grain)
+// rocksblack1-4: skin SLROCK22 (elementalism_tex, near-black obsidian)
+// rocksgreen1-4: same meshes, skin ds_gras1 (darksouls_tex)
+
+Model RocksDark1
+{
+	Model 0 "models/rocks1.md3"
+	Scale 15 15 15
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "textures/zoon_tex/ZKHXRK03.png"
+	FrameIndex CDRA A 0 0
+}
+
+Model RocksDark2
+{
+	Model 0 "models/rocks2.md3"
+	Scale 15 15 15
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "textures/zoon_tex/ZKHXRK03.png"
+	FrameIndex CDRB A 0 0
+}
+
+Model RocksDark3
+{
+	Model 0 "models/rocks3.md3"
+	Scale 15 15 15
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "textures/zoon_tex/ZKHXRK03.png"
+	FrameIndex CDRC A 0 0
+}
+
+Model RocksDark4
+{
+	Model 0 "models/rocks4.md3"
+	Scale 15 15 15
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "textures/zoon_tex/ZKHXRK03.png"
+	FrameIndex CDRD A 0 0
+}
+
+Model RocksBrown1
+{
+	Model 0 "models/rocks1.md3"
+	Scale 15 15 15
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "textures/aa_tex/SLROCK1.png"
+	FrameIndex CDRA A 0 0
+}
+
+Model RocksBrown2
+{
+	Model 0 "models/rocks2.md3"
+	Scale 15 15 15
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "textures/aa_tex/SLROCK1.png"
+	FrameIndex CDRB A 0 0
+}
+
+Model RocksBrown3
+{
+	Model 0 "models/rocks3.md3"
+	Scale 15 15 15
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "textures/aa_tex/SLROCK1.png"
+	FrameIndex CDRC A 0 0
+}
+
+Model RocksBrown4
+{
+	Model 0 "models/rocks4.md3"
+	Scale 15 15 15
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "textures/aa_tex/SLROCK1.png"
+	FrameIndex CDRD A 0 0
+}
+
+Model RocksBlack1
+{
+	Model 0 "models/rocks1.md3"
+	Scale 15 15 15
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "textures/elementalism_tex/SLROCK22.png"
+	FrameIndex CDRA A 0 0
+}
+
+Model RocksBlack2
+{
+	Model 0 "models/rocks2.md3"
+	Scale 15 15 15
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "textures/elementalism_tex/SLROCK22.png"
+	FrameIndex CDRB A 0 0
+}
+
+Model RocksBlack3
+{
+	Model 0 "models/rocks3.md3"
+	Scale 15 15 15
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "textures/elementalism_tex/SLROCK22.png"
+	FrameIndex CDRC A 0 0
+}
+
+Model RocksBlack4
+{
+	Model 0 "models/rocks4.md3"
+	Scale 15 15 15
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "textures/elementalism_tex/SLROCK22.png"
+	FrameIndex CDRD A 0 0
+}
+
+Model RocksGreen1
+{
+	Model 0 "models/rocks1.md3"
+	Scale 15 15 15
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "textures/darksouls_tex/ds_gras1.jpg"
+	FrameIndex CDRA A 0 0
+}
+
+Model RocksGreen2
+{
+	Model 0 "models/rocks2.md3"
+	Scale 15 15 15
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "textures/darksouls_tex/ds_gras1.jpg"
+	FrameIndex CDRB A 0 0
+}
+
+Model RocksGreen3
+{
+	Model 0 "models/rocks3.md3"
+	Scale 15 15 15
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "textures/darksouls_tex/ds_gras1.jpg"
+	FrameIndex CDRC A 0 0
+}
+
+Model RocksGreen4
+{
+	Model 0 "models/rocks4.md3"
+	Scale 15 15 15
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "textures/darksouls_tex/ds_gras1.jpg"
+	FrameIndex CDRD A 0 0
+}
+
+// ---- CHAINS ---------------------------------------------------------------
+
+Model Chain3xStraight
+{
+	Model 0 "models/chain_mofo_3x.md3"
+	Scale 1 1 1
+	DONTCULLBACKFACES
+	USEACTORROLL
+	USEACTORPITCH
+	Skin 0 "models/skins/bb_chain_dark_diffuse.png"
+	FrameIndex NO3D A 0 0
+}
+
+Model Chain3xStraightMiddle
+{
+	Model 0 "models/chain_mofo_3x.md3"
+	Scale 8 8 8
+	Offset 1720 0 0
+	AngleOffset 90
+	DONTCULLBACKFACES
+	USEACTORROLL
+	USEACTORPITCH
+	Skin 0 "models/skins/bb_chain_dark_diffuse.png"
+	FrameIndex NO3D A 0 0
+}
+
+Model ChainStraightNospikes
+{
+	Model 0 "models/chain_straight_fixedorigins_nospikes.md3"
+	Scale 1 1 1
+	DONTCULLBACKFACES
+	USEACTORROLL
+	USEACTORPITCH
+	Skin 0 "models/skins/bb_chain_dark_diffuse.png"
+	FrameIndex NO3D A 0 0
+}
+
+Model ChainCurvedNospikes
+{
+	Model 0 "models/chain_curved_fixedorigins_nospikes.md3"
+	Scale 1 1 1
+	DONTCULLBACKFACES
+	USEACTORROLL
+	USEACTORPITCH
+	Skin 0 "models/skins/bb_chain_dark_diffuse.png"
+	FrameIndex NO3D A 0 0
+}
+
+Model ChainStraight
+{
+	Model 0 "models/chain_straight_fixedorigins.md3"
+	Scale 1 1 1
+	DONTCULLBACKFACES
+	USEACTORROLL
+	USEACTORPITCH
+	Skin 0 "models/skins/bb_chain_dark_diffuse.png"
+	FrameIndex NO3D A 0 0
+}
+
+Model ChainCurved
+{
+	Model 0 "models/chain_curved_fixedorigins.md3"
+	Scale 1 1 1
+	DONTCULLBACKFACES
+	USEACTORROLL
+	USEACTORPITCH
+	Skin 0 "models/skins/bb_chain_dark_diffuse.png"
+	FrameIndex NO3D A 0 0
+}
+
+Model ChainCurvedRR
+{
+	Model 0 "models/chain_curved_fixedorigins.md3"
+	Scale 1 1 1
+	DONTCULLBACKFACES
+	USEACTORROLL
+	USEACTORPITCH
+	Skin 0 "models/skins/bb_chain_dark_diffuse.png"
+	FrameIndex NO3D A 0 0
+}
+
+// ---- SHACKLES -------------------------------------------------------------
+// Animated versions map all md3 frames to sprite frame sequence
+// Static versions snap to a single rest frame
+
+Model ShackleOpen
+{
+	Model 0 "models/shackle_open.md3"
+	Scale 5 5 5
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "models/skins/bb_chain_dark_diffuse.png"
+	FrameIndex NO3D A 0 0
+	FrameIndex NO3D B 0 1
+	FrameIndex NO3D C 0 2
+	FrameIndex NO3D D 0 3
+	FrameIndex NO3D E 0 4
+	FrameIndex NO3D F 0 5
+	FrameIndex NO3D G 0 6
+	FrameIndex NO3D H 0 7
+	FrameIndex NO3D I 0 8
+	FrameIndex NO3D J 0 9
+	FrameIndex NO3D K 0 10
+	FrameIndex NO3D L 0 11
+	FrameIndex NO3D M 0 12
+	FrameIndex NO3D N 0 13
+	FrameIndex NO3D O 0 14
+	FrameIndex NO3D P 0 15
+	FrameIndex NO3D Q 0 16
+	FrameIndex NO3D R 0 17
+	FrameIndex NO3D S 0 18
+	FrameIndex NO3D T 0 19
+	FrameIndex NO3D U 0 20
+	FrameIndex NO3D V 0 21
+	FrameIndex NO3D W 0 22
+	FrameIndex NO3D X 0 23
+	FrameIndex NO3D Y 0 24
+	FrameIndex NO3D Z 0 25
+	FrameIndex NB3D A 0 26
+	FrameIndex NB3D B 0 27
+	FrameIndex NB3D C 0 28
+	FrameIndex NB3D D 0 29
+	FrameIndex NB3D E 0 30
+	FrameIndex NB3D F 0 31
+	FrameIndex NB3D G 0 32
+	FrameIndex NB3D H 0 33
+	FrameIndex NB3D I 0 34
+	FrameIndex NB3D J 0 35
+	FrameIndex NB3D K 0 36
+	FrameIndex NB3D L 0 37
+	FrameIndex NB3D M 0 38
+	FrameIndex NB3D N 0 39
+	FrameIndex NB3D O 0 40
+	FrameIndex NB3D P 0 41
+	FrameIndex NB3D Q 0 42
+	FrameIndex NB3D R 0 43
+	FrameIndex NB3D S 0 44
+	FrameIndex NB3D T 0 45
+	FrameIndex NB3D U 0 46
+	FrameIndex NB3D V 0 47
+	FrameIndex NB3D W 0 48
+	FrameIndex NB3D X 0 49
+	FrameIndex NB3D Y 0 50
+	FrameIndex NB3D Z 0 51
+	FrameIndex NC3D A 0 52
+	FrameIndex NC3D B 0 53
+	FrameIndex NC3D C 0 54
+	FrameIndex NC3D D 0 55
+	FrameIndex NC3D E 0 56
+	FrameIndex NC3D F 0 57
+	FrameIndex NC3D G 0 58
+	FrameIndex NC3D H 0 59
+	FrameIndex NC3D I 0 60
+	FrameIndex NC3D J 0 61
+	FrameIndex NC3D K 0 62
+	FrameIndex NC3D L 0 63
+	FrameIndex NC3D M 0 64
+	FrameIndex NC3D N 0 65
+	FrameIndex NC3D O 0 66
+	FrameIndex NC3D P 0 67
+	FrameIndex NC3D Q 0 68
+	FrameIndex NC3D R 0 69
+	FrameIndex NC3D S 0 70
+	FrameIndex NC3D T 0 71
+	FrameIndex NC3D U 0 72
+	FrameIndex NC3D V 0 73
+	FrameIndex NC3D W 0 74
+	FrameIndex NC3D X 0 75
+	FrameIndex NC3D Y 0 76
+	FrameIndex NC3D Z 0 77
+	FrameIndex ND3D A 0 78
+	FrameIndex ND3D B 0 79
+	FrameIndex ND3D C 0 80
+	FrameIndex ND3D D 0 81
+	FrameIndex ND3D E 0 82
+	FrameIndex ND3D F 0 83
+	FrameIndex ND3D G 0 84
+	FrameIndex ND3D H 0 85
+	FrameIndex ND3D I 0 86
+	FrameIndex ND3D J 0 87
+	FrameIndex ND3D K 0 88
+	FrameIndex ND3D L 0 89
+	FrameIndex ND3D M 0 90
+	FrameIndex ND3D N 0 91
+	FrameIndex ND3D O 0 92
+	FrameIndex ND3D P 0 93
+	FrameIndex ND3D Q 0 94
+	FrameIndex ND3D R 0 95
+	FrameIndex ND3D S 0 96
+	FrameIndex ND3D T 0 97
+	FrameIndex ND3D U 0 98
+	FrameIndex ND3D V 0 99
+	FrameIndex ND3D W 0 100
+}
+
+Model ShackleClosed
+{
+	Model 0 "models/shackle_closed.md3"
+	Scale 5 5 5
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "models/skins/bb_chain_dark_diffuse.png"
+	FrameIndex NO3D A 0 0
+	FrameIndex NO3D B 0 1
+	FrameIndex NO3D C 0 2
+	FrameIndex NO3D D 0 3
+	FrameIndex NO3D E 0 4
+	FrameIndex NO3D F 0 5
+	FrameIndex NO3D G 0 6
+	FrameIndex NO3D H 0 7
+	FrameIndex NO3D I 0 8
+	FrameIndex NO3D J 0 9
+	FrameIndex NO3D K 0 10
+	FrameIndex NO3D L 0 11
+	FrameIndex NO3D M 0 12
+	FrameIndex NO3D N 0 13
+	FrameIndex NO3D O 0 14
+	FrameIndex NO3D P 0 15
+	FrameIndex NO3D Q 0 16
+	FrameIndex NO3D R 0 17
+	FrameIndex NO3D S 0 18
+	FrameIndex NO3D T 0 19
+	FrameIndex NO3D U 0 20
+	FrameIndex NO3D V 0 21
+	FrameIndex NO3D W 0 22
+	FrameIndex NO3D X 0 23
+	FrameIndex NO3D Y 0 24
+	FrameIndex NO3D Z 0 25
+	FrameIndex NB3D A 0 26
+	FrameIndex NB3D B 0 27
+	FrameIndex NB3D C 0 28
+	FrameIndex NB3D D 0 29
+	FrameIndex NB3D E 0 30
+	FrameIndex NB3D F 0 31
+	FrameIndex NB3D G 0 32
+	FrameIndex NB3D H 0 33
+	FrameIndex NB3D I 0 34
+	FrameIndex NB3D J 0 35
+	FrameIndex NB3D K 0 36
+	FrameIndex NB3D L 0 37
+	FrameIndex NB3D M 0 38
+	FrameIndex NB3D N 0 39
+	FrameIndex NB3D O 0 40
+	FrameIndex NB3D P 0 41
+	FrameIndex NB3D Q 0 42
+	FrameIndex NB3D R 0 43
+	FrameIndex NB3D S 0 44
+	FrameIndex NB3D T 0 45
+	FrameIndex NB3D U 0 46
+	FrameIndex NB3D V 0 47
+	FrameIndex NB3D W 0 48
+	FrameIndex NB3D X 0 49
+	FrameIndex NB3D Y 0 50
+	FrameIndex NB3D Z 0 51
+	FrameIndex NC3D A 0 52
+	FrameIndex NC3D B 0 53
+	FrameIndex NC3D C 0 54
+	FrameIndex NC3D D 0 55
+	FrameIndex NC3D E 0 56
+	FrameIndex NC3D F 0 57
+	FrameIndex NC3D G 0 58
+	FrameIndex NC3D H 0 59
+	FrameIndex NC3D I 0 60
+	FrameIndex NC3D J 0 61
+	FrameIndex NC3D K 0 62
+	FrameIndex NC3D L 0 63
+	FrameIndex NC3D M 0 64
+	FrameIndex NC3D N 0 65
+	FrameIndex NC3D O 0 66
+	FrameIndex NC3D P 0 67
+	FrameIndex NC3D Q 0 68
+	FrameIndex NC3D R 0 69
+	FrameIndex NC3D S 0 70
+	FrameIndex NC3D T 0 71
+	FrameIndex NC3D U 0 72
+	FrameIndex NC3D V 0 73
+	FrameIndex NC3D W 0 74
+	FrameIndex NC3D X 0 75
+	FrameIndex NC3D Y 0 76
+	FrameIndex NC3D Z 0 77
+	FrameIndex ND3D A 0 78
+	FrameIndex ND3D B 0 79
+	FrameIndex ND3D C 0 80
+	FrameIndex ND3D D 0 81
+	FrameIndex ND3D E 0 82
+	FrameIndex ND3D F 0 83
+	FrameIndex ND3D G 0 84
+	FrameIndex ND3D H 0 85
+	FrameIndex ND3D I 0 86
+	FrameIndex ND3D J 0 87
+	FrameIndex ND3D K 0 88
+	FrameIndex ND3D L 0 89
+	FrameIndex ND3D M 0 90
+	FrameIndex ND3D N 0 91
+	FrameIndex ND3D O 0 92
+	FrameIndex ND3D P 0 93
+	FrameIndex ND3D Q 0 94
+	FrameIndex ND3D R 0 95
+	FrameIndex ND3D S 0 96
+	FrameIndex ND3D T 0 97
+	FrameIndex ND3D U 0 98
+	FrameIndex ND3D V 0 99
+	FrameIndex ND3D W 0 100
+}
+
+Model ShackleOpenStatic
+{
+	Model 0 "models/shackle_open.md3"
+	Scale 5 5 5
+	Offset 0 0 35
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "models/skins/bb_chain_dark_diffuse.png"
+	FrameIndex SHAO A 0 0
+}
+
+Model ShackleClosedStatic
+{
+	Model 0 "models/shackle_closed.md3"
+	Scale 5 5 5
+	Offset 0 0 35
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	Skin 0 "models/skins/bb_chain_dark_diffuse.png"
+	FrameIndex SHCL A 0 0
+}
+
+// ---- MISC PROPS -----------------------------------------------------------
+
+Model Barrel1
+{
+	Model 0 "models/barrel1.md3"
+	Scale 1 1 1
+	USEACTORPITCH
+	USEACTORROLL
+	Skin 0 "models/skins/barrel1.jpg"
+	FrameIndex BAR1 A 0 0
+}
+
+Model FloorSkeleton
+{
+	Model 0 "models/floor_skeleton.md3"
+	Scale 1 1 1
+	USEACTORPITCH
+	USEACTORROLL
+	Skin 0 "models/skins/skel.png"
+	FrameIndex NADA A 0 0
+}
+
+Model FloorSkeletonRibs
+{
+	Model 0 "models/floor_skeleton_ribs.md3"
+	Scale 1 1 1
+	USEACTORPITCH
+	USEACTORROLL
+	Skin 0 "models/skins/skel.png"
+	FrameIndex NADA A 0 0
+}
+
+Model Tablet
+{
+	Model 0 "models/tablet.obj"
+	Scale 0.15 0.15 0.15
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex NO3D A 0 0
+}
+
+Model MassiveStalactite
+{
+	Model 0 "models/massive_stalactite.obj"
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex BAR1 A 0 0
+}

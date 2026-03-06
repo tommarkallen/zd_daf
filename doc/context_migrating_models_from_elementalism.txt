@@ -1,149 +1,260 @@
 MIGRATING MODELS FROM ELEMENTALISM TO ZD_DAF
 ============================================
 Context document for AI-assisted development.
-Covers the full migration process learned from migrating seaweed.md3/seaweed2.md3/seaweed3.md3.
+Covers the full migration process learned from migrating seaweed, rocks, chains,
+shackles, floor skeletons, barrel, tablet, and stalactite models.
 
 
-SOURCE LOCATION
----------------
-Elementalism pack lives at:
+SOURCE LOCATIONS
+----------------
+Working partial copy (preferred — already trimmed):
+  c:\dev\zd_daf\elementalism-minus-migration\
+
+Full release (fallback if file missing from above):
   c:\dev\zd\Elementalism_Phase1_Full_Release_v1.3\elementalism\
 
-A partial copy may also exist at:
-  c:\dev\zd_daf\elementalism\
-
-Prefer the full release copy for sourcing assets.
+The partial copy has a different sprite folder structure than the full release.
+Sprites may be under:  elementalism-minus-migration/sprites/decorations/
+                       elementalism-minus-migration/sprites/Gibbet/
+                       elementalism-minus-migration/sprites/q3a/
+                       elementalism-minus-migration/sprites/Models/   (seaweed etc.)
+Source actors from:    elementalism-minus-migration/actors/Clay_Models.txt
+Source modeldefs from: elementalism-minus-migration/models/Clay_Modeldef.txt
 
 
 WHAT TO MIGRATE (CHECKLIST)
 ----------------------------
-For each model being migrated, you need:
+For each model being migrated, you need ALL of the following or it will fail:
 
-  1. Model file(s)      elementalism/models/<name>.md3 (or .obj)
-  2. Skin file(s)       elementalism/models/skins/<name>.png
-  3. Sprite lumps       elementalism/sprites/Models/<SPRT>A0.png ... (see below)
-  4. MODELDEF entry     from elementalism/models/Clay_Modeldef.txt
-  5. Actor definition   from elementalism/actors/Clay_Models.txt
+  1. Model file(s)      .md3 or .obj geometry file
+  2. Skin file(s)       .png or .jpg texture referenced in MODELDEF
+  3. Sprite lumps       .png files for every sprite name+frame used in States {}
+  4. MODELDEF entry     Model block with Scale, Skin, FrameIndex lines
+  5. ZScript actor      class definition with Default and States
+  6. DoomEdNum          entry in zd_daf/MAPINFO DoomEdNums block
 
-If any of these is missing, the model will fail to load, animate, or appear in UDB.
+If the original skin file cannot be found (e.g. gibbet_drk.jpg), substitute the
+nearest available alternative and note it in a comment in the modeldef.
 
 
 FILE DESTINATIONS IN ZD_DAF
 -----------------------------
-  Model files   ->  zd_daf/models/<name>.md3
-  Skin files    ->  zd_daf/models/skins/<name>.png
-  Sprite lumps  ->  zd_daf/sprites/<name>/  (subdirectory named after the model)
-  MODELDEF      ->  zd_daf/models/defs/plants.modeldef  (for organic/plant models)
-                    zd_daf/models/defs/architecture.modeldef  (for structural models)
-  ZScript actor ->  zd_daf/actors/plants.zs  (or architecture.zs etc.)
-  DoomEdNum     ->  zd_daf/MAPINFO  DoomEdNums block
+  Model .md3/.obj   ->  zd_daf/models/<name>.md3          (flat, no subdirs)
+  Skin .png/.jpg    ->  zd_daf/models/skins/<name>.png
+  Sprite lumps      ->  zd_daf/sprites/<groupname>/        (subdirectory)
+  MODELDEF          ->  zd_daf/models/defs/<category>.modeldef
+  ZScript actor     ->  zd_daf/actors/<category>.zs
+  DoomEdNum         ->  zd_daf/MAPINFO  DoomEdNums block
+
+Categories and their files:
+  plants.modeldef / plants.zs           -- seaweed, anemone, organic decor
+  dungeon_props.modeldef / (split zs)   -- rocks, chains, shackles, props
+  architecture.modeldef / architecture.zs  -- structural/Giger models
+  (create new .modeldef + .zs for genuinely new categories)
+
+New .modeldef files must be added to zd_daf/MODELDEF via #include.
+New .zs files must be added to zd_daf/zscript.zs via #include.
 
 
-MODELDEF TRANSLATION
+FILE NAMING CONVENTION
+----------------------
+All model and skin filenames in zd_daf/ must be lowercase snake_case.
+Convert CamelCase names from elementalism on copy:
+
+  SmallOrnamentalPlant1.obj  ->  small_ornamental_plant_1.obj
+  Phormium_1.obj             ->  phormium_1.obj
+  Tablet.obj                 ->  tablet.obj
+  BB_chain_dark_diffuse.png  ->  bb_chain_dark_diffuse.png
+
+ZScript class names use CamelCase as required by the language.
+MODELDEF block names match the ZScript class name exactly (CamelCase).
+DoomEdNum entries use the ZScript class name (CamelCase).
+
+
+SPRITE NAMING CONVENTION
+------------------------
+GZDoom/UDB sprite lumps follow the format:  <SPRT><FRAME><ROTATION>.png
+  SPRT  = 4-character sprite name (e.g. CDRA, NO3D, NADA)
+  FRAME = single letter A-Z
+  ROT   = rotation digit (0 = no rotation)
+
+Example: CDRAA0.png  ->  sprite=CDRA, frame=A, rotation=0
+
+The ZScript States block references the 4-char sprite name and frame letter only:
+  CDRA A -1;    <- displays sprite CDRAA0.png
+
+In elementalism, static rock/prop sprites were often named uniquely per model
+(CDRA, CDRB, CDRC, CDRD for the four rock meshes). Do NOT substitute TNT1 as
+a workaround for missing sprites -- migrate the actual PNG files instead.
+TNT1 is a GZDoom built-in null sprite and will hide the model from UDB.
+
+Commonly migrated sprite groups and their elementalism source locations:
+  CDRA/CDRB/CDRC/CDRD  ->  elementalism/sprites/decorations/  (rocks)
+  NADA                 ->  elementalism/sprites/q3a/           (skeletons)
+  SHAO / SHCL          ->  elementalism/sprites/Gibbet/        (shackles static)
+  NO3D / NB3D etc.     ->  elementalism/sprites/Models/        (animated models)
+  BAR1                 ->  elementalism/sprites/...            (barrel)
+
+
+MODELDEF: TWO STYLES
 --------------------
-Elementalism uses:
-  Model 0 "Models/seaweed.md3"
-  Skin 0 "Models/skins/seaweed.png"
+ZD_DAF uses two MODELDEF path styles. Choose based on where skins come from.
 
-ZD_DAF uses (Path sets the base, so paths are relative to it):
+STYLE 1 -- Path directive (skins inside models/skins/):
   Path "models"
   Model 0 "seaweed.md3"
   Skin 0 "skins/seaweed.png"
+Used by: plants.modeldef, architecture.modeldef
 
-Flags to preserve:
-  DONTCULLBACKFACES   -- keep for foliage/thin geometry (seaweed, plants)
-  USEACTORPITCH       -- keep if elementalism had it
-  USEACTORROLL        -- add alongside USEACTORPITCH for zd_daf convention
+STYLE 2 -- Full PK3-root paths (skins from textures/ or mixed sources):
+  Model 0 "models/rocks1.md3"
+  Skin 0 "textures/zoon_tex/ZKHXRK03.png"
+Used by: dungeon_props.modeldef
 
-Do NOT copy the offset line (elementalism: "offset 0 0 0") -- it is implicit and omitted in zd_daf.
+Use Style 2 whenever the skin comes from zd_daf/textures/ rather than
+zd_daf/models/skins/, because the Path directive would also apply to Skin paths
+and break the reference.
 
-Scale: copy directly from elementalism. Each model variant may have a different Z scale
-(e.g. seaweed2 uses Scale 12 12 5 to appear shorter).
+Standard flags:
+  DONTCULLBACKFACES  -- always include for thin geometry (chains, foliage)
+  USEACTORPITCH      -- include for all props/models
+  USEACTORROLL       -- include alongside USEACTORPITCH for zd_daf convention
+
+Do NOT copy zero-offset lines ("offset 0 0 0") from elementalism; they are implicit.
+Copy Scale directly from elementalism. Variants of the same mesh may differ.
 
 
-ANIMATED MODELS: FRAMEINDEX AND SPRITES
------------------------------------------
-Elementalism uses custom sprite names (e.g. NO3D, NB3D) as animation frame drivers.
-The MODELDEF maps each sprite frame to an MD3 keyframe index:
-
+ANIMATED MODELS: FRAMEINDEX
+----------------------------
+Elementalism sprite-driven animation maps sprite frames to MD3 keyframes:
   FrameIndex NO3D A 0 0    <- sprite NO3D frame A = MD3 frame 0
-  FrameIndex NO3D B 0 1    <- sprite NO3D frame B = MD3 frame 1
+  FrameIndex NO3D B 0 1
   ...
-  FrameIndex NB3D A 0 26   <- sprite NB3D frame A = MD3 frame 26
+  FrameIndex NB3D A 0 26   <- continues from where NO3D left off
   ...
 
-Copy ALL FrameIndex lines from Clay_Modeldef.txt verbatim (adjust path prefix as above).
-Different model variants may have a different number of NB3D frames -- check carefully:
-  seaweed1 (seaweed.md3):  NO3D A-Z (frames 0-25) + NB3D A-O (frames 26-40) = 41 frames
-  seaweed2 (seaweed2.md3): NO3D A-Z (frames 0-25) + NB3D A-N (frames 26-39) = 40 frames
-  seaweed3 (seaweed3.md3): NO3D A-Z (frames 0-25) + NB3D A-N (frames 26-39) = 40 frames
+Copy ALL FrameIndex lines verbatim from Clay_Modeldef.txt.
+Count frames carefully -- variants of the same mesh may use different frame counts:
+  seaweed1: NO3D A-Z (0-25) + NB3D A-O (26-40) = 41 frames
+  seaweed2/3: NO3D A-Z (0-25) + NB3D A-N (26-39) = 40 frames
+  shackles: NO3D A-Z + NB3D A-Z + NC3D A-Z + ND3D A-W = 101 frames
 
-CRITICAL: The sprite lumps (e.g. NO3DA0.png, NB3DA0.png) must be present in zd_daf
-or UDB and GZDoom will error:
-  "Unable to find sprite lump NO3DA used by actor Seaweed1:18006"
+The actor States block must loop through the same sprite sequences:
+  Spawn:
+      NO3D ABCDEFGHIJLKMNOPQRSTUVWXYZ 2;
+      NB3D ABCDEFGHIJLKMNOPQRSTUVWXYZ 2;
+      NC3D ABCDEFGHIJLKMNOPQRSTUVWXYZ 2;
+      ND3D ABCDEFGHIJLKMNOPQRSTUVW 2;
+      Loop;
 
-Source them from:  elementalism/sprites/Models/
-Copy them to:      zd_daf/sprites/<modelname>/
-
-You need all frames referenced by the actor states. For NO3D A-Z that is 26 files
-(NO3DA0.png through NO3DZ0.png). For NB3D A-O that is 15 files, etc.
-NB3D has 26 files in elementalism (A-Z) -- copy only the ones actually used by the actor.
+Note: "ABCDEFGHIJLKMNOPQRSTUVWXYZ" -- the K and L are transposed in some
+elementalism actors. Copy the exact letter sequence from Clay_Models.txt.
 
 
-ACTOR ZSCRIPT TRANSLATION
---------------------------
-Elementalism actors (in Clay_Models.txt) use ZDoom DECORATE syntax, not ZScript:
+ZSCRIPT ACTOR PATTERNS
+-----------------------
 
-  Actor seaweed1
-  {
-    -solid
-    +nogravity
-    States { Spawn: NO3D ABCDE...Z 4  NB3D ABCDE...O 4  loop }
-  }
-
-ZD_DAF uses ZScript with class syntax. Template for an animated model actor:
-
-  class Seaweed1 : Actor
-  {
-      Default
-      {
-          //$Category "Models/Plants"    <- UDB category browser
-          //$Title "Seaweed1"            <- UDB display name
+STATIC MODEL (no animation):
+  class RocksDark1 : Actor {
+      Default {
+          //$Category "Models/Rocks"
+          //$Title "RocksDark1"
           Radius 8;
           Height 64;
-
-          +NODAMAGE
-          +NOTARGET
+          +SOLID
           +NOGRAVITY
       }
-
-      States
-      {
-      Spawn:
-          NO3D ABCDEFGHIJKLMNOPQRSTUVWXYZ 4;
-          NB3D ABCDEFGHIJKLMNO 4;
-          Loop;
+      States {
+          Spawn:
+              CDRA A -1;
+              Stop;
       }
   }
 
-Notes on flag translation:
-  elementalism "-solid"   ->  omit +SOLID (zd_daf default is not solid for decorative models)
-  elementalism "+nogravity" ->  +NOGRAVITY
-  Add +NODAMAGE and +NOTARGET for inert decorative props.
+ANIMATED MODEL:
+  class Seaweed1 : Actor {
+      Default {
+          //$Category "Models/Plants"
+          //$Title "Seaweed1"
+          Radius 8;
+          Height 64;
+          -SOLID
+          +NOGRAVITY
+      }
+      States {
+          Spawn:
+              NO3D ABCDEFGHIJKLMNOPQRSTUVWXYZ 4;
+              NB3D ABCDEFGHIJKLMNO 4;
+              Loop;
+      }
+  }
 
-The state sequences (NO3D ABCDE... 4) map directly to the MODELDEF FrameIndex entries.
-The number after the sprite frames (4) is tics per frame. Copy from elementalism.
+SKIN VARIANT SUBCLASS (inherits mesh + states, overrides only $Title):
+  class RocksBrown1 : RocksDark1 { Default { //$Title "RocksBrown1"
+  } }
 
-For STATIC models (no animation), use:
-  States { Spawn: PLAY A -1; Stop; }
-  And a single FrameIndex PLAY A 0 0 in the MODELDEF.
+  CRITICAL: The closing "} }" must be on the NEXT LINE after the //$Title comment.
+  The "//" comment swallows everything to end-of-line, including any "} }" on the
+  same line, causing a ZScript parse error ("Expected a token").
+
+  Skin variants also need their own MODELDEF blocks (cannot inherit MODELDEF).
+  The MODELDEF block name must match the subclass name exactly.
+
+LARGE ENVIRONMENT PROP (far-distance culling prevention):
+  Default {
+      RenderRadius 2500;
+      +NOGRAVITY
+  }
+
+FLAG TRANSLATION FROM ELEMENTALISM DECORATE:
+  -solid      ->  omit +SOLID  (or explicitly -SOLID)
+  +nogravity  ->  +NOGRAVITY
+  Add +NODAMAGE +NOTARGET for fully inert decorative props.
+
+ZSCRIPT CLASS NAME RULES:
+  - Cannot start with a digit.  "3X_chain_straight" -> "Chain3xStraight"
+  - Use CamelCase throughout.
+
+
+MULTI-SKIN VARIANTS
+--------------------
+When the same mesh is used with multiple skins (e.g. rocks with 4 different stone
+textures), create:
+  - One base actor class with the primary skin
+  - Subclasses for each variant, each with its own $Title
+  - A separate MODELDEF block per variant (pointing to the correct Skin path)
+  - A DoomEdNum per variant
+
+Name the classes to describe the skin's visual appearance, not a generic "_2/_3" suffix:
+  RocksDark1   -- dark cracked stone (ZKHXRK03)
+  RocksBrown1  -- brown earthy grain (SLROCK1)
+  RocksBlack1  -- near-black obsidian (SLROCK22)
+  RocksGreen1  -- mossy green (ds_gras1)
+
+Rock skins available in zd_daf/textures/:
+  textures/zoon_tex/ZKHXRK03.png    dark cracked stone
+  textures/aa_tex/SLROCK1.png       brown earthy grain
+  textures/elementalism_tex/SLROCK22.png  near-black obsidian
+  textures/darksouls_tex/ds_gras1.jpg    mossy green
+
+
+UDB CATEGORY BROWSER ($Category)
+----------------------------------
+The //$Category comment controls the folder in UDB's thing browser.
+Use existing categories for consistency:
+  "Models/Rocks"    -- rocks, stalactites, cave geometry
+  "Models/Plants"   -- seaweed, anemone, organic decor
+  "Models/Props"    -- barrel, tablet, furniture
+  "Models/Chains"   -- chains, shackles
+
+Moving to a different category only requires changing $Category in the ZScript actor.
 
 
 DOOMEDNUM REGISTRY
 ------------------
-Models are registered in zd_daf/MAPINFO under DoomEdNums.
-Current model range: 18000-18009 (as of this migration).
-Next available: 18009+
+Models use the range 18000+ in zd_daf/MAPINFO.
+As of the last migration, highest assigned is 18040 (MassiveStalactite).
+Next available: 18041
 
   18000 = Anemone01
   18002 = Anemone02
@@ -153,42 +264,92 @@ Next available: 18009+
   18006 = Seaweed1
   18007 = Seaweed2
   18008 = Seaweed3
+  18009 = RocksDark1       (dark cracked, ZKHXRK03)
+  18010 = RocksDark2
+  18011 = RocksDark3
+  18012 = RocksDark4
+  18013 = RocksBrown1      (brown earthy, SLROCK1)
+  18014 = RocksBrown2
+  18015 = RocksBrown3
+  18016 = RocksBrown4
+  18017 = RocksBlack1      (near-black obsidian, SLROCK22)
+  18018 = RocksBlack2
+  18019 = RocksBlack3
+  18020 = RocksBlack4
+  18021 = RocksGreen1      (mossy green, ds_gras1)
+  18022 = RocksGreen2
+  18023 = RocksGreen3
+  18024 = RocksGreen4
+  18025 = Barrel1
+  18026 = FloorSkeleton
+  18027 = FloorSkeletonRibs
+  18028 = Chain3xStraight
+  18029 = Chain3xStraightMiddle
+  18030 = ChainStraightNospikes
+  18031 = ChainCurvedNospikes
+  18032 = ChainStraight
+  18033 = ChainCurved
+  18034 = ChainCurvedRR
+  18035 = ShackleOpen
+  18036 = ShackleClosed
+  18037 = ShackleOpenStatic
+  18038 = ShackleClosedStatic
+  18039 = Tablet
+  18040 = MassiveStalactite
 
-Add new entries after 18008. Keep the comment grouping (// Models).
+Multiple DoomEdNums blocks in MAPINFO are valid -- GZDoom merges them.
+The Models block is separate from the Weapons/Characters/Monsters block.
 
 
-MODELDEF INCLUDE
-----------------
-zd_daf/MODELDEF includes all .modeldef files:
-  #include "models/defs/plants.modeldef"
-  #include "models/defs/architecture.modeldef"
-  #include "models/defs/uzumaki.modeldef"
+MODELS FOLDER LAYOUT (current)
+-------------------------------
+  models/
+    *.md3 / *.obj          -- all geometry files, flat (no subdirs)
+    skins/
+      *.png / *.jpg        -- all skin textures
+    defs/
+      plants.modeldef
+      architecture.modeldef
+      uzumaki.modeldef
+      dungeon_props.modeldef
 
-If you create a new .modeldef file for a new category, add an #include here.
-
-
-ZSCRIPT INCLUDE
----------------
-zd_daf/zscript.zs includes all actor files via #include.
-Check that your target .zs file is already included. plants.zs and architecture.zs are.
+Do NOT create new subdirs under models/ for new model files.
+The q3a/ subdir that existed has been flattened -- floskel.md3 -> floor_skeleton.md3.
 
 
 COMMON MISTAKES
 ---------------
-1. Missing sprite lumps -- UDB gives "Unable to find sprite lump" warning.
-   Fix: copy the .png sprite files to zd_daf/sprites/<modelname>/
+1. Missing sprite lumps -- UDB: "Unable to find sprite lump CDRAA used by actor..."
+   Fix: find and copy the actual .png sprite files from elementalism/sprites/
+   Do NOT substitute TNT1 -- it hides the model from the UDB thing browser.
 
-2. Wrong model path -- e.g. leaving "Models/" prefix from elementalism.
-   Fix: use Path "models" and relative path "seaweed.md3" not "Models/seaweed.md3"
+2. Wrong model path -- leaving "Models/" prefix from elementalism.
+   Fix: Style 1 uses Path "models" + relative name; Style 2 uses full "models/name.md3"
 
-3. Missing FrameIndex entries -- model loads but freezes on frame 0.
+3. $Title comment swallows closing braces in subclass one-liners.
+   BROKEN:  class Foo : Bar { Default { //$Title "Foo" } }
+   CORRECT: class Foo : Bar { Default { //$Title "Foo"
+            } }
+
+4. Skin variant subclass has no MODELDEF block -- renders with wrong/parent skin.
+   Fix: every subclass needs its own Model <ClassName> { ... } block in the modeldef.
+
+5. Missing FrameIndex entries -- model loads but is frozen on frame 0.
    Fix: copy ALL FrameIndex lines from Clay_Modeldef.txt for that model.
 
-4. Actor uses DECORATE syntax (no "class", no semicolons) -- ZScript compile error.
-   Fix: convert to ZScript class syntax as shown above.
+6. Actor uses DECORATE syntax (no "class", no semicolons) -- ZScript compile error.
+   Fix: convert to ZScript class syntax.
 
-5. Omitting DONTCULLBACKFACES for thin geometry -- model looks hollow/invisible from some angles.
+7. Class name starts with a digit -- ZScript compile error.
+   Fix: prefix with a word, e.g. "3X_chain" -> "Chain3x".
+
+8. Omitting DONTCULLBACKFACES for thin/flat geometry (chains, foliage).
    Fix: add DONTCULLBACKFACES to the MODELDEF entry.
 
-6. Forgetting to add DoomEdNum -- actor doesn't appear in UDB Things browser.
+9. Forgetting to add DoomEdNum -- actor doesn't appear in UDB Things browser.
    Fix: add entry to MAPINFO DoomEdNums block.
+
+10. CamelCase filename for model or skin file.
+    Fix: rename to snake_case and update all MODELDEF paths referencing it.
+    Affected paths in dungeon_props.modeldef use full PK3-root paths --
+    search for the old name across all .modeldef files before deleting.

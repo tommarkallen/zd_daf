@@ -1,7 +1,7 @@
 Model Anemone01
 {
 	Path "models"
-	Model 0 "SmallOrnamentalPlant1.obj"
+	Model 0 "small_ornamental_plant_1.obj"
 	Skin 0 "skins/plant_1-texture"
 	Scale 128.0 128.0 128.0
 
@@ -14,7 +14,7 @@ Model Anemone01
 Model Anemone02
 {
 	Path "models"
-	Model 0 "Phormium_1.obj"
+	Model 0 "phormium_1.obj"
 	Skin 0 "skins/phormium_t_leaf_1_1_diffuse_1"
 	Scale 16.0 16.0 16.0
 
@@ -27,7 +27,7 @@ Model Anemone02
 Model Anemone03
 {
 	Path "models"
-	Model 0 "Phormium_1.obj"
+	Model 0 "phormium_1.obj"
 	Skin 0 "skins/phormium_t_leaf_2_1_diffuse_3"
 	Scale 16.0 16.0 16.0
 
