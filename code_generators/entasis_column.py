@@ -40,11 +40,13 @@ import sys
 # CONFIGURATION — edit these values, then run the script
 # Entasis = "width profile along the arc"
 # Set w_crown equal to w_capital for uniform width (no entasis)
+# arc_radius Centreline radius (map units)
+# arc_span how much of the circle it arcs through
 # =========================================================================
 
 # Prometheus Ampule Room Params. 135, large, for support
 arc_span     = 135.0 
-arc_radius   = 512.0   # Centreline radius (map units)
+arc_radius   = 512.0  
 w_capital    = 64.0
 w_crown      = 32.0
 
@@ -57,11 +59,9 @@ w_crown      = 16.0
 profile_type = "parabolic"  # "parabolic", "elliptic", or "constant"
 
 arc_start_angle = 0.0   # Start angle in degrees (CCW from +X axis)
-                          # 135° start + 270° span = ends at 45°,
-                          # opening faces downward (-Y direction)
 
-# --- Resolution ---
 segments = 24             # Number of arc sectors. Higher = smoother. >= 4.
+segments = 8
 
 # --- Arc centre position ---
 arc_center_x = 0.0
