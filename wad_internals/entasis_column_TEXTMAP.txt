@@ -1,0 +1,892 @@
+namespace = "zdoom";
+
+// ===========================================================
+// ENTASIS ARCH COLUMN: parabolic profile
+// Arc: radius=256.0, span=270.0deg, start=0.0deg
+// Width: w_capital=32.0, w_crown=16.0
+// Centre: (0.0, 0.0), Box: 2048x2048x1024
+// Segments: 8
+// 3D floor: Z 128-192, tag 1, texture DEM1_5
+// Totals: 26 vertices, 33 linedefs, 58 sidedefs, 10 sectors
+// ===========================================================
+
+// ---- VERTICES (0 to 25) ----
+
+vertex // 0
+{
+x = -1024.0;
+y = -1024.0;
+}
+
+vertex // 1
+{
+x = -1024.0;
+y = 1024.0;
+}
+
+vertex // 2
+{
+x = 1024.0;
+y = 1024.0;
+}
+
+vertex // 3
+{
+x = 1024.0;
+y = -1024.0;
+}
+
+vertex // 4
+{
+x = 288.0;
+y = 0.0;
+}
+
+vertex // 5
+{
+x = 224.0;
+y = 0.0;
+}
+
+vertex // 6
+{
+x = 233.643;
+y = 156.115;
+}
+
+vertex // 7
+{
+x = 192.069;
+y = 128.337;
+}
+
+vertex // 8
+{
+x = 105.621;
+y = 254.991;
+}
+
+vertex // 9
+{
+x = 90.313;
+y = 218.036;
+}
+
+vertex // 10
+{
+x = -53.26;
+y = 267.754;
+}
+
+vertex // 11
+{
+x = -46.627;
+y = 234.408;
+}
+
+vertex // 12
+{
+x = -192.333;
+y = 192.333;
+}
+
+vertex // 13
+{
+x = -169.706;
+y = 169.706;
+}
+
+vertex // 14
+{
+x = -267.754;
+y = 53.26;
+}
+
+vertex // 15
+{
+x = -234.408;
+y = 46.627;
+}
+
+vertex // 16
+{
+x = -254.991;
+y = -105.621;
+}
+
+vertex // 17
+{
+x = -218.036;
+y = -90.313;
+}
+
+vertex // 18
+{
+x = -156.115;
+y = -233.643;
+}
+
+vertex // 19
+{
+x = -128.337;
+y = -192.069;
+}
+
+vertex // 20
+{
+x = -0.0;
+y = -288.0;
+}
+
+vertex // 21
+{
+x = -0.0;
+y = -224.0;
+}
+
+vertex // 22
+{
+x = 1088.0;
+y = 0.0;
+}
+
+vertex // 23
+{
+x = 1152.0;
+y = 0.0;
+}
+
+vertex // 24
+{
+x = 1152.0;
+y = -64.0;
+}
+
+vertex // 25
+{
+x = 1088.0;
+y = -64.0;
+}
+
+// ---- LINEDEFS (0 to 32) ----
+
+linedef // 0
+{
+v1 = 0;
+v2 = 1;
+sidefront = 0;
+blocking = true;
+}
+
+linedef // 1
+{
+v1 = 1;
+v2 = 2;
+sidefront = 1;
+blocking = true;
+}
+
+linedef // 2
+{
+v1 = 2;
+v2 = 3;
+sidefront = 2;
+blocking = true;
+}
+
+linedef // 3
+{
+v1 = 3;
+v2 = 0;
+sidefront = 3;
+blocking = true;
+}
+
+linedef // 4
+{
+v1 = 4;
+v2 = 5;
+sidefront = 4;
+sideback = 5;
+twosided = true;
+blocking = false;
+}
+
+linedef // 5
+{
+v1 = 4;
+v2 = 6;
+sidefront = 6;
+sideback = 7;
+twosided = true;
+blocking = false;
+}
+
+linedef // 6
+{
+v1 = 6;
+v2 = 7;
+sidefront = 8;
+sideback = 9;
+twosided = true;
+blocking = false;
+}
+
+linedef // 7
+{
+v1 = 5;
+v2 = 7;
+sidefront = 10;
+sideback = 11;
+twosided = true;
+blocking = false;
+}
+
+linedef // 8
+{
+v1 = 6;
+v2 = 8;
+sidefront = 12;
+sideback = 13;
+twosided = true;
+blocking = false;
+}
+
+linedef // 9
+{
+v1 = 8;
+v2 = 9;
+sidefront = 14;
+sideback = 15;
+twosided = true;
+blocking = false;
+}
+
+linedef // 10
+{
+v1 = 7;
+v2 = 9;
+sidefront = 16;
+sideback = 17;
+twosided = true;
+blocking = false;
+}
+
+linedef // 11
+{
+v1 = 8;
+v2 = 10;
+sidefront = 18;
+sideback = 19;
+twosided = true;
+blocking = false;
+}
+
+linedef // 12
+{
+v1 = 10;
+v2 = 11;
+sidefront = 20;
+sideback = 21;
+twosided = true;
+blocking = false;
+}
+
+linedef // 13
+{
+v1 = 9;
+v2 = 11;
+sidefront = 22;
+sideback = 23;
+twosided = true;
+blocking = false;
+}
+
+linedef // 14
+{
+v1 = 10;
+v2 = 12;
+sidefront = 24;
+sideback = 25;
+twosided = true;
+blocking = false;
+}
+
+linedef // 15
+{
+v1 = 12;
+v2 = 13;
+sidefront = 26;
+sideback = 27;
+twosided = true;
+blocking = false;
+}
+
+linedef // 16
+{
+v1 = 11;
+v2 = 13;
+sidefront = 28;
+sideback = 29;
+twosided = true;
+blocking = false;
+}
+
+linedef // 17
+{
+v1 = 12;
+v2 = 14;
+sidefront = 30;
+sideback = 31;
+twosided = true;
+blocking = false;
+}
+
+linedef // 18
+{
+v1 = 14;
+v2 = 15;
+sidefront = 32;
+sideback = 33;
+twosided = true;
+blocking = false;
+}
+
+linedef // 19
+{
+v1 = 13;
+v2 = 15;
+sidefront = 34;
+sideback = 35;
+twosided = true;
+blocking = false;
+}
+
+linedef // 20
+{
+v1 = 14;
+v2 = 16;
+sidefront = 36;
+sideback = 37;
+twosided = true;
+blocking = false;
+}
+
+linedef // 21
+{
+v1 = 16;
+v2 = 17;
+sidefront = 38;
+sideback = 39;
+twosided = true;
+blocking = false;
+}
+
+linedef // 22
+{
+v1 = 15;
+v2 = 17;
+sidefront = 40;
+sideback = 41;
+twosided = true;
+blocking = false;
+}
+
+linedef // 23
+{
+v1 = 16;
+v2 = 18;
+sidefront = 42;
+sideback = 43;
+twosided = true;
+blocking = false;
+}
+
+linedef // 24
+{
+v1 = 18;
+v2 = 19;
+sidefront = 44;
+sideback = 45;
+twosided = true;
+blocking = false;
+}
+
+linedef // 25
+{
+v1 = 17;
+v2 = 19;
+sidefront = 46;
+sideback = 47;
+twosided = true;
+blocking = false;
+}
+
+linedef // 26
+{
+v1 = 18;
+v2 = 20;
+sidefront = 48;
+sideback = 49;
+twosided = true;
+blocking = false;
+}
+
+linedef // 27
+{
+v1 = 20;
+v2 = 21;
+sidefront = 50;
+sideback = 51;
+twosided = true;
+blocking = false;
+}
+
+linedef // 28
+{
+v1 = 19;
+v2 = 21;
+sidefront = 52;
+sideback = 53;
+twosided = true;
+blocking = false;
+}
+
+linedef // 29
+{
+v1 = 22;
+v2 = 23;
+sidefront = 54;
+blocking = true;
+special = 160;
+arg0 = 1;
+arg1 = 1;
+arg3 = 255;
+}
+
+linedef // 30
+{
+v1 = 23;
+v2 = 24;
+sidefront = 55;
+blocking = true;
+}
+
+linedef // 31
+{
+v1 = 24;
+v2 = 25;
+sidefront = 56;
+blocking = true;
+}
+
+linedef // 32
+{
+v1 = 25;
+v2 = 22;
+sidefront = 57;
+blocking = true;
+}
+
+// ---- SIDEDEFS (0 to 57) ----
+
+sidedef // 0
+{
+sector = 0;
+texturemiddle = "FLAT19";
+}
+
+sidedef // 1
+{
+sector = 0;
+texturemiddle = "FLAT19";
+}
+
+sidedef // 2
+{
+sector = 0;
+texturemiddle = "FLAT19";
+}
+
+sidedef // 3
+{
+sector = 0;
+texturemiddle = "FLAT19";
+}
+
+sidedef // 4
+{
+sector = 1;
+}
+
+sidedef // 5
+{
+sector = 0;
+}
+
+sidedef // 6
+{
+sector = 0;
+}
+
+sidedef // 7
+{
+sector = 1;
+}
+
+sidedef // 8
+{
+sector = 2;
+}
+
+sidedef // 9
+{
+sector = 1;
+}
+
+sidedef // 10
+{
+sector = 1;
+}
+
+sidedef // 11
+{
+sector = 0;
+}
+
+sidedef // 12
+{
+sector = 0;
+}
+
+sidedef // 13
+{
+sector = 2;
+}
+
+sidedef // 14
+{
+sector = 3;
+}
+
+sidedef // 15
+{
+sector = 2;
+}
+
+sidedef // 16
+{
+sector = 2;
+}
+
+sidedef // 17
+{
+sector = 0;
+}
+
+sidedef // 18
+{
+sector = 0;
+}
+
+sidedef // 19
+{
+sector = 3;
+}
+
+sidedef // 20
+{
+sector = 4;
+}
+
+sidedef // 21
+{
+sector = 3;
+}
+
+sidedef // 22
+{
+sector = 3;
+}
+
+sidedef // 23
+{
+sector = 0;
+}
+
+sidedef // 24
+{
+sector = 0;
+}
+
+sidedef // 25
+{
+sector = 4;
+}
+
+sidedef // 26
+{
+sector = 5;
+}
+
+sidedef // 27
+{
+sector = 4;
+}
+
+sidedef // 28
+{
+sector = 4;
+}
+
+sidedef // 29
+{
+sector = 0;
+}
+
+sidedef // 30
+{
+sector = 0;
+}
+
+sidedef // 31
+{
+sector = 5;
+}
+
+sidedef // 32
+{
+sector = 6;
+}
+
+sidedef // 33
+{
+sector = 5;
+}
+
+sidedef // 34
+{
+sector = 5;
+}
+
+sidedef // 35
+{
+sector = 0;
+}
+
+sidedef // 36
+{
+sector = 0;
+}
+
+sidedef // 37
+{
+sector = 6;
+}
+
+sidedef // 38
+{
+sector = 7;
+}
+
+sidedef // 39
+{
+sector = 6;
+}
+
+sidedef // 40
+{
+sector = 6;
+}
+
+sidedef // 41
+{
+sector = 0;
+}
+
+sidedef // 42
+{
+sector = 0;
+}
+
+sidedef // 43
+{
+sector = 7;
+}
+
+sidedef // 44
+{
+sector = 8;
+}
+
+sidedef // 45
+{
+sector = 7;
+}
+
+sidedef // 46
+{
+sector = 7;
+}
+
+sidedef // 47
+{
+sector = 0;
+}
+
+sidedef // 48
+{
+sector = 0;
+}
+
+sidedef // 49
+{
+sector = 8;
+}
+
+sidedef // 50
+{
+sector = 0;
+}
+
+sidedef // 51
+{
+sector = 8;
+}
+
+sidedef // 52
+{
+sector = 8;
+}
+
+sidedef // 53
+{
+sector = 0;
+}
+
+sidedef // 54
+{
+sector = 9;
+texturemiddle = "DEM1_5";
+}
+
+sidedef // 55
+{
+sector = 9;
+texturemiddle = "DEM1_5";
+}
+
+sidedef // 56
+{
+sector = 9;
+texturemiddle = "DEM1_5";
+}
+
+sidedef // 57
+{
+sector = 9;
+texturemiddle = "DEM1_5";
+}
+
+// ---- SECTORS (0 to 9) ----
+
+sector // 0
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT19";
+textureceiling = "FLAT19";
+lightlevel = 192;
+}
+
+sector // 1
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT19";
+textureceiling = "FLAT19";
+lightlevel = 192;
+id = 1;
+}
+
+sector // 2
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT19";
+textureceiling = "FLAT19";
+lightlevel = 192;
+id = 1;
+}
+
+sector // 3
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT19";
+textureceiling = "FLAT19";
+lightlevel = 192;
+id = 1;
+}
+
+sector // 4
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT19";
+textureceiling = "FLAT19";
+lightlevel = 192;
+id = 1;
+}
+
+sector // 5
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT19";
+textureceiling = "FLAT19";
+lightlevel = 192;
+id = 1;
+}
+
+sector // 6
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT19";
+textureceiling = "FLAT19";
+lightlevel = 192;
+id = 1;
+}
+
+sector // 7
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT19";
+textureceiling = "FLAT19";
+lightlevel = 192;
+id = 1;
+}
+
+sector // 8
+{
+heightfloor = 0;
+heightceiling = 1024;
+texturefloor = "FLAT19";
+textureceiling = "FLAT19";
+lightlevel = 192;
+id = 1;
+}
+
+sector // 9
+{
+heightfloor = 128;
+heightceiling = 192;
+texturefloor = "DEM1_5";
+textureceiling = "DEM1_5";
+lightlevel = 192;
+user_managed_3d_floor = true;
+comment = "[!]DO NOT DELETE! 3D floor control sector.";
+}
+

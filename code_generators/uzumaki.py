@@ -80,7 +80,7 @@ floor3d_lightlevel = 192
 floor3d_tag = 1            # Tag shared by all spiral sectors
 
 # --- Output ---
-output_file = "./wad_internals/TEXTMAP_uzumaki.txt"
+output_file = "./wad_internals/uzumaki_TEXTMAP.txt"
 
 
 # =========================================================================

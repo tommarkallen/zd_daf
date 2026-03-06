@@ -92,7 +92,7 @@ floor3d_lightlevel = 192
 floor3d_tag        = 1   # Tag shared by all column sectors
 
 # --- Output ---
-output_file = "./wad_internals/TEXTMAP_entasis_column.txt"
+output_file = "./wad_internals/entasis_column_TEXTMAP.txt"
 
 
 # =========================================================================
