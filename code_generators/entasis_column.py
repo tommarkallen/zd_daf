@@ -1,24 +1,35 @@
 #!/usr/bin/env python3
 """
-Uzumaki Spiral TEXTMAP Generator for GZDoom (UDMF format)
-=============================================================
+Entasis Column TEXTMAP Generator for GZDoom (UDMF format)
+===========================================================
 
 Generates a COMPLETE, self-contained TEXTMAP file:
-  1. A box room sized to fit the spiral (auto-expands if needed)
-  2. An Archimedean spiral (r = b * theta) embedded inside the box
-  3. A 3D floor control sector that lifts the entire spiral off the ground
+  1. A box room sized to fit the column (auto-expands if needed)
+  2. An arc-shaped arch column: the centreline follows a circular arc,
+     and the column has a width (thickness) that varies along the arc
+     via an entasis profile
+  3. A 3D floor control sector that lifts the column off the ground
 
-The output replaces your entire TEXTMAP — just copy it over.
+Shape: a curved strip of sectors following a circular arc centreline.
+The column lies flat in the XY plane — export as a model and rotate
+90° to stand it vertically.
+
+Entasis profile modulates the column half-width along the arc:
+  t=0 and t=1  -> w_capital (the two springer/capital ends)
+  t=0.5        -> w_crown   (the crown, midpoint of the arch)
+
+  parabolic: w(t) = w_crown + (w_capital - w_crown) * (2t-1)^2
+             Faster transition near ends, flatter middle.
+  elliptic:  w(t) = w_crown + (w_capital - w_crown) * |2t-1|
+             Linear taper from crown to capitals. (simple, clean)
+  constant:  w(t) = w_capital throughout (set w_crown = w_capital)
 
 Usage:
-    python uzumaki.py
-    produces TEXTMAP_uzumaki.txt (a complete TEXTMAP)
+    python entasis_column.py
+    produces TEXTMAP_entasis_column.txt (a complete TEXTMAP)
 
-3D Floor Mechanism:
-    Every spiral sector shares a single tag. One off-map control sector
-    has a linedef with special 160 (Sector_Set3dFloor) targeting that tag.
-    The control sector's floor/ceiling heights define the floating slab,
-    and its textures define the slab's visible surfaces.
+Defaults produce a horseshoe U-shape (arc_span=270°) matching the Giger
+pilaster column style.
 """
 
 import math
@@ -27,120 +38,127 @@ import sys
 
 # =========================================================================
 # CONFIGURATION — edit these values, then run the script
+# Entasis = "width profile along the arc"
+# Set w_crown equal to w_capital for uniform width (no entasis)
 # =========================================================================
 
-# --- Core spiral geometry ---
-# Thin Uzumaki
-b = 24.0                  # Growth rate: r = b * theta (map units per radian)
-thickness = 64.0          # Radial width of the spiral arm (map units)
+# Prometheus Ampule Room Params. 135, large, for support
+arc_span     = 135.0 
+arc_radius   = 512.0   # Centreline radius (map units)
+w_capital    = 64.0
+w_crown      = 32.0
 
-# Thicc Uzumaki
-b = 16.0                  # Growth rate: r = b * theta (map units per radian)
-thickness = 96.0          # Radial width of the spiral arm (map units)
+# Horseshoe params. 270, thin, small for door
+arc_span     = 270.0
+arc_radius   = 256.0   # Centreline radius (map units)
+w_capital    = 32.0
+w_crown      = 16.0 
 
-number_of_loops = 4       # How many full 360-degree revolutions
+profile_type = "parabolic"  # "parabolic", "elliptic", or "constant"
 
-start_vertex_x = 0.0      # X of spiral center
-start_vertex_y = 0.0      # Y of spiral center
+arc_start_angle = 0.0   # Start angle in degrees (CCW from +X axis)
+                          # 135° start + 270° span = ends at 45°,
+                          # opening faces downward (-Y direction)
 
 # --- Resolution ---
-# Sectors per 360-degree loop. Higher = smoother, more geometry.
-# 48 is smooth, 24 is coarse-but-light. Must be >= 8.
-segments_per_loop = 24
+segments = 24             # Number of arc sectors. Higher = smoother. >= 4.
+
+# --- Arc centre position ---
+arc_center_x = 0.0
+arc_center_y = 0.0
 
 # --- Box room ---
-# Minimum half-width of the box (box extends from -half to +half on each
-# axis, centered on the origin). If the spiral needs more space, the box
-# auto-expands. Set this larger if you want extra room around the spiral.
 box_min_halfwidth = 1024
-box_height = 1024          # Ceiling height of the box room
-box_texture_floor = "FLAT19"
+box_height        = 1024
+box_texture_floor   = "FLAT19"
 box_texture_ceiling = "FLAT19"
-box_texture_wall = "FLAT19"
-box_lightlevel = 192
+box_texture_wall    = "FLAT19"
+box_lightlevel    = 192
 
-# --- Spiral sector appearance ---
-# Floor/ceiling heights MUST match the box so the spiral sectors blend
-# seamlessly into the room. The visual distinction comes from the 3D
-# floor, not from these values. The texture here is what you see on the
-# room floor *through* the spiral sector (under the floating slab).
-spiral_texturefloor = "FLAT19"
-spiral_textureceiling = "FLAT19"
-spiral_lightlevel = 192
+# --- Column sector appearance ---
+# Floor/ceiling heights MUST match box so column blends into room.
+# The 3D floor creates the visual raised slab.
+col_texturefloor   = "FLAT19"
+col_textureceiling = "FLAT19"
+col_lightlevel     = 192
 
 # --- 3D floor (the floating slab) ---
-# This is the visible raised platform that makes the spiral stand out.
-# The control sector's floor/ceiling define the slab's bottom/top Z.
-floor3d_z_bottom = 128     # Bottom of the floating slab (Z)
-floor3d_z_top = 192        # Top of the floating slab (Z)
-floor3d_texture_floor = "DEM1_5"   # Underside of slab
-floor3d_texture_ceiling = "DEM1_5" # Top surface of slab
-floor3d_texture_wall = "DEM1_5"    # Edge of slab
+floor3d_z_bottom = 128
+floor3d_z_top    = 192
+floor3d_texture_floor   = "DEM1_5"
+floor3d_texture_ceiling = "DEM1_5"
+floor3d_texture_wall    = "DEM1_5"
 floor3d_lightlevel = 192
-floor3d_tag = 1            # Tag shared by all spiral sectors
+floor3d_tag        = 1   # Tag shared by all column sectors
 
 # --- Output ---
-output_file = "./wad_internals/TEXTMAP_uzumaki.txt"
+output_file = "./wad_internals/TEXTMAP_entasis_column.txt"
 
 
 # =========================================================================
 # GENERATION — no need to edit below this line
 # =========================================================================
 
+def half_width(t):
+    """Column half-width at arc parameter t (0=start, 0.5=crown, 1=end)."""
+    if profile_type == "constant":
+        return w_capital
+    u = abs(2.0 * t - 1.0)   # 0 at crown, 1 at endpoints
+    if profile_type == "parabolic":
+        return w_crown + (w_capital - w_crown) * u * u
+    elif profile_type == "elliptic":
+        return w_crown + (w_capital - w_crown) * u
+    else:
+        sys.exit(f"Error: unknown profile_type '{profile_type}'. "
+                 "Use 'parabolic', 'elliptic', or 'constant'.")
+
+
 def generate():
     # --- Validate ---
-    if b <= 0:
-        sys.exit("Error: b must be positive.")
-    if number_of_loops < 1:
-        sys.exit("Error: number_of_loops must be >= 1.")
-    if thickness <= 0:
-        sys.exit("Error: thickness must be positive.")
-    if segments_per_loop < 8:
-        sys.exit("Error: segments_per_loop must be >= 8.")
+    if arc_radius <= 0:
+        sys.exit("Error: arc_radius must be positive.")
+    if not (0 < arc_span < 360):
+        sys.exit("Error: arc_span must be strictly between 0 and 360 degrees. "
+                 "For a full ring use gothic_vault.py.")
+    if w_capital <= 0 or w_crown <= 0:
+        sys.exit("Error: w_capital and w_crown must be positive.")
+    if arc_radius <= w_capital:
+        sys.exit(f"Error: arc_radius ({arc_radius}) must be greater than "
+                 f"w_capital ({w_capital}) so the inner edge doesn't fold inward.")
+    if segments < 4:
+        sys.exit("Error: segments must be >= 4.")
     if floor3d_z_bottom >= floor3d_z_top:
         sys.exit("Error: floor3d_z_bottom must be less than floor3d_z_top.")
     if floor3d_z_top > box_height:
         sys.exit("Error: floor3d_z_top exceeds box_height.")
 
-    arm_gap = 2 * math.pi * b - thickness
-    if arm_gap < 0:
-        sys.exit(
-            f"Error: arms overlap. Gap = {arm_gap:.1f} (must be > 0).\n"
-            f"Either increase b or decrease thickness. "
-            f"Min b for this thickness: {thickness / (2 * math.pi):.2f}"
-        )
+    cx = arc_center_x
+    cy = arc_center_y
+    span_rad  = math.radians(arc_span)
+    start_rad = math.radians(arc_start_angle)
 
-    n_segments = segments_per_loop * number_of_loops
-    dtheta = 2 * math.pi / segments_per_loop
-    theta_max = dtheta * n_segments
-    max_r = b * theta_max + thickness
+    # Maximum possible outer radius (at the endpoints where w is largest)
+    max_outer = arc_radius + w_capital
 
     # --- Dynamic box sizing ---
-    # The box must contain the spiral with some padding. Expand if needed.
     padding = 64
-    needed_x = abs(start_vertex_x) + max_r + padding
-    needed_y = abs(start_vertex_y) + max_r + padding
-    needed = max(needed_x, needed_y)
-    # Round up to next multiple of 64 for clean grid alignment
+    needed = max(abs(cx), abs(cy)) + max_outer + padding
     half = max(box_min_halfwidth, math.ceil(needed / 64) * 64)
 
-    cx, cy = start_vertex_x, start_vertex_y
-
     # --- Index counters ---
-    vi = 0   # vertex
-    li = 0   # linedef
-    si = 0   # sidedef
-    sec_i = 0  # sector
+    vi = 0
+    li = 0
+    si = 0
+    sec_i = 0
 
-    vtx = []   # (index, x, y)
-    lds = []   # list of dicts
-    sds = []   # list of dicts
-    secs = []  # list of dicts
+    vtx  = []
+    lds  = []
+    sds  = []
+    secs = []
 
     # =================================================================
-    # PART 1: Box room
+    # PART 1: Box room (same as uzumaki.py)
     # =================================================================
-    # 4 vertices, 4 one-sided linedefs, 4 sidedefs, 1 sector
     box_verts = [
         (-half, -half),
         (-half,  half),
@@ -162,28 +180,29 @@ def generate():
     })
     sec_i += 1
 
-    # Box walls: one-sided linedefs winding clockwise (v0→v1→v2→v3→v0)
     for j in range(4):
         v1 = j
         v2 = (j + 1) % 4
         sds.append({'idx': si, 'sector': box_sector, 'texturemiddle': box_texture_wall})
-        lds.append({
-            'idx': li, 'v1': v1, 'v2': v2,
-            'sidefront': si, 'blocking': True,
-        })
+        lds.append({'idx': li, 'v1': v1, 'v2': v2, 'sidefront': si, 'blocking': True})
         si += 1
         li += 1
 
     # =================================================================
-    # PART 2: Spiral vertices
+    # PART 2: Arc vertices
     # =================================================================
+    # outer_v[i]: on the outside of the arc (arc_radius + hw)
+    # inner_v[i]: on the inside of the arc (arc_radius - hw)
     outer_v = []
     inner_v = []
 
-    for i in range(n_segments + 1):
-        theta = i * dtheta
-        r_in = b * theta
-        r_out = r_in + thickness
+    for i in range(segments + 1):
+        t = i / segments
+        theta = start_rad + t * span_rad
+        hw = half_width(t)
+
+        r_out = arc_radius + hw
+        r_in  = arc_radius - hw
 
         ox = cx + r_out * math.cos(theta)
         oy = cy + r_out * math.sin(theta)
@@ -198,25 +217,24 @@ def generate():
         vi += 1
 
     # =================================================================
-    # PART 3: Spiral sectors (all share floor3d_tag)
+    # PART 3: Column sectors (all share floor3d_tag)
     # =================================================================
-    spiral_sector_indices = []
-    for i in range(n_segments):
-        spiral_sector_indices.append(sec_i)
-        sec_data = {
+    col_sectors = []
+    for i in range(segments):
+        col_sectors.append(sec_i)
+        secs.append({
             'idx': sec_i,
             'heightfloor': 0,
             'heightceiling': box_height,
-            'texturefloor': spiral_texturefloor,
-            'textureceiling': spiral_textureceiling,
-            'lightlevel': spiral_lightlevel,
+            'texturefloor': col_texturefloor,
+            'textureceiling': col_textureceiling,
+            'lightlevel': col_lightlevel,
             'id': floor3d_tag,
-        }
-        secs.append(sec_data)
+        })
         sec_i += 1
 
     # =================================================================
-    # PART 4: Spiral linedefs + sidedefs
+    # PART 4: Linedefs + sidedefs  (identical pattern to uzumaki.py)
     # =================================================================
     def emit_twosided(v1, v2, front_sector, back_sector):
         nonlocal li, si
@@ -231,36 +249,38 @@ def generate():
         })
         li += 1
 
-    # Leading radial
+    # Leading radial (start cap)
     emit_twosided(outer_v[0], inner_v[0],
-                  front_sector=spiral_sector_indices[0],
+                  front_sector=col_sectors[0],
                   back_sector=box_sector)
 
-    for i in range(n_segments):
-        # Outer arc
+    for i in range(segments):
+        # Outer arc: outer[i] -> outer[i+1]   front=box, back=col[i]
         emit_twosided(outer_v[i], outer_v[i + 1],
                       front_sector=box_sector,
-                      back_sector=spiral_sector_indices[i])
-        # Trailing radial
-        if i < n_segments - 1:
+                      back_sector=col_sectors[i])
+
+        # Internal radial (shared between col[i] and col[i+1])
+        # or trailing radial (end cap) for the last segment
+        if i < segments - 1:
             emit_twosided(outer_v[i + 1], inner_v[i + 1],
-                          front_sector=spiral_sector_indices[i + 1],
-                          back_sector=spiral_sector_indices[i])
+                          front_sector=col_sectors[i + 1],
+                          back_sector=col_sectors[i])
         else:
             emit_twosided(outer_v[i + 1], inner_v[i + 1],
                           front_sector=box_sector,
-                          back_sector=spiral_sector_indices[i])
-        # Inner arc
+                          back_sector=col_sectors[i])
+
+        # Inner arc: inner[i] -> inner[i+1]   front=col[i], back=box
         emit_twosided(inner_v[i], inner_v[i + 1],
-                      front_sector=spiral_sector_indices[i],
+                      front_sector=col_sectors[i],
                       back_sector=box_sector)
 
     # =================================================================
-    # PART 5: 3D floor control sector (off-map)
+    # PART 5: 3D floor control sector (off-map, same as uzumaki.py)
     # =================================================================
-    # Place the control sector rectangle outside the box, top-right.
-    ctrl_x = half + 64
-    ctrl_y = 0
+    ctrl_x  = half + 64
+    ctrl_y  = 0
     ctrl_sz = 64
 
     ctrl_verts = [
@@ -287,20 +307,13 @@ def generate():
     })
     sec_i += 1
 
-    # 4 linedefs for control sector; first one carries the 3D floor special
     for j in range(4):
         v1 = cv[j]
         v2 = cv[(j + 1) % 4]
-        sds.append({
-            'idx': si, 'sector': ctrl_sector,
-            'texturemiddle': floor3d_texture_wall,
-        })
-        ld = {
-            'idx': li, 'v1': v1, 'v2': v2,
-            'sidefront': si, 'blocking': True,
-        }
+        sds.append({'idx': si, 'sector': ctrl_sector,
+                    'texturemiddle': floor3d_texture_wall})
+        ld = {'idx': li, 'v1': v1, 'v2': v2, 'sidefront': si, 'blocking': True}
         if j == 0:
-            # Sector_Set3dFloor: special=160, arg0=tag, arg1=1 (solid), arg3=255 (full opacity)
             ld['special'] = 160
             ld['arg0'] = floor3d_tag
             ld['arg1'] = 1
@@ -315,23 +328,23 @@ def generate():
     with open(output_file, 'w') as f:
         f.write('namespace = "zdoom";\n')
 
-        # --- Header comment ---
         f.write(f"\n// ===========================================================\n")
-        f.write(f"// UZUMAKI ARCHIMEDEAN SPIRAL: r = {b} * theta\n")
-        f.write(f"// Center: ({cx}, {cy}), Box: {half*2} x {half*2} x {box_height}\n")
-        f.write(f"// Loops: {number_of_loops}, Arm width: {thickness}\n")
-        f.write(f"// Segments: {n_segments} ({segments_per_loop}/loop)\n")
+        f.write(f"// ENTASIS ARCH COLUMN: {profile_type} profile\n")
+        f.write(f"// Arc: radius={arc_radius}, span={arc_span}deg, "
+                f"start={arc_start_angle}deg\n")
+        f.write(f"// Width: w_capital={w_capital}, w_crown={w_crown}\n")
+        f.write(f"// Centre: ({cx}, {cy}), Box: {half*2}x{half*2}x{box_height}\n")
+        f.write(f"// Segments: {segments}\n")
         f.write(f"// 3D floor: Z {floor3d_z_bottom}-{floor3d_z_top}, "
                 f"tag {floor3d_tag}, texture {floor3d_texture_floor}\n")
-        f.write(f"// Outer radius: {thickness:.0f} -> {max_r:.0f}\n")
+        f.write(f"// Totals: {vi} vertices, {li} linedefs, {si} sidedefs, "
+                f"{sec_i} sectors\n")
         f.write(f"// ===========================================================\n")
 
-        # --- Vertices ---
         f.write(f"\n// ---- VERTICES (0 to {vi - 1}) ----\n\n")
         for idx, x, y in vtx:
             f.write(f"vertex // {idx}\n{{\nx = {x};\ny = {y};\n}}\n\n")
 
-        # --- Linedefs ---
         f.write(f"// ---- LINEDEFS (0 to {li - 1}) ----\n\n")
         for ld in lds:
             f.write(f"linedef // {ld['idx']}\n{{\n")
@@ -352,7 +365,6 @@ def generate():
                 f.write(f"arg3 = {ld['arg3']};\n")
             f.write("}\n\n")
 
-        # --- Sidedefs ---
         f.write(f"// ---- SIDEDEFS (0 to {si - 1}) ----\n\n")
         for sd in sds:
             f.write(f"sidedef // {sd['idx']}\n{{\n")
@@ -361,7 +373,6 @@ def generate():
                 f.write(f'texturemiddle = "{sd["texturemiddle"]}";\n')
             f.write("}\n\n")
 
-        # --- Sectors ---
         f.write(f"// ---- SECTORS (0 to {sec_i - 1}) ----\n\n")
         for sec in secs:
             f.write(f"sector // {sec['idx']}\n{{\n")
@@ -377,14 +388,13 @@ def generate():
                 f.write('comment = "[!]DO NOT DELETE! 3D floor control sector.";\n')
             f.write("}\n\n")
 
-    # --- Summary ---
     print(f"Complete TEXTMAP generated -> {output_file}")
     print(f"  Box: {half*2}x{half*2}x{box_height}"
           f"{' (auto-expanded)' if half > box_min_halfwidth else ''}")
-    print(f"  Spiral: r = {b}*theta, center ({cx}, {cy})")
-    print(f"  {number_of_loops} loops x {segments_per_loop} seg/loop = {n_segments} sectors")
-    print(f"  Arm width: {thickness}, loop gap: {arm_gap:.1f}")
-    print(f"  Outer radius: {thickness:.0f} -> {max_r:.0f}")
+    print(f"  Arc: radius={arc_radius}, span={arc_span}deg, "
+          f"start={arc_start_angle}deg")
+    print(f"  Width: {profile_type}, w_capital={w_capital}, w_crown={w_crown}")
+    print(f"  {segments} segments")
     print(f"  3D floor: Z {floor3d_z_bottom}-{floor3d_z_top} (tag {floor3d_tag})")
     print(f"  Totals: {vi} vertices, {li} linedefs, {si} sidedefs, {sec_i} sectors")
 

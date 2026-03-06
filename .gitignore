@@ -3,3 +3,6 @@
 *.autosave*
 *.dbs
 *.bak
+
+CLAUDE.md
+*.claude
