@@ -35,6 +35,7 @@ version "4.14.2"
 // New Illithids
 #include "actors/alhoon.zs"
 #include "actors/mind_flayer_arcanist.zs"
+#include "actors/elder_brain.zs"
 
 // Furniture
 #include "actors/giger_lights.zs"

@@ -2,7 +2,8 @@ MIGRATING ASSETS FROM ELEMENTALISM TO ZD_DAF
 =============================================
 Context document for AI-assisted development.
 Covers the full migration process learned from migrating seaweed, rocks, chains,
-shackles, floor skeletons, barrel, tablet, stalactite, and PumpJack.
+shackles, floor skeletons, barrel, tablet, stalactite, PumpJack, and WaterBossHead
+(ElderBrain).
 
 
 SOURCE LOCATION
@@ -15,6 +16,7 @@ Sprite subdirs within elementalism:
   sprites/Gibbet/         shackle static sprites (SHAO, SHCL)
   sprites/q3a/            skeleton sprites (NADA)
   sprites/Models/         animated model sprites (NO3D, NB3D etc.)
+  sprites/waterboss/      waterboss full-rotation sprites (WBSS)
 
 Actor source:   elementalism/actors/Clay_Models.txt   (DECORATE syntax)
 Modeldef source: elementalism/models/Clay_Modeldef.txt
@@ -23,11 +25,19 @@ PumpJack is a special case with its own files:
   elementalism/models/PumpJack.txt  (MODELDEF)
   elementalism/actors/PumpJack.gl   (GLDEFS for PBR materials)
 
+Monsters live in elementalism/actors/<MonsterName>.txt and may be SPRITE-ONLY
+(no model, no MODELDEF). Check by searching elementalism/models/*.txt and the
+MODELDEF lump for the class name -- if absent, it is sprite-only.
+WaterBoss.txt is an example: WaterBossHead is purely sprite-based.
+
 
 WHAT TO MIGRATE (CHECKLIST)
 ----------------------------
-For each model being migrated, you need ALL of the following or it will fail:
+FIRST: determine if the actor is model-based or sprite-only.
+  - Model-based: has an entry in elementalism/models/*.txt or MODELDEF lump.
+  - Sprite-only: no MODELDEF entry. Only sprites and a ZScript class are needed.
 
+For MODEL-BASED actors, you need ALL of the following or it will fail:
   1. Model file(s)      .md3 or .obj geometry file
   2. Skin file(s)       .png or .jpg textures for each surface
   3. Sprite lumps       .png files for every sprite name+frame used in States {}
@@ -35,6 +45,11 @@ For each model being migrated, you need ALL of the following or it will fail:
   5. ZScript actor      class definition with Default and States
   6. DoomEdNum          entry in zd_daf/MAPINFO DoomEdNums block
   7. GLDEFS (if PBR)    .gl file with material texture blocks, included in GLDEFS
+
+For SPRITE-ONLY actors:
+  1. Sprite lumps       ALL .png files from the elementalism sprite folder for this actor
+  2. ZScript actor      class definition with Default and States
+  3. DoomEdNum          entry in zd_daf/MAPINFO DoomEdNums block
 
 If the original skin file cannot be found (e.g. gibbet_drk.jpg), substitute the
 nearest available alternative and note it in a comment in the modeldef.
@@ -87,14 +102,21 @@ DoomEdNum entries use the ZScript class name (CamelCase).
 SPRITE NAMING CONVENTION
 ------------------------
 GZDoom/UDB sprite lumps follow the format:  <SPRT><FRAME><ROTATION>.png
-  SPRT  = 4-character sprite name (e.g. CDRA, NO3D, NADA, PJKA)
+  SPRT  = 4-character sprite name (e.g. CDRA, NO3D, NADA, PJKA, WBSS)
   FRAME = single letter A-Z
-  ROT   = rotation digit (0 = no rotation)
+  ROT   = rotation index
 
-Example: CDRAA0.png  ->  sprite=CDRA, frame=A, rotation=0
+Rotation values:
+  0        = no rotation (single image, all angles)
+  1-8      = 8-rotation sprite (standard Doom)
+  1-9,A-G  = 16-rotation sprite (GZDoom extension; A=10, B=11, ... G=16)
+
+Example: CDRAA0.png  ->  sprite=CDRA, frame=A, rotation=0 (no rotation)
+Example: WBSSA1.png  ->  sprite=WBSS, frame=A, rotation=1 of 16
 
 The ZScript States block references the 4-char sprite name and frame letter only:
-  CDRA A -1;    <- displays sprite CDRAA0.png
+  CDRA A -1;    <- displays CDRAA0.png (no rotation)
+  WBSS A 1;     <- displays WBSSA1..WBSSAG depending on viewing angle (16 rotations)
 
 UDB requires one sprite PNG per 4-char sprite name used in States. If only a
 single placeholder exists (e.g. only PJKAA0.png, but States uses PJKA/PJKB/PJKC/PJKD),
@@ -109,6 +131,7 @@ Commonly migrated sprite groups and their elementalism source locations:
   SHAO / SHCL          ->  elementalism/sprites/Gibbet/        (shackles static)
   NO3D / NB3D etc.     ->  elementalism/sprites/Models/        (animated models)
   BAR1                 ->  elementalism/sprites/...            (barrel)
+  WBSS                 ->  elementalism/sprites/waterboss/     (elder brain, 16-rotation)
 
 
 MODELDEF: TWO STYLES
@@ -209,6 +232,54 @@ shading only. Add GLDEFS as a second pass once the model is confirmed working.
 
 ZSCRIPT ACTOR PATTERNS
 -----------------------
+
+MONSTER / CREATURE (sprite-only, floating, illithid-type):
+  class ElderBrain : Actor
+  {
+      Default
+      {
+          //$Category "Monsters/Illithids"
+          //$Title "Elder Brain"
+          Radius 70;
+          Height 130;
+          +NOCLIP;
+          +SHOOTABLE;
+          +NOGRAVITY;
+          +ROLLSPRITE;
+          +ROLLCENTER;
+          +FLOATBOB;
+          +DONTTHRUST;
+          +FORCEXYBILLBOARD;
+          +COUNTKILL;
+          +NORADIUSDMG;
+          FloatBobPhase 0;
+          FloatBobStrength 1.0;
+          Species "Illithid";
+          DamageFactor "Ice", 0.5;
+          DamageFactor "BFGSplash", 0.15;
+          Health 1000000;
+      }
+      States
+      {
+      Spawn:
+          WBSS A 1 A_RadiusThrust(5000, 256, RTF_NOTMISSILE, 64);
+          Loop;
+      Death:
+          TNT1 A 0;
+          Stop;
+      }
+  }
+
+  Notes on monster migration:
+  - DECORATE "ACTOR Foo { ... }" becomes "class Foo : Actor { Default { ... } States { ... } }"
+  - Add semicolons after every property/flag line.
+  - Drop Species from the original if it refers to a boss-specific type not in zd_daf
+    (e.g. "WBoss" -> "Illithid" to match zd_daf's species grouping).
+  - Drop DamageFactor entries for custom damage types not defined in zd_daf
+    (e.g. "WBossDamage"). Keep standard types: "Ice", "BFGSplash", "Fire", etc.
+  - Drop ActiveSound / SeeSound / DeathSound if the sound is not migrated.
+  - Simplify Death/Pain states if they spawn projectile actors (BloodBoop,
+    BossNeckMlem, etc.) that are not being migrated. Replace with Stop.
 
 STATIC MODEL (no animation):
   class RocksDark1 : Actor {
@@ -322,10 +393,11 @@ UDB CATEGORY BROWSER ($Category)
 ----------------------------------
 The //$Category comment controls the folder in UDB's thing browser.
 Use existing categories for consistency:
-  "Models/Rocks"    -- rocks, stalactites, cave geometry
-  "Models/Plants"   -- seaweed, anemone, organic decor
-  "Models/Props"    -- barrel, tablet, pump jack, furniture
-  "Models/Chains"   -- chains, shackles
+  "Models/Rocks"       -- rocks, stalactites, cave geometry
+  "Models/Plants"      -- seaweed, anemone, organic decor
+  "Models/Props"       -- barrel, tablet, pump jack, furniture
+  "Models/Chains"      -- chains, shackles
+  "Monsters/Illithids" -- mind flayers, elder brain, intellect devourer, etc.
 
 Moving to a different category only requires changing $Category in the ZScript actor.
 
@@ -334,7 +406,13 @@ DOOMEDNUM REGISTRY
 ------------------
 Models use the range 18000+ in zd_daf/MAPINFO.
 As of the last migration, highest assigned is 18041 (PumpJack).
-Next available: 18042
+Next available model: 18042
+
+Illithid monsters use the range 19500+ in zd_daf/MAPINFO (separate block).
+As of the last migration, highest assigned is 19510 (Grimlock). ElderBrain is 19504.
+Pre-reserved commented-out entries (e.g. //19504 = ElderBrain) exist in MAPINFO --
+uncomment them rather than adding a new line.
+Next available illithid: 19511
 
   18000 = Anemone01
   18002 = Anemone02
@@ -402,6 +480,7 @@ FOLDER LAYOUT (current)
     shackles/                  -- SHAO/SHCL static sprites
     q3a/                       -- NADA skeleton sprite
     pump_jack/                 -- PJKA/PJKB/PJKC/PJKD placeholder sprites
+    elder_brain/               -- WBSS 16-rotation sprites (frames A, H, I)
 
 Do NOT create new subdirs under models/ root for new geometry files -- keep it flat.
 
@@ -452,3 +531,22 @@ COMMON MISTAKES
 12. GLDEFS .gl file created but not included in zd_daf/GLDEFS.
     Symptom: PBR materials silently not applied (flat shading only, no error).
     Fix: add #include "actors/<name>.gl" under "// Models" in zd_daf/GLDEFS.
+
+13. Sprite-only actor treated as model-based -- time wasted searching for a MODELDEF.
+    Fix: grep elementalism/models/*.txt and MODELDEF for the class name first.
+    If no match: it is sprite-only. Just copy sprites, write ZScript class, add DoomEdNum.
+
+14. Monster Death state spawns actors not present in zd_daf (custom projectiles,
+    boss parts, etc.) -- ZScript compile error or broken runtime behaviour.
+    Fix: strip the Death state down to TNT1 A 0; Stop; for the initial migration.
+    Flesh it out later once the dependent actors are also migrated.
+
+15. Species "WBoss" or other elementalism-specific species not used in zd_daf.
+    Fix: change to "Illithid" for illithid-type creatures (controls friendly-fire
+    grouping). Check existing actors in zd_daf/actors/ for the correct Species string
+    for the category you're targeting.
+
+16. DamageFactor for custom damage types (e.g. "WBossDamage") -- the type doesn't
+    exist in zd_daf, causing a silent no-op or compile warning.
+    Fix: drop non-standard DamageFactor lines. Keep only standard GZDoom types
+    ("Ice", "Fire", "BFGSplash", etc.).
