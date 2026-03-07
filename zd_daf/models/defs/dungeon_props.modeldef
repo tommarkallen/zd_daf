@@ -539,3 +539,95 @@ Model MassiveStalactite
 	USEACTORROLL
 	FrameIndex BAR1 A 0 0
 }
+
+// ---- PUMP JACK ------------------------------------------------------------
+// Multi-surface MD3: skins are embedded in the md3 shader strings and resolved
+// via GLDEFS material texture blocks (see actors/pump_jack.gl). No Skin lines needed.
+
+Model PumpJack
+{
+	Model 0 "models/pump_jack.md3"
+	Scale 50 50 50
+	DONTCULLBACKFACES
+	USEACTORPITCH
+	USEACTORROLL
+	FrameIndex PJKA A 0 0
+	FrameIndex PJKA B 0 1
+	FrameIndex PJKA C 0 2
+	FrameIndex PJKA D 0 3
+	FrameIndex PJKA E 0 4
+	FrameIndex PJKA F 0 5
+	FrameIndex PJKA G 0 6
+	FrameIndex PJKA H 0 7
+	FrameIndex PJKA I 0 8
+	FrameIndex PJKA J 0 9
+	FrameIndex PJKA K 0 10
+	FrameIndex PJKA L 0 12
+	FrameIndex PJKA M 0 13
+	FrameIndex PJKA N 0 14
+	FrameIndex PJKA O 0 15
+	FrameIndex PJKA P 0 16
+	FrameIndex PJKA Q 0 17
+	FrameIndex PJKA R 0 18
+	FrameIndex PJKA S 0 19
+	FrameIndex PJKA T 0 20
+	FrameIndex PJKA U 0 21
+	FrameIndex PJKA V 0 22
+	FrameIndex PJKA W 0 23
+	FrameIndex PJKA X 0 24
+	FrameIndex PJKA Y 0 25
+	FrameIndex PJKA Z 0 26
+	FrameIndex PJKB A 0 27
+	FrameIndex PJKB B 0 28
+	FrameIndex PJKB C 0 29
+	FrameIndex PJKB D 0 30
+	FrameIndex PJKB E 0 31
+	FrameIndex PJKB F 0 32
+	FrameIndex PJKB G 0 33
+	FrameIndex PJKB H 0 34
+	FrameIndex PJKB I 0 35
+	FrameIndex PJKB J 0 35
+	FrameIndex PJKB K 0 37
+	FrameIndex PJKB L 0 38
+	FrameIndex PJKB M 0 39
+	FrameIndex PJKB N 0 40
+	FrameIndex PJKB O 0 41
+	FrameIndex PJKB P 0 42
+	FrameIndex PJKB Q 0 43
+	FrameIndex PJKB R 0 44
+	FrameIndex PJKB S 0 45
+	FrameIndex PJKB T 0 46
+	FrameIndex PJKB U 0 47
+	FrameIndex PJKB V 0 48
+	FrameIndex PJKB W 0 49
+	FrameIndex PJKB X 0 50
+	FrameIndex PJKB Y 0 51
+	FrameIndex PJKB Z 0 52
+	FrameIndex PJKC A 0 53
+	FrameIndex PJKC B 0 54
+	FrameIndex PJKC C 0 55
+	FrameIndex PJKC D 0 56
+	FrameIndex PJKC E 0 57
+	FrameIndex PJKC F 0 58
+	FrameIndex PJKC G 0 59
+	FrameIndex PJKC H 0 60
+	FrameIndex PJKC I 0 61
+	FrameIndex PJKC J 0 62
+	FrameIndex PJKC K 0 63
+	FrameIndex PJKC L 0 64
+	FrameIndex PJKC M 0 65
+	FrameIndex PJKC N 0 66
+	FrameIndex PJKC O 0 67
+	FrameIndex PJKC P 0 68
+	FrameIndex PJKC Q 0 69
+	FrameIndex PJKC R 0 70
+	FrameIndex PJKC S 0 71
+	FrameIndex PJKC T 0 72
+	FrameIndex PJKC U 0 73
+	FrameIndex PJKC V 0 74
+	FrameIndex PJKC W 0 75
+	FrameIndex PJKC X 0 76
+	FrameIndex PJKC Y 0 77
+	FrameIndex PJKC Z 0 78
+	FrameIndex PJKD A 0 79
+}

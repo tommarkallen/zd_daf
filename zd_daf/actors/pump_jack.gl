@@ -1,0 +1,66 @@
+// GLDEFS for PumpJack
+// PBR materials: normal maps and shared specular map per surface.
+// spec_thing.png is a shared specular map used across all 7 surfaces.
+
+material texture "models/skins/pumpjack/walking_beam.png"
+{
+    normal "materials/normalmaps/walking_beam_norm.png"
+    specular "materials/specularmaps/spec_thing.png"
+    specularlevel 0.5
+    glossiness 1.0
+    disablefullbright
+}
+
+material texture "models/skins/pumpjack/main_body.png"
+{
+    normal "materials/normalmaps/main_body_norm.png"
+    specular "materials/specularmaps/spec_thing.png"
+    specularlevel 0.5
+    glossiness 1.0
+    disablefullbright
+}
+
+material texture "models/skins/pumpjack/polished_rod.png"
+{
+    normal "materials/normalmaps/polished_rod_norm.png"
+    specular "materials/specularmaps/spec_thing.png"
+    specularlevel 0.5
+    glossiness 1.0
+    disablefullbright
+}
+
+material texture "models/skins/pumpjack/gear_secondary.png"
+{
+    normal "materials/normalmaps/gear_secondary_norm.png"
+    specular "materials/specularmaps/spec_thing.png"
+    specularlevel 0.5
+    glossiness 1.0
+    disablefullbright
+}
+
+material texture "models/skins/pumpjack/gear_primary.png"
+{
+    normal "materials/normalmaps/gear_primary_norm.png"
+    specular "materials/specularmaps/spec_thing.png"
+    specularlevel 0.5
+    glossiness 1.0
+    disablefullbright
+}
+
+material texture "models/skins/pumpjack/gear_connecting_rod.png"
+{
+    normal "materials/normalmaps/gear_connecting_rod_norm.png"
+    specular "materials/specularmaps/spec_thing.png"
+    specularlevel 0.5
+    glossiness 1.0
+    disablefullbright
+}
+
+material texture "models/skins/pumpjack/gear_connecting_rod_2.png"
+{
+    normal "materials/normalmaps/gear_connecting_rod2_norm.png"
+    specular "materials/specularmaps/spec_thing.png"
+    specularlevel 1.0
+    glossiness 1.0
+    disablefullbright
+}

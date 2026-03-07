@@ -3,6 +3,7 @@
 #include "actors/flashlight.gl"
 
 // Models
+#include "actors/pump_jack.gl"
 
 // Monsters
 #include "actors/fiddler.gl"

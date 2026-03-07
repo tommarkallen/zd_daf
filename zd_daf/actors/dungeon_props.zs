@@ -142,3 +142,22 @@ class MassiveStalactite : Actor {
             Stop;
     }
 }
+
+class PumpJack : Actor {
+    Default {
+        //$Category "Models/Props"
+        //$Title "Pump Jack"
+        Radius 64;
+        Height 128;
+        -SOLID
+        +NOGRAVITY
+    }
+    States {
+        Spawn:
+            PJKA ABCDEFGHIJKLMNOPQRSTUVWXYZ 2;
+            PJKB ABCDEFGHIJKLMNOPQRSTUVWXYZ 2;
+            PJKC ABCDEFGHIJKLMNOPQRSTUVWXYZ 2;
+            PJKD A 2;
+            Loop;
+    }
+}

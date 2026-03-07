@@ -1,25 +1,27 @@
-MIGRATING MODELS FROM ELEMENTALISM TO ZD_DAF
-============================================
+MIGRATING ASSETS FROM ELEMENTALISM TO ZD_DAF
+=============================================
 Context document for AI-assisted development.
 Covers the full migration process learned from migrating seaweed, rocks, chains,
-shackles, floor skeletons, barrel, tablet, and stalactite models.
+shackles, floor skeletons, barrel, tablet, stalactite, and PumpJack.
 
 
-SOURCE LOCATIONS
-----------------
-Working partial copy (preferred — already trimmed):
-  c:\dev\zd_daf\elementalism-minus-migration\
+SOURCE LOCATION
+---------------
+Elementalism source lives at:
+  c:\dev\zd_daf\elementalism\
 
-Full release (fallback if file missing from above):
-  c:\dev\zd\Elementalism_Phase1_Full_Release_v1.3\elementalism\
+Sprite subdirs within elementalism:
+  sprites/decorations/    rock/prop placeholder sprites (CDRA, PJKA etc.)
+  sprites/Gibbet/         shackle static sprites (SHAO, SHCL)
+  sprites/q3a/            skeleton sprites (NADA)
+  sprites/Models/         animated model sprites (NO3D, NB3D etc.)
 
-The partial copy has a different sprite folder structure than the full release.
-Sprites may be under:  elementalism-minus-migration/sprites/decorations/
-                       elementalism-minus-migration/sprites/Gibbet/
-                       elementalism-minus-migration/sprites/q3a/
-                       elementalism-minus-migration/sprites/Models/   (seaweed etc.)
-Source actors from:    elementalism-minus-migration/actors/Clay_Models.txt
-Source modeldefs from: elementalism-minus-migration/models/Clay_Modeldef.txt
+Actor source:   elementalism/actors/Clay_Models.txt   (DECORATE syntax)
+Modeldef source: elementalism/models/Clay_Modeldef.txt
+PumpJack is a special case with its own files:
+  elementalism/actors/PumpJack.txt  (actor)
+  elementalism/models/PumpJack.txt  (MODELDEF)
+  elementalism/actors/PumpJack.gl   (GLDEFS for PBR materials)
 
 
 WHAT TO MIGRATE (CHECKLIST)
@@ -27,11 +29,12 @@ WHAT TO MIGRATE (CHECKLIST)
 For each model being migrated, you need ALL of the following or it will fail:
 
   1. Model file(s)      .md3 or .obj geometry file
-  2. Skin file(s)       .png or .jpg texture referenced in MODELDEF
+  2. Skin file(s)       .png or .jpg textures for each surface
   3. Sprite lumps       .png files for every sprite name+frame used in States {}
-  4. MODELDEF entry     Model block with Scale, Skin, FrameIndex lines
+  4. MODELDEF entry     Model block with Scale, Skin/GLDEFS, FrameIndex lines
   5. ZScript actor      class definition with Default and States
   6. DoomEdNum          entry in zd_daf/MAPINFO DoomEdNums block
+  7. GLDEFS (if PBR)    .gl file with material texture blocks, included in GLDEFS
 
 If the original skin file cannot be found (e.g. gibbet_drk.jpg), substitute the
 nearest available alternative and note it in a comment in the modeldef.
@@ -39,21 +42,27 @@ nearest available alternative and note it in a comment in the modeldef.
 
 FILE DESTINATIONS IN ZD_DAF
 -----------------------------
-  Model .md3/.obj   ->  zd_daf/models/<name>.md3          (flat, no subdirs)
-  Skin .png/.jpg    ->  zd_daf/models/skins/<name>.png
-  Sprite lumps      ->  zd_daf/sprites/<groupname>/        (subdirectory)
-  MODELDEF          ->  zd_daf/models/defs/<category>.modeldef
-  ZScript actor     ->  zd_daf/actors/<category>.zs
-  DoomEdNum         ->  zd_daf/MAPINFO  DoomEdNums block
+  Model .md3/.obj        ->  zd_daf/models/<name>.md3        (flat, no subdirs)
+  Single-surface skins   ->  zd_daf/models/skins/<name>.png
+  Multi-surface skins    ->  zd_daf/models/skins/<foldername>/<name>.png
+                             (folder name must match MD3 embedded shader strings)
+  Normal maps            ->  zd_daf/materials/normalmaps/<name>.png
+  Specular maps          ->  zd_daf/materials/specularmaps/<name>.png
+  Sprite lumps           ->  zd_daf/sprites/<groupname>/      (subdirectory)
+  MODELDEF               ->  zd_daf/models/defs/<category>.modeldef
+  ZScript actor          ->  zd_daf/actors/<category>.zs
+  GLDEFS file            ->  zd_daf/actors/<name>.gl  (included in zd_daf/GLDEFS)
+  DoomEdNum              ->  zd_daf/MAPINFO DoomEdNums block
 
 Categories and their files:
-  plants.modeldef / plants.zs           -- seaweed, anemone, organic decor
-  dungeon_props.modeldef / (split zs)   -- rocks, chains, shackles, props
+  plants.modeldef / plants.zs              -- seaweed, anemone, organic decor
+  dungeon_props.modeldef / dungeon_props.zs -- rocks, chains, shackles, props
   architecture.modeldef / architecture.zs  -- structural/Giger models
   (create new .modeldef + .zs for genuinely new categories)
 
 New .modeldef files must be added to zd_daf/MODELDEF via #include.
 New .zs files must be added to zd_daf/zscript.zs via #include.
+New .gl files must be added to zd_daf/GLDEFS via #include.
 
 
 FILE NAMING CONVENTION
@@ -62,9 +71,13 @@ All model and skin filenames in zd_daf/ must be lowercase snake_case.
 Convert CamelCase names from elementalism on copy:
 
   SmallOrnamentalPlant1.obj  ->  small_ornamental_plant_1.obj
-  Phormium_1.obj             ->  phormium_1.obj
   Tablet.obj                 ->  tablet.obj
   BB_chain_dark_diffuse.png  ->  bb_chain_dark_diffuse.png
+
+EXCEPTION: Multi-surface MD3 skin folders must preserve the exact folder name
+embedded in the MD3 shader strings (see MULTI-SURFACE MD3 section below).
+Example: PumpJack MD3 embeds "models/skins/pumpjack/..." so the folder must be
+named "pumpjack" not "pump_jack". Check embedded strings before renaming.
 
 ZScript class names use CamelCase as required by the language.
 MODELDEF block names match the ZScript class name exactly (CamelCase).
@@ -74,7 +87,7 @@ DoomEdNum entries use the ZScript class name (CamelCase).
 SPRITE NAMING CONVENTION
 ------------------------
 GZDoom/UDB sprite lumps follow the format:  <SPRT><FRAME><ROTATION>.png
-  SPRT  = 4-character sprite name (e.g. CDRA, NO3D, NADA)
+  SPRT  = 4-character sprite name (e.g. CDRA, NO3D, NADA, PJKA)
   FRAME = single letter A-Z
   ROT   = rotation digit (0 = no rotation)
 
@@ -83,13 +96,15 @@ Example: CDRAA0.png  ->  sprite=CDRA, frame=A, rotation=0
 The ZScript States block references the 4-char sprite name and frame letter only:
   CDRA A -1;    <- displays sprite CDRAA0.png
 
-In elementalism, static rock/prop sprites were often named uniquely per model
-(CDRA, CDRB, CDRC, CDRD for the four rock meshes). Do NOT substitute TNT1 as
-a workaround for missing sprites -- migrate the actual PNG files instead.
-TNT1 is a GZDoom built-in null sprite and will hide the model from UDB.
+UDB requires one sprite PNG per 4-char sprite name used in States. If only a
+single placeholder exists (e.g. only PJKAA0.png, but States uses PJKA/PJKB/PJKC/PJKD),
+copy PJKAA0.png as PJKBA0.png, PJKCA0.png, PJKDA0.png. All are invisible placeholders.
+
+Do NOT substitute TNT1 for missing sprites -- it hides the model from the UDB thing browser.
 
 Commonly migrated sprite groups and their elementalism source locations:
   CDRA/CDRB/CDRC/CDRD  ->  elementalism/sprites/decorations/  (rocks)
+  PJKA/PJKB/PJKC/PJKD ->  elementalism/sprites/decorations/  (pump jack, only PJKAA0 exists)
   NADA                 ->  elementalism/sprites/q3a/           (skeletons)
   SHAO / SHCL          ->  elementalism/sprites/Gibbet/        (shackles static)
   NO3D / NB3D etc.     ->  elementalism/sprites/Models/        (animated models)
@@ -112,8 +127,16 @@ STYLE 2 -- Full PK3-root paths (skins from textures/ or mixed sources):
 Used by: dungeon_props.modeldef
 
 Use Style 2 whenever the skin comes from zd_daf/textures/ rather than
-zd_daf/models/skins/, because the Path directive would also apply to Skin paths
-and break the reference.
+zd_daf/models/skins/, because the Path directive would also apply to Skin paths.
+
+MULTI-SURFACE MD3 (no Skin lines in MODELDEF):
+  Model 0 "models/pump_jack.md3"
+  Scale 50 50 50
+  ... FrameIndex lines ...
+  (no Skin lines)
+GZDoom resolves skins from the paths embedded in the MD3 shader strings.
+GLDEFS material texture blocks then overlay PBR materials on top.
+See GLDEFS MATERIAL BLOCKS section below.
 
 Standard flags:
   DONTCULLBACKFACES  -- always include for thin geometry (chains, foliage)
@@ -133,22 +156,55 @@ Elementalism sprite-driven animation maps sprite frames to MD3 keyframes:
   FrameIndex NB3D A 0 26   <- continues from where NO3D left off
   ...
 
-Copy ALL FrameIndex lines verbatim from Clay_Modeldef.txt.
+Copy ALL FrameIndex lines verbatim from the source modeldef.
 Count frames carefully -- variants of the same mesh may use different frame counts:
   seaweed1: NO3D A-Z (0-25) + NB3D A-O (26-40) = 41 frames
   seaweed2/3: NO3D A-Z (0-25) + NB3D A-N (26-39) = 40 frames
   shackles: NO3D A-Z + NB3D A-Z + NC3D A-Z + ND3D A-W = 101 frames
+  pump jack: PJKA A-Z + PJKB A-Z + PJKC A-Z + PJKD A = 80 frames (0-79)
 
 The actor States block must loop through the same sprite sequences:
   Spawn:
       NO3D ABCDEFGHIJLKMNOPQRSTUVWXYZ 2;
-      NB3D ABCDEFGHIJLKMNOPQRSTUVWXYZ 2;
-      NC3D ABCDEFGHIJLKMNOPQRSTUVWXYZ 2;
-      ND3D ABCDEFGHIJLKMNOPQRSTUVW 2;
+      ...
       Loop;
 
-Note: "ABCDEFGHIJLKMNOPQRSTUVWXYZ" -- the K and L are transposed in some
-elementalism actors. Copy the exact letter sequence from Clay_Models.txt.
+Note: Some elementalism actors have transposed letters (e.g. "HIJLK" instead of
+"HIJKL") or duplicate/skipped MD3 frame indices. Copy verbatim to preserve the
+original animation rhythm. Correcting these would change visual behaviour.
+Known PumpJack anomalies:
+  PJKA L -> MD3 frame 12  (frame 11 skipped in source)
+  PJKB I and PJKB J both -> MD3 frame 35  (frame 36 skipped)
+
+
+GLDEFS MATERIAL BLOCKS (PBR: normal maps + specular)
+------------------------------------------------------
+Some models (e.g. PumpJack) use GLDEFS to apply normal maps and specular maps
+to each surface. This is separate from the MODELDEF skin system.
+
+To migrate a model with GLDEFS:
+1. Copy normal map PNGs to zd_daf/materials/normalmaps/
+2. Copy specular map PNGs to zd_daf/materials/specularmaps/
+3. Create zd_daf/actors/<name>.gl with material texture blocks
+4. Add #include "actors/<name>.gl" under "// Models" in zd_daf/GLDEFS
+
+Format of a material block:
+  material texture "models/skins/pumpjack/walking_beam.png"
+  {
+      normal "materials/normalmaps/walking_beam_norm.png"
+      specular "materials/specularmaps/spec_thing.png"
+      specularlevel 0.5
+      glossiness 1.0
+      disablefullbright
+  }
+
+CRITICAL: The path in "material texture "..."" must exactly match the skin path
+that GZDoom resolves for that surface. For multi-surface MD3s this is the path
+embedded in the MD3 shader strings. If it doesn't match, the PBR override is silently
+ignored (flat shading only -- functional but not enhanced).
+
+Omitting GLDEFS entirely is acceptable for an initial migration; it gives flat
+shading only. Add GLDEFS as a second pass once the model is confirmed working.
 
 
 ZSCRIPT ACTOR PATTERNS
@@ -216,10 +272,34 @@ ZSCRIPT CLASS NAME RULES:
   - Use CamelCase throughout.
 
 
-MULTI-SKIN VARIANTS
---------------------
-When the same mesh is used with multiple skins (e.g. rocks with 4 different stone
-textures), create:
+MULTI-SURFACE MD3
+-----------------
+When an MD3 has multiple surfaces (e.g. PumpJack with 7 surfaces), each surface
+has an embedded shader string naming its skin texture path. GZDoom resolves these
+paths directly from the PK3, so:
+
+1. The skin files must exist at EXACTLY the paths embedded in the MD3.
+   To find out what paths the MD3 embeds, open it in a hex editor and search for
+   "models/skins/" -- the shader strings are plain ASCII.
+
+2. Do not rename the skin folder if it would break the embedded path.
+   Example: PumpJack MD3 embeds "models/skins/pumpjack/walking_beam.png"
+   so the folder must be "pumpjack/" not "pump_jack/".
+   GZDoom on Windows is case-insensitive, but the exact slug must match.
+
+3. MODELDEF needs no Skin lines for multi-surface MD3s -- just Model 0 + FrameIndex.
+
+4. If GLDEFS material texture blocks are provided, their "material texture "..."" path
+   must also match the embedded shader string exactly.
+
+5. If you later want to override the embedded skins via MODELDEF Skin N lines,
+   the surface index N corresponds to the order of surfaces in the MD3 file
+   (requires checking in Blender or a MD3 viewer).
+
+
+MULTI-SKIN VARIANTS (same mesh, different skins)
+-------------------------------------------------
+When the same mesh is used with multiple skins, create:
   - One base actor class with the primary skin
   - Subclasses for each variant, each with its own $Title
   - A separate MODELDEF block per variant (pointing to the correct Skin path)
@@ -232,10 +312,10 @@ Name the classes to describe the skin's visual appearance, not a generic "_2/_3"
   RocksGreen1  -- mossy green (ds_gras1)
 
 Rock skins available in zd_daf/textures/:
-  textures/zoon_tex/ZKHXRK03.png    dark cracked stone
-  textures/aa_tex/SLROCK1.png       brown earthy grain
-  textures/elementalism_tex/SLROCK22.png  near-black obsidian
-  textures/darksouls_tex/ds_gras1.jpg    mossy green
+  textures/zoon_tex/ZKHXRK03.png             dark cracked stone
+  textures/aa_tex/SLROCK1.png                brown earthy grain
+  textures/elementalism_tex/SLROCK22.png     near-black obsidian
+  textures/darksouls_tex/ds_gras1.jpg        mossy green
 
 
 UDB CATEGORY BROWSER ($Category)
@@ -244,7 +324,7 @@ The //$Category comment controls the folder in UDB's thing browser.
 Use existing categories for consistency:
   "Models/Rocks"    -- rocks, stalactites, cave geometry
   "Models/Plants"   -- seaweed, anemone, organic decor
-  "Models/Props"    -- barrel, tablet, furniture
+  "Models/Props"    -- barrel, tablet, pump jack, furniture
   "Models/Chains"   -- chains, shackles
 
 Moving to a different category only requires changing $Category in the ZScript actor.
@@ -253,8 +333,8 @@ Moving to a different category only requires changing $Category in the ZScript a
 DOOMEDNUM REGISTRY
 ------------------
 Models use the range 18000+ in zd_daf/MAPINFO.
-As of the last migration, highest assigned is 18040 (MassiveStalactite).
-Next available: 18041
+As of the last migration, highest assigned is 18041 (PumpJack).
+Next available: 18042
 
   18000 = Anemone01
   18002 = Anemone02
@@ -296,25 +376,34 @@ Next available: 18041
   18038 = ShackleClosedStatic
   18039 = Tablet
   18040 = MassiveStalactite
+  18041 = PumpJack
 
 Multiple DoomEdNums blocks in MAPINFO are valid -- GZDoom merges them.
 The Models block is separate from the Weapons/Characters/Monsters block.
 
 
-MODELS FOLDER LAYOUT (current)
--------------------------------
+FOLDER LAYOUT (current)
+------------------------
   models/
-    *.md3 / *.obj          -- all geometry files, flat (no subdirs)
+    *.md3 / *.obj              -- all geometry files, flat (no subdirs)
     skins/
-      *.png / *.jpg        -- all skin textures
+      *.png / *.jpg            -- single-surface skins
+      pumpjack/                -- multi-surface skins, folder name from MD3 shader strings
     defs/
       plants.modeldef
       architecture.modeldef
       uzumaki.modeldef
       dungeon_props.modeldef
+  materials/
+    normalmaps/                -- normal map PNGs for GLDEFS PBR materials
+    specularmaps/              -- specular map PNGs for GLDEFS PBR materials
+  sprites/
+    rocks_dark/                -- CDRA/CDRB/CDRC/CDRD placeholder sprites
+    shackles/                  -- SHAO/SHCL static sprites
+    q3a/                       -- NADA skeleton sprite
+    pump_jack/                 -- PJKA/PJKB/PJKC/PJKD placeholder sprites
 
-Do NOT create new subdirs under models/ for new model files.
-The q3a/ subdir that existed has been flattened -- floskel.md3 -> floor_skeleton.md3.
+Do NOT create new subdirs under models/ root for new geometry files -- keep it flat.
 
 
 COMMON MISTAKES
@@ -322,6 +411,8 @@ COMMON MISTAKES
 1. Missing sprite lumps -- UDB: "Unable to find sprite lump CDRAA used by actor..."
    Fix: find and copy the actual .png sprite files from elementalism/sprites/
    Do NOT substitute TNT1 -- it hides the model from the UDB thing browser.
+   If only one sprite PNG exists for a multi-sequence animated model (e.g. only PJKAA0),
+   copy it as placeholders for each additional sprite name (PJKBA0, PJKCA0, PJKDA0).
 
 2. Wrong model path -- leaving "Models/" prefix from elementalism.
    Fix: Style 1 uses Path "models" + relative name; Style 2 uses full "models/name.md3"
@@ -335,7 +426,7 @@ COMMON MISTAKES
    Fix: every subclass needs its own Model <ClassName> { ... } block in the modeldef.
 
 5. Missing FrameIndex entries -- model loads but is frozen on frame 0.
-   Fix: copy ALL FrameIndex lines from Clay_Modeldef.txt for that model.
+   Fix: copy ALL FrameIndex lines from the source modeldef for that model.
 
 6. Actor uses DECORATE syntax (no "class", no semicolons) -- ZScript compile error.
    Fix: convert to ZScript class syntax.
@@ -351,5 +442,13 @@ COMMON MISTAKES
 
 10. CamelCase filename for model or skin file.
     Fix: rename to snake_case and update all MODELDEF paths referencing it.
-    Affected paths in dungeon_props.modeldef use full PK3-root paths --
-    search for the old name across all .modeldef files before deleting.
+    Search all .modeldef files for the old name before renaming.
+
+11. Multi-surface MD3 skin folder name doesn't match embedded shader strings.
+    Symptom: UDB/GZDoom reports "unable to load skin models\skins\<name>\..."
+    Fix: rename the skin subfolder to match what the MD3 embeds exactly.
+    Use a hex editor to read the embedded shader strings if unsure.
+
+12. GLDEFS .gl file created but not included in zd_daf/GLDEFS.
+    Symptom: PBR materials silently not applied (flat shading only, no error).
+    Fix: add #include "actors/<name>.gl" under "// Models" in zd_daf/GLDEFS.
