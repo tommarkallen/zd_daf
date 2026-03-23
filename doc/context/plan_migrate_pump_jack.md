@@ -196,8 +196,8 @@ FILES TO CREATE
   or a md3 viewer tool).
 
 
-3. GLDEFS material file -- create zd_daf/actors/pump_jack.gl
-   Then add  #include "actors/pump_jack.gl"  under "// Models" in zd_daf/GLDEFS.
+3. GLDEFS material file -- create zd_daf/actors/pump_jack.gldefs
+   Then add  #include "actors/pump_jack.gldefs"  under "// Models" in zd_daf/GLDEFS.
 
   Content -- translate from elementalism/actors/PumpJack.gl, updating paths:
 
@@ -242,8 +242,8 @@ MIGRATION ORDER
 5. Copy PJKAA0.png to sprites/pump_jack/ and make 3 copies (PJKBA0, PJKCA0, PJKDA0)
 6. Add ZScript class to actors/dungeon_props.zs
 7. Add MODELDEF block to models/defs/dungeon_props.modeldef
-8. Create actors/pump_jack.gl with GLDEFS material blocks
-9. Add #include "actors/pump_jack.gl" to GLDEFS (under // Models)
+8. Create actors/pump_jack.gldefs with GLDEFS material blocks
+9. Add #include "actors/pump_jack.gldefs" to GLDEFS (under // Models)
 10. Add DoomEdNum 18041 to MAPINFO
 11. Load in UDB -- verify no sprite lump errors, verify model appears in thing browser
 12. Test in GZDoom -- verify animation plays, skins render, normal/specular visible

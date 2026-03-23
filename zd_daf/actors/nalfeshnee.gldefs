@@ -1,0 +1,200 @@
+//===========================================================================
+//
+// GZDoom GLDefs - Nalfeshnee
+//
+//===========================================================================
+
+// ---- Main Actor ------------------------------------------------------------
+
+PointLight NalfFire
+{
+    Color 0.4 0.8 0.2
+    Size 64
+    Offset 0 48 30
+}
+
+Object Nalfeshnee
+{
+    Frame NALFI { Light NalfFire }
+}
+
+// ---- Nalfeshnee_Ball1 / Nalfeshnee_BallFire --------------------------------
+
+PointLight NalfBall11
+{
+    Color 0.4 0.8 0.3
+    Size 40
+}
+
+PointLight NalfBall12
+{
+    Color 0.4 0.8 0.3
+    Size 48
+}
+
+PointLight NalfBall13
+{
+    Color 0.6 1.0 0.4
+    Size 56
+}
+
+PointLight NalfBall14
+{
+    Color 0.5 0.9 0.3
+    Size 48
+}
+
+PointLight NalfBall15
+{
+    Color 0.3 0.6 0.15
+    Size 36
+}
+
+PointLight NalfBall16
+{
+    Color 0.2 0.5 0.05
+    Size 24
+}
+
+Object Nalfeshnee_Ball1
+{
+    Frame NAP2A { Light NalfBall11 }
+    Frame NAP2B { Light NalfBall11 }
+    Frame NAP2C { Light NalfBall11 }
+    Frame NAP2D { Light NalfBall12 }
+    Frame NAP2E { Light NalfBall13 }
+    Frame NAP2F { Light NalfBall14 }
+    Frame NAP2G { Light NalfBall15 }
+    Frame NAP2H { Light NalfBall16 }
+}
+
+Object Nalfeshnee_BallFire
+{
+    Frame NAP2A { Light NalfBall11 }
+    Frame NAP2B { Light NalfBall11 }
+    Frame NAP2C { Light NalfBall11 }
+    Frame NAP2D { Light NalfBall12 }
+    Frame NAP2E { Light NalfBall13 }
+    Frame NAP2F { Light NalfBall14 }
+    Frame NAP2G { Light NalfBall15 }
+    Frame NAP2H { Light NalfBall16 }
+}
+
+// ---- Nalfeshnee_Ball2 / Nalfeshnee_Ball3 -----------------------------------
+
+PulseLight NalfBall21
+{
+    Color 0.3 0.6 0.2
+    Size 32
+    SecondarySize 24
+    Interval 1.5
+}
+
+PointLight NalfBall22
+{
+    Color 0.35 0.7 0.25
+    Size 36
+}
+
+PointLight NalfBall23
+{
+    Color 0.4 0.9 0.3
+    Size 42
+}
+
+PointLight NalfBall24
+{
+    Color 0.2 0.5 0.1
+    Size 28
+}
+
+PointLight NalfBall25
+{
+    Color 0.1 0.4 0.0
+    Size 16
+}
+
+Object Nalfeshnee_Ball2
+{
+    Frame NAP1D { Light NalfBall21 }
+    Frame NAP1E { Light NalfBall21 }
+    Frame NAP1F { Light NalfBall22 }
+    Frame NAP1G { Light NalfBall23 }
+    Frame NAP1H { Light NalfBall24 }
+    Frame NAP1I { Light NalfBall25 }
+}
+
+Object Nalfeshnee_Ball3
+{
+    Frame NAP1D { Light NalfBall21 }
+    Frame NAP1E { Light NalfBall21 }
+    Frame NAP1F { Light NalfBall22 }
+    Frame NAP1G { Light NalfBall23 }
+    Frame NAP1H { Light NalfBall24 }
+    Frame NAP1I { Light NalfBall25 }
+}
+
+// ---- Nalfeshnee_Creature ---------------------------------------------------
+
+PulseLight NalfCreature1
+{
+    Color 0.2 0.4 0.05
+    Size 56
+    SecondarySize 48
+    Interval 4
+    Offset 0 8 0
+}
+
+PointLight NalfCreature2
+{
+    Color 0.2 0.4 0.05
+    Size 48
+    Offset 0 12 0
+}
+
+PointLight NalfCreature3
+{
+    Color 0.2 0.4 0.05
+    Size 40
+    Offset 0 16 0
+}
+
+PointLight NalfCreature4
+{
+    Color 0.2 0.4 0.05
+    Size 32
+    Offset 0 20 0
+}
+
+PointLight NalfCreature5
+{
+    Color 0.2 0.4 0.05
+    Size 24
+    Offset 0 24 0
+}
+
+PointLight NalfCreature6
+{
+    Color 0.2 0.4 0.05
+    Size 16
+    Offset 0 28 0
+}
+
+PointLight NalfCreature7
+{
+    Color 0.2 0.4 0.05
+    Size 8
+    Offset 0 32 0
+}
+
+Object Nalfeshnee_Creature
+{
+    Frame NASPA { Light NalfCreature1 }
+    Frame NASPB { Light NalfCreature1 }
+    Frame NASPE { Light NalfCreature2 }
+    Frame NASPF { Light NalfCreature3 }
+    Frame NASPG { Light NalfCreature4 }
+    Frame NASPH { Light NalfCreature5 }
+    Frame NASPI { Light NalfCreature6 }
+    Frame NASPJ { Light NalfCreature7 }
+}

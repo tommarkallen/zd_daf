@@ -1,6 +1,6 @@
 map HIVE01 "Illithid Hive"
 {
-	title = "Illithid Hive - Deep Sea Trench"
+	// title = "Illithid Hive - Deep Sea Trench"
     music = "music/dr_gorgo.mp3"
 	next = "ABYSS222"
     sky1 = "OSKY01"
@@ -11,7 +11,7 @@ map HIVE01 "Illithid Hive"
 
 map ABYSS222 "Shedaklah, 222nd Abyss Layer"
 {
-    title = "Abyss - 222nd Layer - Shedaklah (aka Mycorji)"
+    // title = "Abyss - 222nd Layer - Shedaklah (aka Mycorji)"
 	music = "music/d2_act3_kurast_temple.mp3"
     next = "ABYSS045"
     sky1 = "OSKY51"
@@ -22,7 +22,7 @@ map ABYSS222 "Shedaklah, 222nd Abyss Layer"
 
 map ABYSS045 "Azzagrat, 45th Abyss Layer"
 {
-    title = "Abyss - 45th Layer - Azzagrat (aka The Triple Realm)"
+    // title = "Abyss - 45th Layer - Azzagrat (aka The Triple Realm)"
 	music = "music/ff7_forgotten_capital.mp3"
     next = "ABYSS046"
     sky1 = "SKY3"
@@ -32,7 +32,7 @@ map ABYSS045 "Azzagrat, 45th Abyss Layer"
 
 map ABYSS046 "Zelatar, 46th Abyss Layer"
 {
-    title = "Abyss - 46th Layer - The City of Zelatar"
+    // title = "Abyss - 46th Layer - The City of Zelatar"
 	music = "music/d1_catacombs.mp3"
     next = "ABYSS047"
     sky1 = "SKY3"
@@ -42,7 +42,7 @@ map ABYSS046 "Zelatar, 46th Abyss Layer"
 
 map ABYSS047 "Argent Palace, 47th Abyss Layer"
 {
-    title = "Abyss - 47th Layer - The Argent Palace"
+    // title = "Abyss - 47th Layer - The Argent Palace"
 	music = "music/ff7_bizarro_sephiroth.mp3"
     sky1 = "SKY3"
     par = 360
@@ -74,7 +74,7 @@ DoomEdNums
     // 19107 = Quasit
     // 19108 = Dretch
     // 19109 = Manes
-    // 19110 = Nalfeshnee
+    19110 = Nalfeshnee
     // 19111 = Yochlol
     // 19112 = ShadowDemon
     // 19113 = Dybbuk

@@ -1,18 +1,19 @@
 // Weapons
-#include "actors/arcane_axe.gl"
-#include "actors/flashlight.gl"
+#include "actors/arcane_axe.gldefs"
+#include "actors/flashlight.gldefs"
 
 // Models
-#include "actors/pump_jack.gl"
+#include "actors/pump_jack.gldefs"
 
 // Monsters
-#include "actors/fiddler.gl"
-#include "actors/shtank.gl"
+#include "actors/fiddler.gldefs"
+#include "actors/shtank.gldefs"
 
-#include "actors/succubus.gl"
+#include "actors/succubus.gldefs"
+#include "actors/nalfeshnee.gldefs"
 
-#include "actors/mind_flayer.gl"
-#include "actors/mind_witness.gl"
-#include "actors/sahuagin.gl"
-#include "actors/grimlock.gl"
-#include "actors/sahuagin_baron.gl"
+#include "actors/mind_flayer.gldefs"
+#include "actors/mind_witness.gldefs"
+#include "actors/sahuagin.gldefs"
+#include "actors/grimlock.gldefs"
+#include "actors/sahuagin_baron.gldefs"

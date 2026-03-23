@@ -542,7 +542,7 @@ Model MassiveStalactite
 
 // ---- PUMP JACK ------------------------------------------------------------
 // Multi-surface MD3: skins are embedded in the md3 shader strings and resolved
-// via GLDEFS material texture blocks (see actors/pump_jack.gl). No Skin lines needed.
+// via GLDEFS material texture blocks (see actors/pump_jack.gldefs). No Skin lines needed.
 
 Model PumpJack
 {

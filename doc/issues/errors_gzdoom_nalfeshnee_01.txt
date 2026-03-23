@@ -1,0 +1,85 @@
+OS: Windows 11 (or higher) (NT 10.0) Build 26200
+    
+GZDoom version g4.14.2
+W_Init: Init WADfiles.
+adding C:/dev/zdoom/gzdoom.pk3, 692 lumps
+adding C:/dev/zdoom/game_support.pk3, 3308 lumps
+adding C:/dev/zdoom/doom2.wad, 2919 lumps
+adding C:/dev/zdoom/game_widescreen_gfx.pk3, 214 lumps
+adding C:/dev/zd_daf/zd_daf, 10748 lumps
+adding C:/dev/zd_daf/zd_daf/maps/DAF_TEST.wad, 6 lumps
+adding C:/Users/tomma/AppData/Local/Temp/y2npbv4p/u29agbbm.wad, 6 lumps
+S_Init: Setting up sound.
+I_InitSound: Initializing OpenAL
+  Opened device IOpenAL Soft on Headphones (Realtek(R) Audio)
+  EFX enabled
+I_InitInput
+I_StartupMouse
+I_StartupKeyboard
+I_StartupXInput
+I_StartupRawPS2
+I_StartupDirectInputJoystick
+Vulkan device: INVIDIA GeForce RTX 3060 Laptop GPU
+Vulkan device type: discrete gpu
+Vulkan version: 1.3.278 (api) 555.340.0 (driver)
+Max. texture size: 32768
+Max. uniform buffer range: 65536
+Min. uniform buffer offset alignment: 64
+Resolution: 1920 x 1009
+I_Init: Setting up machine state.
+CPU speed: 2688 MHz
+CPU Vendor ID: GenuineIntel
+  Name: 12th Gen Intel(R) Core(TM) i7-12700H
+  Family 6, Model 154, Stepping 3
+  Features: SSE2 SSE3 SSSE3 SSE4.1 SSE4.2 AVX AVX2 F16C FMA3 BMI1 BMI2 HyperThreading
+V_Init: allocate screen.
+ST_Init: Init startup screen.
+Checking cmd-line parameters...
+S_InitData: Load sound definitions.
+G_ParseMapInfo: Load map definitions.
+GScript error, "C:/dev/zd_daf/zd_daf/:mapinfo"G line 3:
+GUnknown property 'title' found in map definition
+
+GScript error, "C:/dev/zd_daf/zd_daf/:mapinfo"G line 14:
+GUnknown property 'title' found in map definition
+
+GScript error, "C:/dev/zd_daf/zd_daf/:mapinfo"G line 25:
+GUnknown property 'title' found in map definition
+
+GScript error, "C:/dev/zd_daf/zd_daf/:mapinfo"G line 35:
+GUnknown property 'title' found in map definition
+
+GScript error, "C:/dev/zd_daf/zd_daf/:mapinfo"G line 45:
+GUnknown property 'title' found in map definition
+
+Texman.Init: Init texture manager.
+ParseTeamInfo: Load team definitions.
+LoadActors: Load actor definitions.
+GScript error, "C:/dev/zd_daf/zd_daf/:actors/nalfeshnee.zs" line 193:
+GUnknown identifier 'Add'
+GScript error, "C:/dev/zd_daf/zd_daf/:actors/nalfeshnee.zs" line 234:
+GUnknown identifier 'Add'
+GScript error, "C:/dev/zd_daf/zd_daf/:actors/nalfeshnee.zs" line 262:
+GUnknown identifier 'Add'
+GScript error, "C:/dev/zd_daf/zd_daf/:actors/nalfeshnee.zs" line 267:
+GUnknown identifier 'Poison'
+GScript error, "C:/dev/zd_daf/zd_daf/:actors/nalfeshnee.zs" line 272:
+GUnknown identifier 'MummyScorch'
+GScript error, "C:/dev/zd_daf/zd_daf/:actors/nalfeshnee.zs" line 294:
+GUnknown identifier 'Add'
+GScript error, "C:/dev/zd_daf/zd_daf/:actors/nalfeshnee.zs" line 299:
+GUnknown identifier 'Poison'
+GScript error, "C:/dev/zd_daf/zd_daf/:actors/nalfeshnee.zs" line 304:
+GUnknown identifier 'MummyScorch'
+GScript error, "C:/dev/zd_daf/zd_daf/:actors/nalfeshnee.zs" line 327:
+GUnknown identifier 'Add'
+GScript error, "C:/dev/zd_daf/zd_daf/:actors/nalfeshnee.zs" line 336:
+GUnknown identifier 'PlasmaScorchLower'
+GScript error, "C:/dev/zd_daf/zd_daf/:actors/nalfeshnee.zs" line 360:
+GUnknown identifier 'Add'
+GScript error, "C:/dev/zd_daf/zd_daf/:actors/nalfeshnee.zs" line 369:
+GUnknown identifier 'PlasmaScorchLower'
+IC:/dev/zd_daf/zd_daf/:actors/intellect_devourer.zs, line 24: Deprecated flag 'DONTHURTSPECIES' used, deprecated since 0.0.0
+
+Execution could not continue.
+12 errors, 1 warnings while compiling C:/dev/zd_daf/zd_daf/:zscript.zs

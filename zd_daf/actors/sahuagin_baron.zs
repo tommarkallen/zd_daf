@@ -1,5 +1,6 @@
 //===========================================================================
-// Sahuagin Baron
+//
+// ZDoom ZScript - Sahuagin Baron
 //
 // Based on "Blight Lord" from Realm667
 // Submitted: DeVloek

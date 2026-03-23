@@ -296,3 +296,24 @@ weapons/quakeaxe/hitflesh axhit
 
 flashlight/on	fshlite1
 flashlight/off	fshlite2
+
+//===========================================================================
+//
+// ZDoom SndInfo - Nalfeshnee
+//
+//===========================================================================
+
+Nalfeshnee/attack       NAMATK1
+Nalfeshnee/death        NAMDTH1
+Nalfeshnee/idle1        NAMIDL1
+Nalfeshnee/idle2        NAMIDL2
+$random Nalfeshnee/active { Nalfeshnee/idle2 Nalfeshnee/idle1 }
+Nalfeshnee/pain         NAMPAN1
+Nalfeshnee/sight        NAMSIT1
+Nalfeshnee/pr1death     NAPD1
+Nalfeshnee/pr1sight     NAPS1
+Nalfeshnee/pr2death     NAPD2
+Nalfeshnee/pr2sight     NAPS2
+Nalfeshnee/spread       NAPSPR
+Nalfeshnee/spiritsit    NASPR2
+Nalfeshnee/spiritdth    NASPR1

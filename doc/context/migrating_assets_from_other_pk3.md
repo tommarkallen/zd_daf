@@ -44,7 +44,7 @@ For MODEL-BASED actors, you need ALL of the following or it will fail:
   4. MODELDEF entry     Model block with Scale, Skin/GLDEFS, FrameIndex lines
   5. ZScript actor      class definition with Default and States
   6. DoomEdNum          entry in zd_daf/MAPINFO DoomEdNums block
-  7. GLDEFS (if PBR)    .gl file with material texture blocks, included in GLDEFS
+  7. GLDEFS (if PBR)    .gldefs file with material texture blocks, included in GLDEFS
 
 For SPRITE-ONLY actors:
   1. Sprite lumps       ALL .png files from the elementalism sprite folder for this actor
@@ -66,7 +66,7 @@ FILE DESTINATIONS IN ZD_DAF
   Sprite lumps           ->  zd_daf/sprites/<groupname>/      (subdirectory)
   MODELDEF               ->  zd_daf/models/defs/<category>.modeldef
   ZScript actor          ->  zd_daf/actors/<category>.zs
-  GLDEFS file            ->  zd_daf/actors/<name>.gl  (included in zd_daf/GLDEFS)
+  GLDEFS file            ->  zd_daf/actors/<name>.gldefs  (included in zd_daf/GLDEFS)
   DoomEdNum              ->  zd_daf/MAPINFO DoomEdNums block
 
 Categories and their files:
@@ -77,7 +77,7 @@ Categories and their files:
 
 New .modeldef files must be added to zd_daf/MODELDEF via #include.
 New .zs files must be added to zd_daf/zscript.zs via #include.
-New .gl files must be added to zd_daf/GLDEFS via #include.
+New .gldefs files must be added to zd_daf/GLDEFS via #include.
 
 
 FILE NAMING CONVENTION
@@ -208,8 +208,8 @@ to each surface. This is separate from the MODELDEF skin system.
 To migrate a model with GLDEFS:
 1. Copy normal map PNGs to zd_daf/materials/normalmaps/
 2. Copy specular map PNGs to zd_daf/materials/specularmaps/
-3. Create zd_daf/actors/<name>.gl with material texture blocks
-4. Add #include "actors/<name>.gl" under "// Models" in zd_daf/GLDEFS
+3. Create zd_daf/actors/<name>.gldefs with material texture blocks
+4. Add #include "actors/<name>.gldefs" under "// Models" in zd_daf/GLDEFS
 
 Format of a material block:
   material texture "models/skins/pumpjack/walking_beam.png"
@@ -408,6 +408,12 @@ Models use the range 18000+ in zd_daf/MAPINFO.
 As of the last migration, highest assigned is 18041 (PumpJack).
 Next available model: 18042
 
+Tanar'ri demons use the range 19100+ in zd_daf/MAPINFO.
+As of the last migration, highest assigned is 19110 (Nalfeshnee). Succubus is 19100.
+Pre-reserved commented-out entries exist for the full Tanar'ri roster up to 19116 --
+uncomment rather than adding a new line.
+Next available Tanar'ri: 19111
+
 Illithid monsters use the range 19500+ in zd_daf/MAPINFO (separate block).
 As of the last migration, highest assigned is 19510 (Grimlock). ElderBrain is 19504.
 Pre-reserved commented-out entries (e.g. //19504 = ElderBrain) exist in MAPINFO --
@@ -508,7 +514,11 @@ COMMON MISTAKES
    Fix: copy ALL FrameIndex lines from the source modeldef for that model.
 
 6. Actor uses DECORATE syntax (no "class", no semicolons) -- ZScript compile error.
-   Fix: convert to ZScript class syntax.
+   Fix: convert to ZScript class syntax. Key conversion pitfalls:
+   - String-valued Default properties need quotes (see mistake #17)
+   - A_Chase(0, 0) on multi-frame state lines (see mistake #18)
+   - DoomEdNum is dropped from the class definition; goes in MAPINFO instead
+   - PROJECTILE / MONSTER keywords become Projectile; / Monster; with semicolons
 
 7. Class name starts with a digit -- ZScript compile error.
    Fix: prefix with a word, e.g. "3X_chain" -> "Chain3x".
@@ -528,9 +538,9 @@ COMMON MISTAKES
     Fix: rename the skin subfolder to match what the MD3 embeds exactly.
     Use a hex editor to read the embedded shader strings if unsure.
 
-12. GLDEFS .gl file created but not included in zd_daf/GLDEFS.
+12. GLDEFS .gldefs file created but not included in zd_daf/GLDEFS.
     Symptom: PBR materials silently not applied (flat shading only, no error).
-    Fix: add #include "actors/<name>.gl" under "// Models" in zd_daf/GLDEFS.
+    Fix: add #include "actors/<name>.gldefs" under "// Models" in zd_daf/GLDEFS.
 
 13. Sprite-only actor treated as model-based -- time wasted searching for a MODELDEF.
     Fix: grep elementalism/models/*.txt and MODELDEF for the class name first.
@@ -550,3 +560,19 @@ COMMON MISTAKES
     exist in zd_daf, causing a silent no-op or compile warning.
     Fix: drop non-standard DamageFactor lines. Keep only standard GZDoom types
     ("Ice", "Fire", "BFGSplash", etc.).
+
+17. DECORATE string-valued properties written without quotes in ZScript -- compile error
+    "Unknown identifier 'Add'" / "Unknown identifier 'Poison'" etc.
+    DECORATE accepts bare identifiers for these; ZScript requires string literals.
+    Affected properties:
+      RenderStyle Add        ->  RenderStyle "Add";
+      DamageType Poison      ->  DamageType "Poison";
+      Decal MummyScorch      ->  Decal "MummyScorch";
+      Decal PlasmaScorchLower ->  Decal "PlasmaScorchLower";
+    Rule: any Default property that takes a name/type value needs double-quotes in ZScript.
+
+18. A_Chase(0, 0) on a multistate definition line -- compile error
+    "State jumps with index cannot be used on multistate definitions."
+    DECORATE accepts integer 0 to suppress melee/missile; ZScript interprets it as a state
+    index offset, which is forbidden on lines that define multiple frames (e.g. NALF AABBCCDDEEFF 2).
+    Fix: replace A_Chase(0, 0) with A_Chase() -- the default arguments are already null/null.

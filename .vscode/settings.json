@@ -8,6 +8,6 @@
         "*.acs": "acs",
         "TEXTURES": "textures",
         "TEXTURES.txt": "textures",
-        "*.gl": "gldefs"
+        "*.gldefs": "gldefs"
     }
 }
