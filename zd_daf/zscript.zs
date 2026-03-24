@@ -25,6 +25,9 @@ version "4.14.2"
 #include "actors/pink_horror.zs"
 #include "actors/mother_imp.zs"
 
+// Undead
+#include "actors/nightstalker.zs"
+
 // Abberations - Illithids
 #include "actors/mind_flayer.zs"
 #include "actors/ulitharid.zs"

@@ -1,0 +1,1335 @@
+//===========================================================================
+//
+// GZDoom GLDefs - Nightstalker
+//
+// Based on: "Obsidian Ravager" by DeVloek
+//
+//===========================================================================
+
+Pulselight NightstalkerGlow
+{
+	color 0.4 0.0 0.0
+	size 16
+	secondarySize 20
+	interval 2.0
+	offset 0 64 0
+}
+
+Pulselight NightstalkerGlowLarge
+{
+	color 1.0 0.0 0.0
+	size 16
+	secondarySize 18
+	interval 2.0
+	offset 0 0 0
+}
+
+Pulselight NightstalkerGlowSmall
+{
+	color 1.0 0.0 0.0
+	size 10
+	secondarySize 12
+	interval 2.0
+	offset 0 0 0
+}
+
+object Nightstalker
+{
+	frame NSTL { light NightstalkerGlow }
+}
+
+object NightstalkerBall
+{
+	frame BAL7 { light NightstalkerGlowLarge }
+}
+
+object NightstalkerBarrage
+{
+	frame BAL7 { light NightstalkerGlowSmall }
+}
+
+//Brightmaps
+BrightMap Sprite NSTLA1
+{
+	Map BMNSTLA1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLA2
+{
+	Map BMNSTLA2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLA3
+{
+	Map BMNSTLA3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLA4
+{
+	Map BMNSTLA4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLA5
+{
+	Map BMNSTLA5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLA6
+{
+	Map BMNSTLA6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLA7
+{
+	Map BMNSTLA7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLA8
+{
+	Map BMNSTLA8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLB1
+{
+	Map BMNSTLB1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLB2
+{
+	Map BMNSTLB2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLB3
+{
+	Map BMNSTLB3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLB4
+{
+	Map BMNSTLB4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLB5
+{
+	Map BMNSTLB5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLB6
+{
+	Map BMNSTLB6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLB7
+{
+	Map BMNSTLB7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLB8
+{
+	Map BMNSTLB8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLC1
+{
+	Map BMNSTLC1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLC2
+{
+	Map BMNSTLC2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLC3
+{
+	Map BMNSTLC3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLC4
+{
+	Map BMNSTLC4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLC5
+{
+	Map BMNSTLC5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLC6
+{
+	Map BMNSTLC6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLC7
+{
+	Map BMNSTLC7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLC8
+{
+	Map BMNSTLC8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLD1
+{
+	Map BMNSTLD1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLD2
+{
+	Map BMNSTLD2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLD3
+{
+	Map BMNSTLD3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLD4
+{
+	Map BMNSTLD4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLD5
+{
+	Map BMNSTLD5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLD6
+{
+	Map BMNSTLD6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLD7
+{
+	Map BMNSTLD7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLD8
+{
+	Map BMNSTLD8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLE1
+{
+	Map BMNSTLE1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLE2
+{
+	Map BMNSTLE2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLE3
+{
+	Map BMNSTLE3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLE4
+{
+	Map BMNSTLE4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLE5
+{
+	Map BMNSTLE5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLE6
+{
+	Map BMNSTLE6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLE7
+{
+	Map BMNSTLE7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLE8
+{
+	Map BMNSTLE8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLF1
+{
+	Map BMNSTLF1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLF2
+{
+	Map BMNSTLF2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLF3
+{
+	Map BMNSTLF3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLF4
+{
+	Map BMNSTLF4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLF5
+{
+	Map BMNSTLF5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLF6
+{
+	Map BMNSTLF6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLF7
+{
+	Map BMNSTLF7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLF8
+{
+	Map BMNSTLF8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLG1
+{
+	Map BMNSTLG1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLG2
+{
+	Map BMNSTLG2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLG3
+{
+	Map BMNSTLG3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLG4
+{
+	Map BMNSTLG4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLG5
+{
+	Map BMNSTLG5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLG6
+{
+	Map BMNSTLG6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLG7
+{
+	Map BMNSTLG7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLG8
+{
+	Map BMNSTLG8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLH1
+{
+	Map BMNSTLH1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLH2
+{
+	Map BMNSTLH2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLH3
+{
+	Map BMNSTLH3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLH4
+{
+	Map BMNSTLH4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLH5
+{
+	Map BMNSTLH5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLH6
+{
+	Map BMNSTLH6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLH7
+{
+	Map BMNSTLH7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLH8
+{
+	Map BMNSTLH8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLI1
+{
+	Map BMNSTLI1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLI2
+{
+	Map BMNSTLI2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLI3
+{
+	Map BMNSTLI3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLI4
+{
+	Map BMNSTLI4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLI5
+{
+	Map BMNSTLI5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLI6
+{
+	Map BMNSTLI6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLI7
+{
+	Map BMNSTLI7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLI8
+{
+	Map BMNSTLI8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLJ1
+{
+	Map BMNSTLJ1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLJ2
+{
+	Map BMNSTLJ2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLJ3
+{
+	Map BMNSTLJ3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLJ4
+{
+	Map BMNSTLJ4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLJ5
+{
+	Map BMNSTLJ5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLJ6
+{
+	Map BMNSTLJ6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLJ7
+{
+	Map BMNSTLJ7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLJ8
+{
+	Map BMNSTLJ8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLK1
+{
+	Map BMNSTLK1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLK2
+{
+	Map BMNSTLK2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLK3
+{
+	Map BMNSTLK3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLK4
+{
+	Map BMNSTLK4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLK5
+{
+	Map BMNSTLK5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLK6
+{
+	Map BMNSTLK6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLK7
+{
+	Map BMNSTLK7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLK8
+{
+	Map BMNSTLK8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLL1
+{
+	Map BMNSTLL1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLL2
+{
+	Map BMNSTLL2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLL3
+{
+	Map BMNSTLL3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLL4
+{
+	Map BMNSTLL4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLL5
+{
+	Map BMNSTLL5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLL6
+{
+	Map BMNSTLL6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLL7
+{
+	Map BMNSTLL7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLL8
+{
+	Map BMNSTLL8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLM1
+{
+	Map BMNSTLM1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLM2
+{
+	Map BMNSTLM2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLM3
+{
+	Map BMNSTLM3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLM4
+{
+	Map BMNSTLM4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLM5
+{
+	Map BMNSTLM5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLM6
+{
+	Map BMNSTLM6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLM7
+{
+	Map BMNSTLM7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLM8
+{
+	Map BMNSTLM8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLN1
+{
+	Map BMNSTLN1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLN2
+{
+	Map BMNSTLN2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLN3
+{
+	Map BMNSTLN3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLN4
+{
+	Map BMNSTLN4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLN5
+{
+	Map BMNSTLN5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLN6
+{
+	Map BMNSTLN6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLN7
+{
+	Map BMNSTLN7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLN8
+{
+	Map BMNSTLN8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLO1
+{
+	Map BMNSTLO1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLO2
+{
+	Map BMNSTLO2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLO3
+{
+	Map BMNSTLO3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLO4
+{
+	Map BMNSTLO4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLO5
+{
+	Map BMNSTLO5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLO6
+{
+	Map BMNSTLO6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLO7
+{
+	Map BMNSTLO7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLO8
+{
+	Map BMNSTLO8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLP1
+{
+	Map BMNSTLP1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLP2
+{
+	Map BMNSTLP2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLP3
+{
+	Map BMNSTLP3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLP4
+{
+	Map BMNSTLP4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLP5
+{
+	Map BMNSTLP5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLP6
+{
+	Map BMNSTLP6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLP7
+{
+	Map BMNSTLP7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLP8
+{
+	Map BMNSTLP8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLQ1
+{
+	Map BMNSTLQ1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLQ2
+{
+	Map BMNSTLQ2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLQ3
+{
+	Map BMNSTLQ3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLQ4
+{
+	Map BMNSTLQ4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLQ5
+{
+	Map BMNSTLQ5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLQ6
+{
+	Map BMNSTLQ6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLQ7
+{
+	Map BMNSTLQ7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLQ8
+{
+	Map BMNSTLQ8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLR1
+{
+	Map BMNSTLR1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLR2
+{
+	Map BMNSTLR2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLR3
+{
+	Map BMNSTLR3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLR4
+{
+	Map BMNSTLR4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLR5
+{
+	Map BMNSTLR5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLR6
+{
+	Map BMNSTLR6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLR7
+{
+	Map BMNSTLR7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLR8
+{
+	Map BMNSTLR8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLS1
+{
+	Map BMNSTLS1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLS2
+{
+	Map BMNSTLS2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLS3
+{
+	Map BMNSTLS3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLS4
+{
+	Map BMNSTLS4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLS5
+{
+	Map BMNSTLS5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLS6
+{
+	Map BMNSTLS6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLS7
+{
+	Map BMNSTLS7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLS8
+{
+	Map BMNSTLS8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLT1
+{
+	Map BMNSTLT1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLT2
+{
+	Map BMNSTLT2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLT3
+{
+	Map BMNSTLT3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLT4
+{
+	Map BMNSTLT4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLT5
+{
+	Map BMNSTLT5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLT6
+{
+	Map BMNSTLT6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLT7
+{
+	Map BMNSTLT7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLT8
+{
+	Map BMNSTLT8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLU1
+{
+	Map BMNSTLU1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLU2
+{
+	Map BMNSTLU2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLU3
+{
+	Map BMNSTLU3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLU4
+{
+	Map BMNSTLU4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLU5
+{
+	Map BMNSTLU5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLU6
+{
+	Map BMNSTLU6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLU7
+{
+	Map BMNSTLU7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLU8
+{
+	Map BMNSTLU8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLV1
+{
+	Map BMNSTLV1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLV2
+{
+	Map BMNSTLV2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLV3
+{
+	Map BMNSTLV3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLV4
+{
+	Map BMNSTLV4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLV5
+{
+	Map BMNSTLV5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLV6
+{
+	Map BMNSTLV6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLV7
+{
+	Map BMNSTLV7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLV8
+{
+	Map BMNSTLV8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLW1
+{
+	Map BMNSTLW1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLW2
+{
+	Map BMNSTLW2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLW3
+{
+	Map BMNSTLW3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLW4
+{
+	Map BMNSTLW4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLW5
+{
+	Map BMNSTLW5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLW6
+{
+	Map BMNSTLW6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLW7
+{
+	Map BMNSTLW7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLW8
+{
+	Map BMNSTLW8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLX1
+{
+	Map BMNSTLX1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLX2
+{
+	Map BMNSTLX2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLX3
+{
+	Map BMNSTLX3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLX4
+{
+	Map BMNSTLX4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLX5
+{
+	Map BMNSTLX5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLX6
+{
+	Map BMNSTLX6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLX7
+{
+	Map BMNSTLX7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLX8
+{
+	Map BMNSTLX8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLY1
+{
+	Map BMNSTLY1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLY2
+{
+	Map BMNSTLY2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLY3
+{
+	Map BMNSTLY3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLY4
+{
+	Map BMNSTLY4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLY5
+{
+	Map BMNSTLY5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLY6
+{
+	Map BMNSTLY6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLY7
+{
+	Map BMNSTLY7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLY8
+{
+	Map BMNSTLY8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLZ1
+{
+	Map BMNSTLZ1
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLZ2
+{
+	Map BMNSTLZ2
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLZ3
+{
+	Map BMNSTLZ3
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLZ4
+{
+	Map BMNSTLZ4
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLZ5
+{
+	Map BMNSTLZ5
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLZ6
+{
+	Map BMNSTLZ6
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLZ7
+{
+	Map BMNSTLZ7
+	DisableFullBright
+}
+
+BrightMap Sprite NSTLZ8
+{
+	Map BMNSTLZ8
+	DisableFullBright
+}
+
+BrightMap Sprite NSTKA0
+{
+	Map BMNSTKA0
+	DisableFullBright
+}
+
+BrightMap Sprite NSTKB0
+{
+	Map BMNSTKB0
+	DisableFullBright
+}
+
+BrightMap Sprite NSTKC0
+{
+	Map BMNSTKC0
+	DisableFullBright
+}
+
+BrightMap Sprite NSTKD0
+{
+	Map BMNSTKD0
+	DisableFullBright
+}
+
+BrightMap Sprite NSTKE0
+{
+	Map BMNSTKE0
+	DisableFullBright
+}
+
+BrightMap Sprite NSTKF0
+{
+	Map BMNSTKF0
+	DisableFullBright
+}
+

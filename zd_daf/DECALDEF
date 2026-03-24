@@ -67,3 +67,61 @@ decalgroup SahuaginBaronSlimeScorch
 	SahuaginBaronSlimeScorch2	1
 	SahuaginBaronSlimeScorch3	1
 }
+
+//===========================================================================
+//
+// Nightstalker Decals
+//
+//===========================================================================
+
+decal NightstalkerBallScorch1
+{
+	pic BAL7SCR1
+	shade "18 00 00"
+	x-scale 0.8
+	y-scale 0.8
+	randomflipx
+	randomflipy
+}
+
+decal NightstalkerBallScorch2
+{
+	pic BAL7SCR2
+	shade "18 00 00"
+	x-scale 0.8
+	y-scale 0.8
+	randomflipx
+	randomflipy
+}
+
+decal NightstalkerBarrageScorch1
+{
+	pic BAL7SCR1
+	shade "18 00 00"
+	x-scale 0.3
+	y-scale 0.3
+	randomflipx
+	randomflipy
+}
+
+decal NightstalkerBarrageScorch2
+{
+	pic BAL7SCR2
+	shade "18 00 00"
+	x-scale 0.3
+	y-scale 0.3
+	randomflipx
+	randomflipy
+}
+
+decalgroup NightstalkerBallScorch
+{
+	NightstalkerBallScorch1		1
+	NightstalkerBallScorch2		1
+}
+
+decalgroup NightstalkerBarrageScorch
+{
+	NightstalkerBarrageScorch1	1
+	NightstalkerBarrageScorch2	1
+}

@@ -317,3 +317,61 @@ Nalfeshnee/pr2sight     NAPS2
 Nalfeshnee/spread       NAPSPR
 Nalfeshnee/spiritsit    NASPR2
 Nalfeshnee/spiritdth    NASPR1
+
+//===========================================================================
+//
+// ZDoom SndInfo - Nightstalker
+//
+//===========================================================================
+
+$random Nightstalker/alert    { NSTALRT1 NSTALRT2 }
+NSTALRT1	NSTALRT1
+NSTALRT2	NSTALRT2
+$volume Nightstalker/alert 2.0
+
+$random Nightstalker/attack   { NSTATCK1 NSTATCK2 NSTATCK2 }
+NSTATCK1	NSTATCK1
+NSTATCK2	NSTATCK2
+NSTATCK3	NSTATCK3
+
+$random Nightstalker/death    { NSTDETH1 NSTDETH2 }
+NSTDETH1	NSTDETH1
+NSTDETH2	NSTDETH2
+
+$random Nightstalker/idle     { NSTIDLE1 NSTIDLE2 }
+NSTIDLE1	NSTIDLE1
+NSTIDLE2	NSTIDLE2
+
+$random Nightstalker/melee    { NSTMELE1 NSTMELE2 }
+NSTMELE1	NSTMELE1
+NSTMELE2	NSTMELE2
+
+$random Nightstalker/pain     { NSTPAIN1 NSTPAIN2 NSTPAIN3 NSTPAIN4 }
+NSTPAIN1	NSTPAIN1
+NSTPAIN2	NSTPAIN2
+NSTPAIN3	NSTPAIN3
+NSTPAIN4	NSTPAIN4
+
+$random Nightstalker/swipe    { NSTSWIP1 NSTSWIP2 }
+NSTSWIP1	NSTSWIP1
+NSTSWIP2	NSTSWIP2
+
+$random Nightstalker/missile  { NSTMISS1 NSTMISS2 NSTMISS3 NSTMISS4 }
+NSTMISS1	NSTMISS1
+NSTMISS2	NSTMISS2
+NSTMISS3	NSTMISS3
+NSTMISS4	NSTMISS4
+
+$random Nightstalker/impact   { NSTBALL1 NSTBALL2 NSTBALL3 NSTBALL4 }
+NSTBALL1	NSTBALL1
+NSTBALL2	NSTBALL2
+NSTBALL3	NSTBALL3
+NSTBALL4	NSTBALL4
+
+$random Nightstalker/trapdeath { NSTRAPD1 NSTRAPD2 }
+NSTRAPD1	NSTRAPD1
+NSTRAPD2	NSTRAPD2
+
+$random Nightstalker/trapspawn { NSTRAPS1 NSTRAPS2 }
+NSTRAPS1	NSTRAPS1
+NSTRAPS2	NSTRAPS2

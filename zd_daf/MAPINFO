@@ -122,9 +122,12 @@ DoomEdNums
 	19600 = PinkHorror
 	19601 = BlueHorror
 
+    // Undead
+    19700 = Nightstalker
+
     // Other
-	19700 = BlueImp
-	19701 = MotherImp
+	19900 = BlueImp
+	19901 = MotherImp
 
     // Furniture
     20000 = HRCeilingLight
