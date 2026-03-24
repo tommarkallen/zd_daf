@@ -1,0 +1,85 @@
+//===========================================================================
+//
+// GZDoom GLDefs - Goristro
+//
+//===========================================================================
+
+PointLight GorisBall
+{
+    color 1.0 0.0 0.0
+    size 64
+}
+
+FlickerLight GorisBall_X1
+{
+    color 1.0 0.0 0.0
+    size 80
+    secondarySize 88
+    chance 0.25
+}
+
+FlickerLight GorisBall_X2
+{
+    color 0.4 0.0 0.0
+    size 96
+    secondarySize 104
+    chance 0.25
+}
+
+FlickerLight GorisBall_X3
+{
+    color 0.2 0.0 0.0
+    size 112
+    secondarySize 120
+    chance 0.25
+}
+
+Object GoristroBall
+{
+    Frame GORBA { light GorisBall    }
+    Frame GORBB { light GorisBall    }
+    Frame GORBC { light GorisBall_X1 }
+    Frame GORBD { light GorisBall_X2 }
+    Frame GORBE { light GorisBall_X3 }
+}
+
+// Brightmaps — walk frames E/F/G, missile frames Q/R/S
+BrightMap Sprite GORIE1    { Texture "BMGORIE1"    }
+BrightMap Sprite GORIE2E8  { Texture "BMGORIE2E8"  }
+BrightMap Sprite GORIE3E7  { Texture "BMGORIE3E7"  }
+BrightMap Sprite GORIE4E6  { Texture "BMGORIE4E6"  }
+BrightMap Sprite GORIE5    { Texture "BMGORIE5"    }
+BrightMap Sprite GORIF1    { Texture "BMGORIF1"    }
+BrightMap Sprite GORIF2F8  { Texture "BMGORIF2F8"  }
+BrightMap Sprite GORIF3F7  { Texture "BMGORIF3F7"  }
+BrightMap Sprite GORIF4F6  { Texture "BMGORIF4F6"  }
+BrightMap Sprite GORIF5    { Texture "BMGORIF5"    }
+BrightMap Sprite GORIG1    { Texture "BMGORIG1"    }
+BrightMap Sprite GORIG2G8  { Texture "BMGORIG2G8"  }
+BrightMap Sprite GORIG3G7  { Texture "BMGORIG3G7"  }
+BrightMap Sprite GORIG4G6  { Texture "BMGORIG4G6"  }
+BrightMap Sprite GORIG5    { Texture "BMGORIG5"    }
+BrightMap Sprite GORIQ1    { Texture "BMGORIQ1"    }
+BrightMap Sprite GORIQ2    { Texture "BMGORIQ2"    }
+BrightMap Sprite GORIQ3    { Texture "BMGORIQ3"    }
+BrightMap Sprite GORIQ4    { Texture "BMGORIQ4"    }
+BrightMap Sprite GORIQ5    { Texture "BMGORIQ5"    }
+BrightMap Sprite GORIQ6    { Texture "BMGORIQ6"    }
+BrightMap Sprite GORIQ7    { Texture "BMGORIQ7"    }
+BrightMap Sprite GORIQ8    { Texture "BMGORIQ8"    }
+BrightMap Sprite GORIR1    { Texture "BMGORIR1"    }
+BrightMap Sprite GORIR2    { Texture "BMGORIR2"    }
+BrightMap Sprite GORIR3    { Texture "BMGORIR3"    }
+BrightMap Sprite GORIR4    { Texture "BMGORIR4"    }
+BrightMap Sprite GORIR5    { Texture "BMGORIR5"    }
+BrightMap Sprite GORIR6    { Texture "BMGORIR6"    }
+BrightMap Sprite GORIR7    { Texture "BMGORIR7"    }
+BrightMap Sprite GORIR8    { Texture "BMGORIR8"    }
+BrightMap Sprite GORIS1    { Texture "BMGORIS1"    }
+BrightMap Sprite GORIS2    { Texture "BMGORIS2"    }
+BrightMap Sprite GORIS3    { Texture "BMGORIS3"    }
+BrightMap Sprite GORIS4    { Texture "BMGORIS4"    }
+BrightMap Sprite GORIS5    { Texture "BMGORIS5"    }
+BrightMap Sprite GORIS6    { Texture "BMGORIS6"    }
+BrightMap Sprite GORIS7    { Texture "BMGORIS7"    }
+BrightMap Sprite GORIS8    { Texture "BMGORIS8"    }

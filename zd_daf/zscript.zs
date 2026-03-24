@@ -20,6 +20,7 @@ version "4.14.2"
 // Demons - Tanar'ri
 #include "actors/succubus.zs"
 #include "actors/nalfeshnee.zs"
+#include "actors/goristro.zs"
 
 // Daemons - Chaos Daemons
 #include "actors/pink_horror.zs"

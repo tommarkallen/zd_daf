@@ -49,7 +49,7 @@ map ABYSS047 "Argent Palace, 47th Abyss Layer"
     levelnum = 5
 }
 
-
+// Sprite Based Actors
 DoomEdNums
 {
     // Weapons
@@ -80,7 +80,7 @@ DoomEdNums
     // 19113 = Dybbuk
     // 19114 = Rutterkin
     // 19115 = Chasme
-    // 19116 = Goristro
+    19116 = Goristro
 
     // Devils - Baatezu
     // 19200 = PitFiend
@@ -162,26 +162,32 @@ DoomEdNums
     18010 = RocksDark2
     18011 = RocksDark3
     18012 = RocksDark4
+
     // Rocks - brown earthy skin (SLROCK1)
     18013 = RocksBrown1
     18014 = RocksBrown2
     18015 = RocksBrown3
     18016 = RocksBrown4
+
     // Rocks - near-black obsidian skin (SLROCK22)
     18017 = RocksBlack1
     18018 = RocksBlack2
     18019 = RocksBlack3
     18020 = RocksBlack4
+
     // Rocks - green/mossy (ds_gras1 skin)
     18021 = RocksGreen1
     18022 = RocksGreen2
     18023 = RocksGreen3
     18024 = RocksGreen4
+
     // Barrel
     18025 = Barrel1
+
     // Floor skeletons
     18026 = FloorSkeleton
     18027 = FloorSkeletonRibs
+
     // Chains
     18028 = Chain3xStraight
     18029 = Chain3xStraightMiddle
@@ -190,11 +196,13 @@ DoomEdNums
     18032 = ChainStraight
     18033 = ChainCurved
     18034 = ChainCurvedRR
+
     // Shackles
     18035 = ShackleOpen
     18036 = ShackleClosed
     18037 = ShackleOpenStatic
     18038 = ShackleClosedStatic
+    
     // Props
     18039 = Tablet
     18040 = MassiveStalactite

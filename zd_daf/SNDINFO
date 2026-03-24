@@ -375,3 +375,13 @@ NSTRAPD2	NSTRAPD2
 $random Nightstalker/trapspawn { NSTRAPS1 NSTRAPS2 }
 NSTRAPS1	NSTRAPS1
 NSTRAPS2	NSTRAPS2
+
+//===========================================================================
+//
+// ZDoom SndInfo - Goristro
+//
+//===========================================================================
+
+Goristro/death      GORDTH1
+Goristro/snarl      GORSNA1
+Goristro/crash      GORLND1

@@ -5,6 +5,19 @@
 
 Non-fatal warning. No fix needed until a replacement is identified.
 
+## Deprecated LOWGRAVITY
+
+`goristro.zs` lines 127, 154: `Deprecated flag 'LOWGRAVITY' used, deprecated since 4.13.0`
+
+**Findings (from GZDoom actor.zs source):**
+- `LOWGRAVITY` flag is deprecated since 4.13.0
+- `GravityFactor` does **not** exist as a property in 4.14.2 (causes hard compile error)
+- The correct replacement is the `Gravity` property (native double, default 1.0)
+- `A_LowGravity()` sets `Gravity = 0.125` at runtime — equivalent to the old flag behavior
+- In Default blocks: use `Gravity 0.125;` to replace `+LOWGRAVITY;`
+
+**Fix:** Replace `+LOWGRAVITY;` with `Gravity 0.125;` in Default block. Applied to goristro.zs.
+
 ## Deprecated MISSILEMORE / MISSILEEVENMORE
 
 `nightstalker.zs`: `Deprecated flag 'MISSILEMORE' used, deprecated since 4.13.0`

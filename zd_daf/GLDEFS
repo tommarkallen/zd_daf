@@ -12,6 +12,7 @@
 #include "actors/succubus.gldefs"
 #include "actors/nalfeshnee.gldefs"
 #include "actors/nightstalker.gldefs"
+#include "actors/goristro.gldefs"
 
 #include "actors/mind_flayer.gldefs"
 #include "actors/mind_witness.gldefs"
