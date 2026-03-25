@@ -84,7 +84,7 @@ DoomEdNums
 
     // Devils - Baatezu
     // 19200 = PitFiend
-    // 19201 = HornedDevil
+    19201 = HornedDevil
     // 19202 = Erinyes
     // 19203 = BarbedDevil
     // 19204 = ChainDevil

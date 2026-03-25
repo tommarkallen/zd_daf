@@ -22,6 +22,9 @@ version "4.14.2"
 #include "actors/nalfeshnee.zs"
 #include "actors/goristro.zs"
 
+// Devils - Baatezu
+#include "actors/horneddevil.zs"
+
 // Daemons - Chaos Daemons
 #include "actors/pink_horror.zs"
 #include "actors/mother_imp.zs"

@@ -13,6 +13,7 @@
 #include "actors/nalfeshnee.gldefs"
 #include "actors/nightstalker.gldefs"
 #include "actors/goristro.gldefs"
+#include "actors/horneddevil.gldefs"
 
 #include "actors/mind_flayer.gldefs"
 #include "actors/mind_witness.gldefs"

@@ -385,3 +385,17 @@ NSTRAPS2	NSTRAPS2
 Goristro/death      GORDTH1
 Goristro/snarl      GORSNA1
 Goristro/crash      GORLND1
+
+//===========================================================================
+//
+// ZDoom SndInfo - HornedDevil
+//
+//===========================================================================
+
+HornedDevil/sight       HRNDSIT
+HornedDevil/death       HRNDDTH
+HornedDevil/shotfire    HRNDFI
+HornedDevil/shotdeath   HRNDEX
+HornedDevil/nadebounce  HRNDBFI
+HornedDevil/nadecasual  HRNDCAS
+HornedDevil/meleehit    HRNDWBL

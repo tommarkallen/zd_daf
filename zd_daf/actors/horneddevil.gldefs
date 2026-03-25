@@ -1,0 +1,38 @@
+//===========================================================================
+//
+// GZDoom GLDefs - HornedDevil
+//
+// Based on: "Hell Duke" from Realm667 Beastiary
+// GLDefs: SkyMarshall, SamVision
+//
+//===========================================================================
+
+object HornedDevil_Shot
+{
+	frame HRSHA { light IMPBALL   }
+	frame HRSHB { light IMPBALL   }
+	frame HRSHC { light IMPBALL   }
+	frame HRSHD { light IMPBALL   }
+	frame HRSHE { light ROCKET_X1 }
+	frame HRSHF { light ROCKET_X2 }
+	frame HRSHG { light ROCKET_X3 }
+	frame HRSHH { light ROCKET_X3 }
+	frame HRSHI { light ROCKET_X3 }
+}
+
+object HornedDevil_Nade
+{
+	frame HRGRA { light IMPBALL    }
+	frame HRGRB { light IMPBALL    }
+	frame HRGRC { light IMPBALL    }
+	frame HRGRD { light IMPBALL_X1 }
+	frame HRGRE { light IMPBALL_X1 }
+	frame HRGRF { light IMPBALL_X2 }
+	frame HRGRG { light IMPBALL_X3 }
+	frame HRGRH { light IMPBALL_X3 }
+	frame HRGRI { light IMPBALL_X3 }
+	frame HRGRJ { light IMPBALL_X3 }
+	frame HRGRK { light IMPBALL_X3 }
+	frame HRGRL { light IMPBALL_X3 }
+	frame HRGRM { light IMPBALL_X3 }
+}
